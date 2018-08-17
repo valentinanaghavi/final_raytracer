@@ -1,4 +1,4 @@
-#ifndef SCENE_HPP
+#ifndef SCENE_HPP    // Valentina stinkt
 #define SCENE_HPP
 
 #include "material.hpp"
