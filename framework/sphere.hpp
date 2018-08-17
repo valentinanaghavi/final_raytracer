@@ -20,8 +20,11 @@ public:
     Sphere(glm::vec3 const& center, float const& radius , std::string const& name, Material const& material);
     ~Sphere();
 
-     glm::vec3 const& getCenter() const;
-     float const& getRadius() const;
+    void setCenter(glm::vec3 center) ;
+    void setRadius(float radius) ;
+
+    glm::vec3 const& getCenter() const;
+    float const& getRadius() const;
 
     float area() const override; //abstrakte M. = rein virtuelle Methode
     float volume() const override;

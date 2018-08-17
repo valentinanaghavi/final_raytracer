@@ -14,6 +14,9 @@ public:
     Box();
     ~Box();
 
+    void setMax( glm::vec3 max) ;
+    void setMin( glm::vec3 min) ;
+  
     glm::vec3 getMax() const;
     glm::vec3 getMin() const;
 

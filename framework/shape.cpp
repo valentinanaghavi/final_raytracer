@@ -19,6 +19,16 @@ Shape :: ~Shape()
       //  std::cout << "Destructor class Shape" << std::endl ;
     };
 
+
+void Shape :: setName(std::string name) 
+    {
+        name_ = name ;
+    }
+void Shape :: setMaterial(Material material) 
+    {
+        material_ = material ;
+    }
+
 std::string Shape :: getName() const
     {
         return name_ ;

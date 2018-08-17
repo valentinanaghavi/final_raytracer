@@ -43,10 +43,6 @@ void read_sdf(std::string const& file_path , Scene& scene)
         {
            
             std::stringstream buffer(line);
-            Material material;
-            Shape shape;
-            Box box;
-            Sphere sphere;
             std::string a;
             std::string b;
             std::string c;
@@ -59,6 +55,9 @@ void read_sdf(std::string const& file_path , Scene& scene)
             {
                 if(b=="material")
                 {
+                    
+                Material material;
+
                 buffer 
                 >> a
                 >> b
@@ -86,34 +85,53 @@ void read_sdf(std::string const& file_path , Scene& scene)
                 {
                     if (c=="box")
                     {
-                       //entweder glm::vec3 oder ohne x y z arbeiten!
-                       //setter einfuegen! auch in shape, sphere , box
-                       //sdf loader vielleicht extern umaendern 
-                       buffer 
-                       >> a
-                       >> b
-                       >> box.setName()
-                       >> box.setMin().x
-                       >> box.setMin().y
-                       >> box.setMin().z
-                       >> box.setMax().x
-                       >> box.setMax().y
-                       >> box.setMax().z
-                       >> box.setMaterial();
+                       Box box;
+                       std::string name , materialname;
+                       float minx , miny , minz , maxx , maxy , maxz;
+                    
+                       buffer >> a;
+                       buffer >> b;
+                       buffer >> name;
+                       buffer >> minx;
+                       buffer >> miny;
+                       buffer >> minz;
+                       buffer >> maxx;
+                       buffer >> maxy;
+                       buffer >> maxz;
+                       buffer >> materialname;
+
+                      /* box.setName(name);
+                       box.setMin(minx).x;
+                       box.setMin(miny).y;
+                       box.setMin(minz).z;
+                       box.setMax(maxx).x;
+                       box.setMax(maxy).y;
+                       box.setMax(maxz).z;
+                       box.setMaterial(material);*/
                     }
 
                     if (c=="sphere")
                     {
+                       Sphere sphere;
+                       std::string name , materialname;
+                       float cx , cy , cz , radius ;
                        
-                       buffer 
-                       >> a
-                       >> b
-                       >> sphere.setName()
-                       >> sphere.setCenter().x
-                       >> sphere.setCenter().y
-                       >> sphere.setCenter().z
-                       >> sphere.setRadius()
-                       >> sphere.setMaterial();
+                       
+                       buffer >> a;
+                       buffer >> b;
+                       buffer >> name;
+                       buffer >> cx;
+                       buffer >> cy;
+                       buffer >> cz;
+                       buffer >> radius;
+                       buffer >> materialname;
+
+                       /*sphere.setName(name);
+                       sphere.setCenter(cx).x;
+                       sphere.setCenter(cy).y;
+                       sphere.setCenter(cz).z;
+                       sphere.setRadius(radius);
+                       sphere.setMaterial(material);*/
                     }
 
                 }
