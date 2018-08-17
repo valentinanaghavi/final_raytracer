@@ -14,8 +14,8 @@ public:
     Box();
     ~Box();
 
-    glm::vec3 const& getMax() const;
-    glm::vec3 const& getMin() const;
+    glm::vec3 getMax() const;
+    glm::vec3 getMin() const;
 
     float area() const override; //abstrakte M. = rein virtuelle Methode
     float volume() const override;

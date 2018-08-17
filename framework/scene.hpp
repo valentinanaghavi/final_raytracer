@@ -2,6 +2,9 @@
 #define SCENE_HPP
 
 #include "material.hpp"
+#include "box.hpp"
+#include "sphere.hpp"
+#include "shape.hpp"
 
 #include <map>
 #include <vector>
@@ -41,6 +44,9 @@ void read_sdf(std::string const& file_path , Scene& scene)
            
             std::stringstream buffer(line);
             Material material;
+            Shape shape;
+            Box box;
+            Sphere sphere;
             std::string a;
             std::string b;
             std::string c;
@@ -74,7 +80,44 @@ void read_sdf(std::string const& file_path , Scene& scene)
                 //scene.material_set.insert(material_path);
                 //scene.material_vector.push_back(material_path);
                 scene.material_map.insert(std::pair<std::string,std::shared_ptr<Material>> (material_path->name_,material_path));
-            }}
+                }
+
+                if(b=="shape")
+                {
+                    if (c=="box")
+                    {
+                       //entweder glm::vec3 oder ohne x y z arbeiten!
+                       //setter einfuegen! auch in shape, sphere , box
+                       //sdf loader vielleicht extern umaendern 
+                       buffer 
+                       >> a
+                       >> b
+                       >> box.setName()
+                       >> box.setMin().x
+                       >> box.setMin().y
+                       >> box.setMin().z
+                       >> box.setMax().x
+                       >> box.setMax().y
+                       >> box.setMax().z
+                       >> box.setMaterial();
+                    }
+
+                    if (c=="sphere")
+                    {
+                       
+                       buffer 
+                       >> a
+                       >> b
+                       >> sphere.setName()
+                       >> sphere.setCenter().x
+                       >> sphere.setCenter().y
+                       >> sphere.setCenter().z
+                       >> sphere.setRadius()
+                       >> sphere.setMaterial();
+                    }
+
+                }
+            }
 
         }
         myfile.close();

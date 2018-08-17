@@ -19,12 +19,12 @@ Box :: Box () :
 Box :: ~Box()
     {};
 
-glm::vec3 const& Box :: getMax() const //warum const& ??
+glm::vec3 Box :: getMax() const 
     {
         return max_ ;
     }
 
-glm::vec3 const& Box :: getMin() const
+glm::vec3  Box :: getMin() const
     {
         return min_ ;
     }
