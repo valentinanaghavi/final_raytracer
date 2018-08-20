@@ -31,6 +31,14 @@ Sphere :: ~Sphere()
        // std::cout << "Destructor class Sphere - Child" << std::endl ;
     };
 
+void Sphere :: setCenter(glm::vec3 center) 
+    {
+        center_ = center ;
+    }
+void Sphere :: setRadius(float radius) 
+    {
+        radius_ = radius ;
+    }
 
 glm::vec3 const& Sphere :: getCenter() const
     {

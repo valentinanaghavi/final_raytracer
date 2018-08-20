@@ -197,7 +197,7 @@ TEST_CASE("aufgabe 6.3" , "[intersectRayBox]")
   m.print(std::cout);
   std::cout<<m<<"\n";
 }  
-*/
+
 
 TEST_CASE("aufgabe6.5", "[sceneSDF]")
 {
@@ -214,7 +214,7 @@ TEST_CASE("aufgabe6.5", "[sceneSDF]")
 
   REQUIRE(find_material("pink",*scene) == nullptr);
 }
-
+*/
 int main(int argc, char *argv[])
 {
   return Catch::Session().run(argc, argv);

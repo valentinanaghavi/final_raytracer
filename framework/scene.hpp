@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 #ifndef SCENE_HPP   
+=======
+#ifndef SCENE_HPP    
+>>>>>>> c65331299f14ab55552d8bab033d7ee6976ba8cd
 #define SCENE_HPP
 
 #include "material.hpp"
 #include "box.hpp"
 #include "sphere.hpp"
 #include "shape.hpp"
+#include "light.hpp"
+#include "color.hpp"
+#include "ambient.hpp"
 
 #include <map>
 #include <vector>
@@ -19,12 +26,33 @@
 
 struct Scene
 {
-    std::vector<std::shared_ptr<Material>> material_vector;
-    std::set<std::shared_ptr<Material>> material_set;
-    std::map <std::string , std::shared_ptr<Material>> material_map;
+    std::map <std::string , Material> material_map;
+    std::vector <std::shared_ptr<Shape>> shape_vector;
+    std::vector <std::shared_ptr<Ambient>> ambient_vector;
+    std::map <std::string , std::shared_ptr<Light>> light_map;
 };
 
+
+
 //free function
+
+Material search_material_map(std::string const& search_name , Scene& scene)
+{
+    auto it = scene.material_map.find(search_name);
+    if(it == scene.material_map.end())
+    {
+        std::cout << "Der Name existiert nicht. \n";
+       // Material mat =  Material ();
+        return Material ();
+    }
+    else
+    {
+        std::cout << "Der Name existiert. \n";
+        return it->second;
+    }
+};
+
+
 void read_sdf(std::string const& file_path , Scene& scene) 
 {
     std::ifstream myfile (file_path);
@@ -43,10 +71,6 @@ void read_sdf(std::string const& file_path , Scene& scene)
         {
            
             std::stringstream buffer(line);
-            Material material;
-            Shape shape;
-            Box box;
-            Sphere sphere;
             std::string a;
             std::string b;
             std::string c;
@@ -59,6 +83,9 @@ void read_sdf(std::string const& file_path , Scene& scene)
             {
                 if(b=="material")
                 {
+
+                Material material;
+
                 buffer 
                 >> a
                 >> b
@@ -74,63 +101,132 @@ void read_sdf(std::string const& file_path , Scene& scene)
                 >> material.ks_.b
                 >> material.m_;
 
-                std::shared_ptr<Material> material_path = std::make_shared<Material>(material);
-
+                //std::shared_ptr<Material> material_path = std::make_shared<Material>(material);
+                scene.material_map[material.name_] = material;
                 //scene.material_map.insert(std::make_pair(material_path->name_ , material_path));
                 //scene.material_set.insert(material_path);
                 //scene.material_vector.push_back(material_path);
-                scene.material_map.insert(std::pair<std::string,std::shared_ptr<Material>> (material_path->name_,material_path));
+               // scene.material_map.insert(std::pair<std::string,std::shared_ptr<Material>> (material_path->name_,material_path));
                 }
 
                 if(b=="shape")
                 {
                     if (c=="box")
                     {
-                       //entweder glm::vec3 oder ohne x y z arbeiten!
-                       //setter einfuegen! auch in shape, sphere , box
-                       //sdf loader vielleicht extern umaendern 
-                       buffer 
-                       >> a
-                       >> b
-                       >> box.setName()
-                       >> box.setMin().x
-                       >> box.setMin().y
-                       >> box.setMin().z
-                       >> box.setMax().x
-                       >> box.setMax().y
-                       >> box.setMax().z
-                       >> box.setMaterial();
+                       Box box;
+                       std::string name , materialname;
+                       glm::vec3 min , max ;
+
+                       buffer >> a;
+                       buffer >> b;
+                       buffer >> name;
+                       buffer >> min.x;
+                       buffer >> min.y;
+                       buffer >> min.z;
+                       buffer >> max.x;
+                       buffer >> max.y;
+                       buffer >> max.z;
+                       buffer >> materialname;
+
+                     //ueberpruefen , ob materialname in der sdf existiert bzw gespeichert wurde
+                       Material mat_test = search_material_map(materialname , scene) ;
+                       if (mat_test.name_.compare("no Name") == 0)
+                       {
+                           std::cout << "Der Materialname existiert nicht. Die Sphere kann nicht bearbeitet werden. \n";
+                       }
+                       else
+                       {
+                           Material material = scene.material_map[materialname];
+
+                           std::shared_ptr<Shape> box_path = std::make_shared<Box>(min , max , name , material);
+                           scene.shape_vector.push_back(box_path);
+                       }
+
                     }
 
                     if (c=="sphere")
                     {
+                       Sphere sphere;
+                       std::string name , materialname;
+                       float radius;
+                       glm::vec3 center;
                        
-                       buffer 
-                       >> a
-                       >> b
-                       >> sphere.setName()
-                       >> sphere.setCenter().x
-                       >> sphere.setCenter().y
-                       >> sphere.setCenter().z
-                       >> sphere.setRadius()
-                       >> sphere.setMaterial();
+                       buffer >> a;
+                       buffer >> b;
+                       buffer >> name;
+                       buffer >> center.x;
+                       buffer >> center.y;
+                       buffer >> center.z;
+                       buffer >> radius;
+                       buffer >> materialname;
+                       
+                       //ueberpruefen , ob materialname in der sdf existiert bzw gespeichert wurde
+                       Material mat_test = search_material_map(materialname , scene) ;
+                       if (mat_test.name_.compare("no Name") == 0)
+                       {
+                           std::cout << "Der Materialname existiert nicht. Die Sphere kann nicht bearbeitet werden. \n";
+                       }
+                       else
+                       {
+                           Material material = scene.material_map[materialname];
+
+                           std::shared_ptr<Shape> sphere_path = std::make_shared<Sphere>(center , radius , name , material);
+                           scene.shape_vector.push_back(sphere_path);
+                       }
                     }
 
                 }
+                else if (b == "light")
+                {
+                    Light light;
+                    std::string name;
+                    glm::vec3 pos;
+                    Color color;
+                    float brightness;
+
+                    buffer >> a;
+                    buffer >> b;
+                    buffer >> name;
+                    buffer >> pos.x;
+                    buffer >> pos.y;
+                    buffer >> pos.z;
+                    buffer >> color.r;
+                    buffer >> color.g;
+                    buffer >> color.b;
+                    buffer >> brightness;
+    
+                    std::shared_ptr<Light> light_path = std::make_shared<Light>(name , pos , color , brightness );
+                    scene.light_map.insert(std::pair<std::string,std::shared_ptr<Light>> (light_path->name_, light_path));
+
+                }
+            }
+            else if (a == "ambient")
+            {
+                    Color color;
+
+                    buffer >> a;
+                    buffer >> color.r;
+                    buffer >> color.g;
+                    buffer >> color.b;
+
+                    std::shared_ptr<Ambient> ambient_path = std::make_shared<Ambient>(color);
+                    scene.ambient_vector.push_back(ambient_path);
             }
 
         }
         myfile.close();
     
 
-}
+};
 
 
 
 bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
 {
     return lhs->name_ < rhs->name_ ;
-}
+};
+
+
 
 /*std::shared_ptr<Material> search_vector(std::string const& search_name , std::vector<std::shared_ptr<Material>> const& material_vector_)
 {
@@ -182,7 +278,7 @@ std::shared_ptr<Material> search_set(std::string const& search_name , std::set<s
         std::cout << "Der Name ist an Stelle:" << *(*it) << "\n";
         return *it;
     }
-};*/
+};
 
 std::shared_ptr<Material> find_material(std::string matName, Scene& sc)
 {
@@ -195,5 +291,7 @@ std::shared_ptr<Material> find_material(std::string matName, Scene& sc)
     {
         return nullptr;
     }
-}
+}*/
+
+
 #endif //SCENE_HPP

@@ -19,6 +19,17 @@ Box :: Box () :
 Box :: ~Box()
     {};
 
+void Box :: setMax(glm::vec3 max) 
+    {
+        max_ = max ;
+    }
+
+void Box :: setMin(glm::vec3 min) 
+    {
+        min_ = min ;
+    }
+
+
 glm::vec3 Box :: getMax() const 
     {
         return max_ ;

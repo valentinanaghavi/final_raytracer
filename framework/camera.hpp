@@ -3,11 +3,12 @@
 
 #include "Ray.hpp"
 #include <glm/vec3.hpp>
+#include <string>
 
 class Camera 
 {
     public:
-    Camera(std::String const& name, float fovX, glm::vec3 const& position, glm::vec3 const& direction):
+    Camera(std::string const& name, float fovX, glm::vec3 const& position, glm::vec3 const& direction):
     name_(name),
     fovX_(fovX),
     position_(0.0f, 0.0f, 0.0f),
