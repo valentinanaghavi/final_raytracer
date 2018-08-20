@@ -846,6 +846,12 @@ detail/func_vector_relational.hpp
 glm/vec3.hpp
 -
 
+/home/valentina/final_raytracer/framework/ambient.hpp
+iostream
+-
+color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
+
 /home/valentina/final_raytracer/framework/box.cpp
 box.hpp
 /home/valentina/final_raytracer/framework/box.hpp
@@ -903,6 +909,8 @@ light.hpp
 /home/valentina/final_raytracer/framework/light.hpp
 color.hpp
 /home/valentina/final_raytracer/framework/color.hpp
+ambient.hpp
+/home/valentina/final_raytracer/framework/ambient.hpp
 map
 -
 vector

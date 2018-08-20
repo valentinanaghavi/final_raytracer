@@ -15,7 +15,7 @@ struct Light
   color_(0.0f , 0.0f , 0.0f),
   brightness_(0.0f) 
   {};
-
+  //INTENSITAET DER LICHTQUELLE = BRIGHTNESS*COLOR
   Light(std::string name, glm::vec3 pos, Color color , float brightness) : 
   name_(name), 
   pos_(pos), 
@@ -35,4 +35,4 @@ struct Light
   float brightness_;
 };
 
-#endif //#define BUW_COLOR_HPP
+#endif //#define BUW_LIGHT_HPP
