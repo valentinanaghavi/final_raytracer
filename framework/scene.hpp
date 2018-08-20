@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#ifndef SCENE_HPP   
-=======
 #ifndef SCENE_HPP    
->>>>>>> c65331299f14ab55552d8bab033d7ee6976ba8cd
 #define SCENE_HPP
 
 #include "material.hpp"

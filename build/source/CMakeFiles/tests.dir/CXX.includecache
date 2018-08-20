@@ -846,6 +846,12 @@ detail/func_vector_relational.hpp
 glm/vec3.hpp
 -
 
+/home/judith/Dokumente/Uni/final_raytracer/framework/ambient.hpp
+iostream
+-
+color.hpp
+/home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+
 /home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp
 box.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
@@ -868,6 +874,16 @@ glm/vec3.hpp
 iostream
 -
 
+/home/judith/Dokumente/Uni/final_raytracer/framework/light.hpp
+iostream
+-
+string
+-
+glm/vec3.hpp
+-
+color.hpp
+/home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+
 /home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp
 material.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/material.hpp
@@ -888,17 +904,13 @@ box.hpp
 sphere.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
 shape.hpp
-<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
-=======
-/home/valentina/final_raytracer/framework/shape.hpp
 light.hpp
-/home/valentina/final_raytracer/framework/light.hpp
+/home/judith/Dokumente/Uni/final_raytracer/framework/light.hpp
 color.hpp
-/home/valentina/final_raytracer/framework/color.hpp
+/home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
 ambient.hpp
-/home/valentina/final_raytracer/framework/ambient.hpp
->>>>>>> c65331299f14ab55552d8bab033d7ee6976ba8cd
+/home/judith/Dokumente/Uni/final_raytracer/framework/ambient.hpp
 map
 -
 vector

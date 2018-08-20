@@ -206,8 +206,10 @@ source/CMakeFiles/tests.dir/tests.cpp.o
  ../external/glm-0.9.5.3/glm/vec4.hpp
  ../external/glm-0.9.5.3/glm/vector_relational.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
+ /home/judith/Dokumente/Uni/final_raytracer/framework/ambient.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+ /home/judith/Dokumente/Uni/final_raytracer/framework/light.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/material.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/scene.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
