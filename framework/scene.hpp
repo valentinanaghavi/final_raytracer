@@ -1,4 +1,4 @@
-#ifndef SCENE_HPP    // Valentina stinkt
+#ifndef SCENE_HPP    
 #define SCENE_HPP
 
 #include "material.hpp"
@@ -19,12 +19,30 @@
 
 struct Scene
 {
-    std::vector<std::shared_ptr<Material>> material_vector;
-    std::set<std::shared_ptr<Material>> material_set;
     std::map <std::string , std::shared_ptr<Material>> material_map;
+    std::vector <std::shared_ptr<Shape>> shape_vector;
 };
 
+
+
 //free function
+
+std::shared_ptr<Material> search_material_map(std::string const& search_name , Scene& scene)
+{
+    auto it = scene.material_map.find(search_name);
+    if(it == scene.material_map.end())
+    {
+        std::cout << "Der Name existiert nicht. \n";
+        return nullptr;
+    }
+    else
+    {
+        std::cout << "Der Name ist an Stelle:" << *it->second << "\n";
+        return it->second;
+    }
+};
+
+
 void read_sdf(std::string const& file_path , Scene& scene) 
 {
     std::ifstream myfile (file_path);
@@ -55,7 +73,7 @@ void read_sdf(std::string const& file_path , Scene& scene)
             {
                 if(b=="material")
                 {
-                    
+
                 Material material;
 
                 buffer 
@@ -87,51 +105,52 @@ void read_sdf(std::string const& file_path , Scene& scene)
                     {
                        Box box;
                        std::string name , materialname;
-                       float minx , miny , minz , maxx , maxy , maxz;
-                    
+                       glm::vec3 min , max ;
+
                        buffer >> a;
                        buffer >> b;
                        buffer >> name;
-                       buffer >> minx;
-                       buffer >> miny;
-                       buffer >> minz;
-                       buffer >> maxx;
-                       buffer >> maxy;
-                       buffer >> maxz;
+                       buffer >> min.x;
+                       buffer >> min.y;
+                       buffer >> min.z;
+                       buffer >> max.x;
+                       buffer >> max.y;
+                       buffer >> max.z;
                        buffer >> materialname;
 
-                      /* box.setName(name);
-                       box.setMin(minx).x;
-                       box.setMin(miny).y;
-                       box.setMin(minz).z;
-                       box.setMax(maxx).x;
-                       box.setMax(maxy).y;
-                       box.setMax(maxz).z;
-                       box.setMaterial(material);*/
+                     //  std::shared_ptr<Shape> box_path = std::make_shared<Box>(min , max , name , material);
+                     //  scene.shape_vector.push_back(box_path);
+
                     }
 
                     if (c=="sphere")
                     {
                        Sphere sphere;
                        std::string name , materialname;
-                       float cx , cy , cz , radius ;
-                       
+                       float radius;
+                       glm::vec3 center;
                        
                        buffer >> a;
                        buffer >> b;
                        buffer >> name;
-                       buffer >> cx;
-                       buffer >> cy;
-                       buffer >> cz;
+                       buffer >> center.x;
+                       buffer >> center.y;
+                       buffer >> center.z;
                        buffer >> radius;
                        buffer >> materialname;
+                       
+                       //ueberpruefen , ob materialname in der sdf existiert bzw gespeichert wurde
+                       if (search_material_map(materialname , scene) == nullptr)
+                       {
+                           std::cout << "Der Materialname existiert nicht. Die Sphere kann nicht bearbeitet werden. \n";
+                       }
+                       else
+                       {
+                           std::shared_ptr<Material> material = scene.material_map[materialname];
 
-                       /*sphere.setName(name);
-                       sphere.setCenter(cx).x;
-                       sphere.setCenter(cy).y;
-                       sphere.setCenter(cz).z;
-                       sphere.setRadius(radius);
-                       sphere.setMaterial(material);*/
+                          // std::shared_ptr<Shape> sphere_path = std::make_shared<Sphere>(center , radius , name , material);
+                          // scene.shape_vector.push_back(sphere_path);
+                       }
                     }
 
                 }
@@ -141,14 +160,16 @@ void read_sdf(std::string const& file_path , Scene& scene)
         myfile.close();
     
 
-}
+};
 
 
 
 bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
 {
     return lhs->name_ < rhs->name_ ;
-}
+};
+
+
 
 /*std::shared_ptr<Material> search_vector(std::string const& search_name , std::vector<std::shared_ptr<Material>> const& material_vector_)
 {
@@ -214,4 +235,6 @@ std::shared_ptr<Material> find_material(std::string matName, Scene& sc)
         return nullptr;
     }
 }
+
+
 #endif //SCENE_HPP
