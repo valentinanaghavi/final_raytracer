@@ -208,6 +208,7 @@ source/CMakeFiles/tests.dir/tests.cpp.o
  /home/valentina/final_raytracer/framework/Ray.hpp
  /home/valentina/final_raytracer/framework/box.hpp
  /home/valentina/final_raytracer/framework/color.hpp
+ /home/valentina/final_raytracer/framework/light.hpp
  /home/valentina/final_raytracer/framework/material.hpp
  /home/valentina/final_raytracer/framework/scene.hpp
  /home/valentina/final_raytracer/framework/shape.hpp

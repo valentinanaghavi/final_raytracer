@@ -5,6 +5,8 @@
 #include "box.hpp"
 #include "sphere.hpp"
 #include "shape.hpp"
+#include "light.hpp"
+#include "color.hpp"
 
 #include <map>
 #include <vector>
@@ -21,6 +23,7 @@ struct Scene
 {
     std::map <std::string , Material> material_map;
     std::vector <std::shared_ptr<Shape>> shape_vector;
+    std::map <std::string , std::shared_ptr<Light>> light_map;
 };
 
 
@@ -165,6 +168,29 @@ void read_sdf(std::string const& file_path , Scene& scene)
                            scene.shape_vector.push_back(sphere_path);
                        }
                     }
+
+                }
+                else if (b == "light")
+                {
+                    Light light;
+                    std::string name;
+                    glm::vec3 pos;
+                    Color color;
+                    float brightness;
+
+                    buffer >> a;
+                    buffer >> b;
+                    buffer >> name;
+                    buffer >> pos.x;
+                    buffer >> pos.y;
+                    buffer >> pos.z;
+                    buffer >> color.r;
+                    buffer >> color.g;
+                    buffer >> color.b;
+                    buffer >> brightness;
+    
+                    std::shared_ptr<Light> light_path = std::make_shared<Light>(name , pos , color , brightness );
+                    scene.light_map.insert(std::pair<std::string,std::shared_ptr<Light>> (light_path->name_, light_path));
 
                 }
             }

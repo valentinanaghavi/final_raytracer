@@ -207,6 +207,7 @@ source/CMakeFiles/tests.dir/tests.cpp.o: ../external/glm-0.9.5.3/glm/vector_rela
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/Ray.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/box.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/color.hpp
+source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/light.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/material.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/scene.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/shape.hpp

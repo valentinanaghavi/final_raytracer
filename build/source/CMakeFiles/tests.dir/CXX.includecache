@@ -868,6 +868,16 @@ glm/vec3.hpp
 iostream
 -
 
+/home/valentina/final_raytracer/framework/light.hpp
+iostream
+-
+string
+-
+glm/vec3.hpp
+-
+color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
+
 /home/valentina/final_raytracer/framework/material.cpp
 material.hpp
 /home/valentina/final_raytracer/framework/material.hpp
@@ -889,6 +899,10 @@ sphere.hpp
 /home/valentina/final_raytracer/framework/sphere.hpp
 shape.hpp
 /home/valentina/final_raytracer/framework/shape.hpp
+light.hpp
+/home/valentina/final_raytracer/framework/light.hpp
+color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
 map
 -
 vector
