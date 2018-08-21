@@ -8,6 +8,7 @@
 #include "light.hpp"
 #include "color.hpp"
 #include "ambient.hpp"
+#include "camera.hpp"
 
 #include <map>
 #include <vector>
@@ -26,6 +27,8 @@ struct Scene
     std::vector <std::shared_ptr<Shape>> shape_vector;
     std::vector <std::shared_ptr<Ambient>> ambient_vector;
     std::map <std::string , std::shared_ptr<Light>> light_map;
+    std::vector <std::shared_ptr<Camera>> camera_vector;
+
 };
 
 
@@ -207,6 +210,18 @@ void read_sdf(std::string const& file_path , Scene& scene)
 
                     std::shared_ptr<Ambient> ambient_path = std::make_shared<Ambient>(color);
                     scene.ambient_vector.push_back(ambient_path);
+            }
+            else if (a == "camera")
+            {
+                    std::string name;
+                    float fovX;
+
+                    buffer >> a;
+                    buffer >> name;
+                    buffer >> fovX;
+
+                    std::shared_ptr<Camera> camera_path = std::make_shared<Camera>(name , fovX);
+                    scene.camera_vector.push_back(camera_path);
             }
 
         }

@@ -13,7 +13,14 @@ class Camera
     fovX_(fovX),
     position_(0.0f, 0.0f, 0.0f),
     direction_(0.0f, 0.0f, -1.0f)
-    {}
+    {};
+
+    Camera(std::string const& name, float fovX):
+    name_(name),
+    fovX_(fovX),
+    position_(0.0f, 0.0f, 0.0f),
+    direction_(0.0f, 0.0f, -1.0f)
+    {};
 
     private:
     std::string name_;
