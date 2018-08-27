@@ -15,6 +15,8 @@
 #include "ppmwriter.hpp"
 #include "scene.hpp"
 #include "Ray.hpp"
+#include "strike.hpp"
+#include "sphere.hpp"
 #include <string>
 #include <glm/glm.hpp>
 
@@ -26,7 +28,8 @@ public:
 
   void render();
   void write(Pixel const& p);
-  void raytrace(Ray const& ray, unsigned int depth) const;
+  Color raytrace(Ray const& ray, unsigned int depth) const;
+  Strike computeStrike(Ray const& ray) const;
 
   inline std::vector<Color> const& color_buffer() const
   {

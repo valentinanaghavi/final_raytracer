@@ -56,4 +56,31 @@ void Renderer::write(Pixel const& p)
 Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
 {
 
+
+}
+
+Strike Renderer::computeStrike(Ray const& rayStrike) const
+{
+  Strike closest;
+  float t = 2000;
+
+  for (auto const& shape: scene_.shape_vector)
+  {
+    if(shape != nullptr)
+    {
+      Ray ray{rayStrike.origin, glm::normalize(rayStrike.direction)};
+
+      Strike newStrike = shape -> intersection(ray, t);
+
+      if (newStrike.hit && 0.000001 < newStrike.distance && newStrike.distance < closest.distance) 
+      {
+        closest = newStrike;
+      }
+    }
+    else
+    {
+      std::cout<< "shape == nullptr"<< std::endl;
+    }
+    return closest;
+  }
 }
