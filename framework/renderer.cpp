@@ -36,6 +36,45 @@ void Renderer::render()
   ppm_.save(filename_);
 }
 
+
+//der erste Kreis 
+
+/*void Renderer::render()
+{
+  std::size_t const checker_pattern_size = 20;
+  Ray ray;
+  for (unsigned y = 0; y < height_; ++y) {
+    for (unsigned x = 0; x < width_; ++x) {
+      Pixel p(x,y);
+
+      Material mat;
+      Sphere sphere (glm::vec3{0,-80,110},100,"kugel",mat);
+
+      ray.direction = {glm::vec3{(float)x-height_/2,(float)y-width_/2,100}};
+
+      float a = 10.0f;
+      
+      if(sphere.intersect(ray,a))
+      {
+
+          if ( ((x/checker_pattern_size)%2) != ((y/checker_pattern_size)%2)) 
+          {
+              p.color = Color(0.0, 1.0, float(x)/height_);
+          } 
+          else 
+          {
+              p.color = Color(1.0, 0.0, float(y)/width_);
+          }
+      }
+
+       write(p);
+    }
+  }
+  ppm_.save(filename_);
+}*/
+
+
+
 void Renderer::write(Pixel const& p)
 {
   // flip pixels, because of opengl glDrawPixels
@@ -67,7 +106,7 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
     Color ambient {0.0, 0.0, 0.0};
     Color c (0.0, 0.0, 0.0);
     float ia = 0.10;
-    Color ip = {0.0, 0.0, 0.0}; // das war float
+    Color ip = {0.0, 0.0, 0.0}; // das war mal float
     float ln = 0;
     float rv = 0;
     ambient.r = ia * (closest.nearestShape -> getMaterial().ka_.r); //closest braucht pointer im Strike ist es ein nullptr muss im Strike intersect in den Shapes geändert werden dass es einen pointer bekommt beim methodenausführen 
@@ -79,7 +118,7 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
     {
       if (breaking(closest, scene_.light_vector[i] -> pos_)) // light muss glaub ich n vektor sein
       {
-        ip = scene_.light_vector[i]->intensity(); // Intensität: brightness * color
+        ip = scene_.light_vector[i]->intensity(); // Intensitaet: brightness * color
         
         glm::vec3 l = glm::normalize(scene_.light_vector[i] -> pos_ - closest.origin);
         glm::vec3 n = glm::normalize(closest.normal);
