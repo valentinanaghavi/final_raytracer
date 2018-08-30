@@ -7,6 +7,7 @@
 
 #include "color.hpp"
 
+
 struct Light
 {
   Light () :
@@ -22,6 +23,14 @@ struct Light
   color_(color),
   brightness_(brightness) 
   {};
+
+  ~Light(){}
+
+  Color intensity() const 
+  {
+    Color intensity {color_ * brightness_};
+    return intensity;
+  }
 
   friend std::ostream& operator<<(std::ostream& os, Light const& l)
   {

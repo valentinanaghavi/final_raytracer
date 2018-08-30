@@ -13,12 +13,16 @@
 #include "color.hpp"
 #include "pixel.hpp"
 #include "ppmwriter.hpp"
-#include "scene.hpp"
 #include "Ray.hpp"
+#include "scene.hpp"
 #include "strike.hpp"
 #include "sphere.hpp"
+
 #include <string>
 #include <glm/glm.hpp>
+#include <glm/vec3.hpp>
+#include <algorithm>
+#include <iostream>
 
 
 class Renderer

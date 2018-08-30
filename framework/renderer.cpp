@@ -54,30 +54,73 @@ void Renderer::write(Pixel const& p)
 
 Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
 {
-  Color c (0.0, 0.0, 0.0);
+  
   Strike closest = computeStrike(ray);
 
-  Color ambient {0.0, 0.0, 0.0};
+  
 
   if(closest.hit == true) // -> in shape unterklassen muss Strike intersect geändert werden damit Strike.hit true wird
   {
     /* Ambiente Beleuchtung = I_a*k_a   I_a: Intensität des ambienten Lichts, bestimmt
     durch konstante I_a = 0.10     k_a: ambienter Reflexionskoeffizient (in Material
     ka = ambiente Reflexion*/
+    Color ambient {0.0, 0.0, 0.0};
+    Color c (0.0, 0.0, 0.0);
     float ia = 0.10;
-    ambient = ia * (closest.nearestShape -> getMaterial() -> ka); //closest braucht pointer im Strike ist es ein nullptr muss im Strike intersect in den Shapes geändert werden dass es einen pointer bekommt beim methodenausführen 
+    float ip = 0;
+    float ln = 0;
+    float rv = 0;
+    ambient = ia * (closest.nearestShape -> getMaterial() -> ka_); //closest braucht pointer im Strike ist es ein nullptr muss im Strike intersect in den Shapes geändert werden dass es einen pointer bekommt beim methodenausführen 
  
     //Falls andere Lichtquellen vorhanden werden diese durchgegangen
     for (unsigned int i = 0; i < scene_.light_map.size(); i++)
     {
       if (breaking(closest, scene_.light_map[i] -> position)) // light muss glaub ich n vektor sein
       {
+        ip = scene_.light_map[i].intensity(); // Intensität: brightness * color
         
+        glm::vec3 l = glm::normalize(scene_.light_map[i] -> position - closest.origin_);
+        glm::vec3 n = glm::normalize(closest.normal);
+        // ln: i_p * k_d || i_p: Helligkeit Puntlichtquelle, k_d: diffuser Reflexionskoeffizient
+        ln = glm::dot(l,n); //dot: Skalarprodukt der beiden normalisierten Vektoren l und n
+        
+        // in der Folie S.14 l+r = 2(n*l)n, also r = (2*(ln)*n-l)
+        glm::vec3 r = glm::normalize(2 * ln * n - l);
+        glm::vec3 v = - ray.direction; // v: Vektor zum Betrachter. Ray geht vom Betrachter aus -> ZUM also -
+        //rv: cos^m ß -> (r*v)^m || r: reflektierter Lichtvektor, v: Vektor zum Betrachter
+        rv = glm::dot(r,v);
 
+        if(ln < 0)
+        {
+          ln = 0;
+        }
+
+        if (rv < 0)
+        {
+          rv = 0;
+        }
+
+        // Ip * (kd * (ln) + ks * (rv)^m)
+        c += ip * (ln * (closest.nearestShape -> getMaterial() -> kd_) 
+            + (closest.nearestShape -> getMaterial() -> ks_) 
+            * std::pow(rv, (closest.nearestShape -> getMaterial() -> m_)));
+        
       }
-
-
     }
+    return c;  
+
+
+
+
+
+
+
+
+
+      
+
+
+    
 
 
     
