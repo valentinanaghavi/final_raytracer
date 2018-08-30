@@ -9,9 +9,8 @@
 
 #include "renderer.hpp"
 
-Renderer::Renderer(Scene const& scene, unsigned w, unsigned h, std::string const& file)
-  : scene_(scene)
-  , width_(w)
+Renderer::Renderer(unsigned w, unsigned h, std::string const& file)
+  : width_(w)
   , height_(h)
   , color_buffer_(w*h, Color(0.0, 0.0, 0.0))
   , filename_(file)
@@ -55,14 +54,56 @@ void Renderer::write(Pixel const& p)
 
 Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
 {
+  Color c (0.0, 0.0, 0.0);
+  Strike closest = computeStrike(ray);
+
+  Color ambient {0.0, 0.0, 0.0};
+
+  if(closest.hit == true) // -> in shape unterklassen muss Strike intersect geändert werden damit Strike.hit true wird
+  {
+    /* Ambiente Beleuchtung = I_a*k_a   I_a: Intensität des ambienten Lichts, bestimmt
+    durch konstante I_a = 0.10     k_a: ambienter Reflexionskoeffizient (in Material
+    ka = ambiente Reflexion*/
+    float ia = 0.10;
+    ambient = ia * (closest.nearestShape -> getMaterial() -> ka); //closest braucht pointer im Strike ist es ein nullptr muss im Strike intersect in den Shapes geändert werden dass es einen pointer bekommt beim methodenausführen 
+ 
+    //Falls andere Lichtquellen vorhanden werden diese durchgegangen
+    for (unsigned int i = 0; i < scene_.light_map.size(); i++)
+    {
+      if (breaking(closest, scene_.light_map[i] -> position)) // light muss glaub ich n vektor sein
+      {
+        
+
+      }
 
 
+    }
+
+
+    
+  }
+
+
+
+
+}
+/* Die Funktion schaut ob ein Objekt zwischen dem Strike eines Objetes und einer der / allen 
+Lichtquellen liegt. Liegt ein Objekt dazwischen gibt es einen Schatten*/ 
+bool Renderer::breaking (Strike const& strike, glm::vec3 const& lightPosition) const
+{
+  float a = 0.001f; //wieso 0.001?
+
+  glm::vec3 point = strike.origin + (a * glm::normalize(strike.normal));
+
+  Strike shadow = computeStrike(Ray{point, lightPosition - point}); //Wieso light position - Strikepunkt??
+  
+  return (!shadow.hit || glm::length(point - lightPosition) < glm::length(point - shadow.origin));
 }
 
 Strike Renderer::computeStrike(Ray const& rayStrike) const
 {
   Strike closest;
-  float t = 2000;
+  float d = 2000;
 
   for (auto const& shape: scene_.shape_vector)
   {
@@ -70,7 +111,7 @@ Strike Renderer::computeStrike(Ray const& rayStrike) const
     {
       Ray ray{rayStrike.origin, glm::normalize(rayStrike.direction)};
 
-      Strike newStrike = shape -> intersection(ray, t);
+      Strike newStrike = shape -> intersection(ray, d);
 
       if (newStrike.hit && 0.000001 < newStrike.distance && newStrike.distance < closest.distance) 
       {

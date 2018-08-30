@@ -24,12 +24,13 @@
 class Renderer
 {
 public:
-  Renderer(Scene const& scene, unsigned w, unsigned h, std::string const& file);
+  Renderer(unsigned w, unsigned h, std::string const& file);
 
   void render();
   void write(Pixel const& p);
   Color raytrace(Ray const& ray, unsigned int depth) const;
   Strike computeStrike(Ray const& ray) const;
+  bool breaking (Strike const& strike, glm::vec3 const& lightPosition) const;
 
   inline std::vector<Color> const& color_buffer() const
   {
