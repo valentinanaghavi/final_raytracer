@@ -67,19 +67,21 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
     Color ambient {0.0, 0.0, 0.0};
     Color c (0.0, 0.0, 0.0);
     float ia = 0.10;
-    float ip = 0;
+    Color ip = {0.0, 0.0, 0.0}; // das war float
     float ln = 0;
     float rv = 0;
-    ambient = ia * (closest.nearestShape -> getMaterial() -> ka_); //closest braucht pointer im Strike ist es ein nullptr muss im Strike intersect in den Shapes geändert werden dass es einen pointer bekommt beim methodenausführen 
+    ambient.r = ia * (closest.nearestShape -> getMaterial().ka_.r); //closest braucht pointer im Strike ist es ein nullptr muss im Strike intersect in den Shapes geändert werden dass es einen pointer bekommt beim methodenausführen 
+    ambient.g = ia * (closest.nearestShape -> getMaterial().ka_.g);  
+    ambient.b = ia * (closest.nearestShape -> getMaterial().ka_.b);  
  
     //Falls andere Lichtquellen vorhanden werden diese durchgegangen
-    for (unsigned int i = 0; i < scene_.light_map.size(); i++)
+    for (unsigned int i = 0; i < scene_.light_vector.size(); i++)
     {
-      if (breaking(closest, scene_.light_map[i] -> position)) // light muss glaub ich n vektor sein
+      if (breaking(closest, scene_.light_vector[i] -> pos_)) // light muss glaub ich n vektor sein
       {
-        ip = scene_.light_map[i].intensity(); // Intensität: brightness * color
+        ip = scene_.light_vector[i]->intensity(); // Intensität: brightness * color
         
-        glm::vec3 l = glm::normalize(scene_.light_map[i] -> position - closest.origin_);
+        glm::vec3 l = glm::normalize(scene_.light_vector[i] -> pos_ - closest.origin);
         glm::vec3 n = glm::normalize(closest.normal);
         // ln: i_p * k_d || i_p: Helligkeit Puntlichtquelle, k_d: diffuser Reflexionskoeffizient
         ln = glm::dot(l,n); //dot: Skalarprodukt der beiden normalisierten Vektoren l und n
@@ -101,9 +103,13 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
         }
 
         // Ip * (kd * (ln) + ks * (rv)^m)
-        c += ip * (ln * (closest.nearestShape -> getMaterial() -> kd_) 
-            + (closest.nearestShape -> getMaterial() -> ks_) 
-            * std::pow(rv, (closest.nearestShape -> getMaterial() -> m_)));
+
+
+        Color lnTimesKd (ip.r *  ln * (closest.nearestShape -> getMaterial().kd_.r),ip.g *  ln * (closest.nearestShape -> getMaterial().kd_.g) ,ip.b *  ln * (closest.nearestShape -> getMaterial().kd_.b));
+
+        c += lnTimesKd 
+            + (closest.nearestShape -> getMaterial().ks_) 
+            * std::pow(rv, (closest.nearestShape -> getMaterial().m_));
         
       }
     }
@@ -138,7 +144,7 @@ bool Renderer::breaking (Strike const& strike, glm::vec3 const& lightPosition) c
 
   glm::vec3 point = strike.origin + (a * glm::normalize(strike.normal));
 
-  Strike shadow = computeStrike(Ray{point, lightPosition - point}); //Wieso light position - Strikepunkt??
+  Strike shadow = computeStrike(Ray{point, lightPosition - point}); //Wieso light pos_ - Strikepunkt??
   
   return (!shadow.hit || glm::length(point - lightPosition) < glm::length(point - shadow.origin));
 }
