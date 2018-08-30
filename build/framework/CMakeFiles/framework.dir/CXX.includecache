@@ -700,19 +700,19 @@ iosfwd
 color.hpp
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
+/home/valentina/final_raytracer/framework/Ray.hpp
 glm/vec3.hpp
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/ambient.hpp
+/home/valentina/final_raytracer/framework/ambient.hpp
 iostream
 -
 color.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp
+/home/valentina/final_raytracer/framework/box.cpp
 box.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
+/home/valentina/final_raytracer/framework/box.hpp
 iostream
 -
 string
@@ -720,27 +720,27 @@ string
 glm/vec3.hpp
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
+/home/valentina/final_raytracer/framework/box.hpp
 iostream
 -
 shape.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
+/home/valentina/final_raytracer/framework/shape.hpp
 glm/vec3.hpp
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/camera.hpp
+/home/valentina/final_raytracer/framework/camera.hpp
 Ray.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
+/home/valentina/final_raytracer/framework/Ray.hpp
 glm/vec3.hpp
 -
 string
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
 iostream
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/light.hpp
+/home/valentina/final_raytracer/framework/light.hpp
 iostream
 -
 string
@@ -748,35 +748,35 @@ string
 glm/vec3.hpp
 -
 color.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp
+/home/valentina/final_raytracer/framework/material.cpp
 material.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/material.hpp
+/home/valentina/final_raytracer/framework/material.hpp
 iostream
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/material.hpp
+/home/valentina/final_raytracer/framework/material.hpp
 string
 -
 color.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/pixel.cpp
+/home/valentina/final_raytracer/framework/pixel.cpp
 pixel.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/pixel.hpp
+/home/valentina/final_raytracer/framework/pixel.hpp
 ostream
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/pixel.hpp
+/home/valentina/final_raytracer/framework/pixel.hpp
 iosfwd
 -
 color.hpp
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/ppmwriter.cpp
+/home/valentina/final_raytracer/framework/ppmwriter.cpp
 ppmwriter.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/ppmwriter.hpp
+/home/valentina/final_raytracer/framework/ppmwriter.hpp
 iostream
 -
 fstream
@@ -786,7 +786,7 @@ cmath
 algorithm
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/ppmwriter.hpp
+/home/valentina/final_raytracer/framework/ppmwriter.hpp
 string
 -
 vector
@@ -794,47 +794,57 @@ vector
 pixel.hpp
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/renderer.cpp
+/home/valentina/final_raytracer/framework/renderer.cpp
 renderer.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/renderer.hpp
+/home/valentina/final_raytracer/framework/renderer.hpp
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/renderer.hpp
+/home/valentina/final_raytracer/framework/renderer.hpp
 color.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
 pixel.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/pixel.hpp
+/home/valentina/final_raytracer/framework/pixel.hpp
 ppmwriter.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/ppmwriter.hpp
-scene.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/scene.hpp
+/home/valentina/final_raytracer/framework/ppmwriter.hpp
 Ray.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
+/home/valentina/final_raytracer/framework/Ray.hpp
+scene.hpp
+/home/valentina/final_raytracer/framework/scene.hpp
 strike.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
+/home/valentina/final_raytracer/framework/strike.hpp
 sphere.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
+/home/valentina/final_raytracer/framework/sphere.hpp
+shape.hpp
+/home/valentina/final_raytracer/framework/shape.hpp
+camera.hpp
+/home/valentina/final_raytracer/framework/camera.hpp
 string
 -
 glm/glm.hpp
 -
+glm/vec3.hpp
+-
+algorithm
+-
+iostream
+-
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/scene.hpp
+/home/valentina/final_raytracer/framework/scene.hpp
 material.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/material.hpp
+/home/valentina/final_raytracer/framework/material.hpp
 box.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
+/home/valentina/final_raytracer/framework/box.hpp
 sphere.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
+/home/valentina/final_raytracer/framework/sphere.hpp
 shape.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
+/home/valentina/final_raytracer/framework/shape.hpp
 light.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/light.hpp
+/home/valentina/final_raytracer/framework/light.hpp
 color.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
 ambient.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/ambient.hpp
+/home/valentina/final_raytracer/framework/ambient.hpp
 camera.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/camera.hpp
+/home/valentina/final_raytracer/framework/camera.hpp
 map
 -
 vector
@@ -854,19 +864,19 @@ fstream
 memory
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/shape.cpp
+/home/valentina/final_raytracer/framework/shape.cpp
 shape.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
+/home/valentina/final_raytracer/framework/shape.hpp
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
+/home/valentina/final_raytracer/framework/shape.hpp
 color.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
 Ray.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
+/home/valentina/final_raytracer/framework/Ray.hpp
 material.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/material.hpp
+/home/valentina/final_raytracer/framework/material.hpp
 strike.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
+/home/valentina/final_raytracer/framework/strike.hpp
 iostream
 -
 string
@@ -874,9 +884,9 @@ string
 memory
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/sphere.cpp
+/home/valentina/final_raytracer/framework/sphere.cpp
 sphere.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
+/home/valentina/final_raytracer/framework/sphere.hpp
 glm/glm.hpp
 -
 glm/gtx/intersect.hpp
@@ -890,13 +900,13 @@ math.h
 string
 -
 Ray.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
+/home/valentina/final_raytracer/framework/Ray.hpp
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
+/home/valentina/final_raytracer/framework/sphere.hpp
 shape.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
+/home/valentina/final_raytracer/framework/shape.hpp
 Ray.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
+/home/valentina/final_raytracer/framework/Ray.hpp
 glm/glm.hpp
 -
 glm/gtx/intersect.hpp
@@ -908,13 +918,13 @@ iostream
 string
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
+/home/valentina/final_raytracer/framework/strike.hpp
 glm/glm.hpp
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/window.cpp
+/home/valentina/final_raytracer/framework/window.cpp
 window.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/window.hpp
+/home/valentina/final_raytracer/framework/window.hpp
 utility
 -
 cstring
@@ -926,9 +936,9 @@ cassert
 exception
 -
 
-/home/judith/Dokumente/Uni/final_raytracer/framework/window.hpp
+/home/valentina/final_raytracer/framework/window.hpp
 color.hpp
-/home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
 GL/glew.h
 -
 GLFW/glfw3.h

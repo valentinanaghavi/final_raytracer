@@ -70,8 +70,8 @@ std::ostream& Sphere :: print(std::ostream& os ) const
 
 bool Sphere :: intersect (Ray const& ray, float& distance) const
     {
-        //ray.direction = glm::normalize(ray.direction); //vielleicht auskommentieren , Richtung muss normalisiert sein!
-        return glm::intersectRaySphere(ray.origin,ray.direction, center_, radius_*radius_, distance); 
+        Ray ray_direction = glm::normalize(ray.direction); //vielleicht auskommentieren , Richtung muss normalisiert sein!
+        return glm::intersectRaySphere(ray.origin,ray_direction, center_, radius_*radius_, distance); 
         //Berrechnung/Ueberpruefung des Schnitts von Strahl und Kugel
         // ray starting - normalisierte Richtung des Strahl - Kugel Mittelpunkt - quadrierter radius - Schnitt Abstand
     }

@@ -1,5 +1,7 @@
-#ifndef SCENE_HPP    
-#define SCENE_HPP
+#ifndef SDFREADER_HPP    
+#define SDFREADER_HPP
+
+#include "scene.hpp"
 
 #include "material.hpp"
 #include "box.hpp"
@@ -21,16 +23,15 @@
 #include <fstream> //Stream class to both read and write from/to files
 #include <memory> //manage dynamic shared_ptr
 
-struct Scene
+struct sdfReader
 {
-    std::map <std::string , Material> material_map;
-    std::vector <std::shared_ptr<Shape>> shape_vector;
-    std::vector <std::shared_ptr<Ambient>> ambient_vector;
-    std::map <std::string , std::shared_ptr<Light>> light_map;
-    std::vector <std::shared_ptr<Camera>> camera_vector;
+    Material SdfReader search_material_map(std::string const& search_name , Scene& scene);
 
+    bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs);
+
+    void read_sdf(std::string const& file_path , Scene& scene); 
 };
 
 
 
-#endif //SCENE_HPP
+#endif //SDFREADER_HPP
