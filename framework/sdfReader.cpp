@@ -197,7 +197,7 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
 
 
 
-bool SdfReader :: operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
+bool SdfReader::operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
 {
     return lhs->name_ < rhs->name_ ;
 };
