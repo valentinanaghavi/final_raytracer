@@ -37,6 +37,7 @@ public:
   Color raytrace(Ray const& ray, unsigned int depth) const;
   Strike computeStrike(Ray const& ray) const;
   bool breaking (Strike const& strike, glm::vec3 const& lightPosition) const;
+  Color toneMapping (Color const& c) const;
 
   inline std::vector<Color> const& color_buffer() const
   {

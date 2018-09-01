@@ -91,6 +91,20 @@ void Renderer::write(Pixel const& p)
   ppm_.write(p);
 }
 
+//tone mapping soll in der Ausgabedatei bzw im Window angezeigt werden
+//c ist der berechnete Farbwert vom raytracer
+Color Renderer :: toneMapping (Color const& c) const
+{
+  Color c_ldr ;
+  c_ldr.r = c.r / (c.r+1);
+  c_ldr.g = c.g / (c.g+1);
+  c_ldr.b = c.b / (c.b+1);
+
+  return c_ldr ;
+
+}
+
+
 Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
 {
   
