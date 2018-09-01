@@ -185,6 +185,7 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
                     buffer >> name;
                     buffer >> fovX;
 
+
                     std::shared_ptr<Camera> camera_path = std::make_shared<Camera>(name , fovX);
                     scene.camera_vector.push_back(camera_path);
             }
