@@ -91,8 +91,13 @@ void Renderer::write(Pixel const& p)
   ppm_.write(p);
 }
 
-//tone mapping soll in der Ausgabedatei bzw im Window angezeigt werden
-//c ist der berechnete Farbwert vom raytracer
+/*
+!!tone mapping soll in der Ausgabedatei bzw im Window angezeigt werden !!
+
+Tone Mapping ist die Verrringerung des Kontrastes eines Hochkontrastbildes fuer ein naturgetreu wirkende Darstellung.
+Berechnung des finalen Farbwertes.
+Dabei ist c (hdr) ist der berechnete Farbwert vom raytracer.
+*/
 Color Renderer :: toneMapping (Color const& c) const
 {
   Color c_ldr ;
