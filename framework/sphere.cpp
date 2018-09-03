@@ -78,4 +78,6 @@ bool Sphere :: intersect (Ray const& ray, float& distance) const
     }
 
 
+
+
     
