@@ -27,7 +27,7 @@ public:
 
     //aufgabe 6.3
     bool intersect( Ray const& ray , float& t ) const override;
-    Strike intersection (Ray const& ray, float& t) const override;
+    //Strike intersection (Ray const& ray, float& t) const override;
 
 private:
     glm::vec3 min_ ;
