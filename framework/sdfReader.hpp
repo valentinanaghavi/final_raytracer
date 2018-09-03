@@ -25,7 +25,7 @@
 
 struct sdfReader
 {
-    Material SdfReader search_material_map(std::string const& search_name , Scene& scene);
+    Material search_material_map(std::string const& search_name , Scene& scene);
 
     bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs);
 
