@@ -180,13 +180,28 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
             {
                     std::string name;
                     float fovX;
+                    glm::vec3 eye;
+                    glm::vec3 dir;
+                    glm::vec3 up;
 
                     buffer >> a;
                     buffer >> name;
                     buffer >> fovX;
+                    buffer >> eye.x;
+                    buffer >> eye.y;
+                    buffer >> eye.z;
+                    buffer >> dir.x;
+                    buffer >> dir.y;
+                    buffer >> dir.z;
+                    buffer >> up.x;
+                    buffer >> up.y;
+                    buffer >> up.z;
 
-                    std::shared_ptr<Camera> camera_path = std::make_shared<Camera>(name , fovX);
+                    std::shared_ptr<Camera> camera_path = std::make_shared<Camera>(name , fovX, eye, dir, up);
                     scene.camera_vector.push_back(camera_path);
+            }
+
+________________________
             }
 
         }
