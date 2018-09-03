@@ -36,45 +36,6 @@ void Renderer::render()
   ppm_.save(filename_);
 }
 
-
-//der erste Kreis 
-
-/*void Renderer::render()
-{
-  std::size_t const checker_pattern_size = 20;
-  Ray ray;
-  for (unsigned y = 0; y < height_; ++y) {
-    for (unsigned x = 0; x < width_; ++x) {
-      Pixel p(x,y);
-
-      Material mat;
-      Sphere sphere (glm::vec3{0,-80,110},100,"kugel",mat);
-
-      ray.direction = {glm::vec3{(float)x-height_/2,(float)y-width_/2,100}};
-
-      float a = 10.0f;
-      
-      if(sphere.intersect(ray,a))
-      {
-
-          if ( ((x/checker_pattern_size)%2) != ((y/checker_pattern_size)%2)) 
-          {
-              p.color = Color(0.0, 1.0, float(x)/height_);
-          } 
-          else 
-          {
-              p.color = Color(1.0, 0.0, float(y)/width_);
-          }
-      }
-
-       write(p);
-    }
-  }
-  ppm_.save(filename_);
-}*/
-
-
-
 void Renderer::write(Pixel const& p)
 {
   // flip pixels, because of opengl glDrawPixels
@@ -125,21 +86,19 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
     Color ambient {0.0, 0.0, 0.0};
     Color c (0.0, 0.0, 0.0);
     float ia = 0.10;
-    Color ip = {0.0, 0.0, 0.0}; // das war mal float
+    float ip = 0;
     float ln = 0;
     float rv = 0;
-    ambient.r = ia * (closest.nearestShape -> getMaterial().ka_.r); //closest braucht pointer im Strike ist es ein nullptr muss im Strike intersect in den Shapes geändert werden dass es einen pointer bekommt beim methodenausführen 
-    ambient.g = ia * (closest.nearestShape -> getMaterial().ka_.g);  
-    ambient.b = ia * (closest.nearestShape -> getMaterial().ka_.b);  
+    ambient = ia * (closest.nearestShape -> getMaterial() -> ka_); //closest braucht pointer im Strike ist es ein nullptr muss im Strike intersect in den Shapes geändert werden dass es einen pointer bekommt beim methodenausführen 
  
     //Falls andere Lichtquellen vorhanden werden diese durchgegangen
-    for (unsigned int i = 0; i < scene_.light_vector.size(); i++)
+    for (unsigned int i = 0; i < scene_.light_map.size(); i++)
     {
-      if (breaking(closest, scene_.light_vector[i] -> pos_)) // light muss glaub ich n vektor sein
+      if (breaking(closest, scene_.light_map[i] -> position)) // light muss glaub ich n vektor sein
       {
-        ip = scene_.light_vector[i]->intensity(); // Intensitaet: brightness * color
+        ip = scene_.light_map[i].intensity(); // Intensität: brightness * color
         
-        glm::vec3 l = glm::normalize(scene_.light_vector[i] -> pos_ - closest.origin);
+        glm::vec3 l = glm::normalize(scene_.light_map[i] -> position - closest.origin_);
         glm::vec3 n = glm::normalize(closest.normal);
         // ln: i_p * k_d || i_p: Helligkeit Puntlichtquelle, k_d: diffuser Reflexionskoeffizient
         ln = glm::dot(l,n); //dot: Skalarprodukt der beiden normalisierten Vektoren l und n
@@ -161,38 +120,35 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
         }
 
         // Ip * (kd * (ln) + ks * (rv)^m)
-
-
-        Color lnTimesKd (ip.r *  ln * (closest.nearestShape -> getMaterial().kd_.r),ip.g *  ln * (closest.nearestShape -> getMaterial().kd_.g) ,ip.b *  ln * (closest.nearestShape -> getMaterial().kd_.b));
-
-        c += lnTimesKd 
-            + (closest.nearestShape -> getMaterial().ks_) 
-            * std::pow(rv, (closest.nearestShape -> getMaterial().m_));
+        c += ip * (ln * (closest.nearestShape -> getMaterial() -> kd_) 
+            + (closest.nearestShape -> getMaterial() -> ks_) 
+            * std::pow(rv, (closest.nearestShape -> getMaterial() -> m_)));
         
       }
     }
-    return c;  
+
+    //Reflektion anderer Objekte
+    //if depth > 0 || ist es größer null gibt es eine Tiefe es können also auch andere Objekte vorhanden sein
+    if (depth > 0)
+    {
+      //reflect:: reflektiert Vektor V1 mit der Orientierung von Vektor V2, wird an der Normalen gespiegelt
+      //mit der Formel V1 - 2.0 * dot(V2,V1) * V2
+      glm::vec3 mirrorDirection = glm::normalize(glm::reflect(ray.direction, closest.normal));
+      //Mirror-Ray berechnen aus Ursprung + leichte Verschiebung und der Mirrordirection
+      Ray mirrorRay {(closest.origin + (0.0001f * mirrorDirection)), mirrorDirection};
+      // mirrorRay raytracen mit verringerter Tiefe
+      Color reflection = raytrace(mirrorRay, depth -1);
 
 
-
-
-
-
-
-
-
-      
-
-
-    
-
-
-    
+      /*Die Farbe der Spiegelung berechnet sich zur Hälfte aus der color c und 
+      zur Häfte aus aus der Color c * gespiegelte Farbe * ks (specular reflection)
+      * m (specular reflection exponent)*/
+      float m = closest.nearestShape -> getMaterial() -> m_;
+      Color ks = closest.nearestShape -> getMaterial() -> ks_;
+      c = c * 0.5f + c * 0.5f * reflection * ks * m;  
+    }
+    return c;      
   }
-
-
-
-
 }
 /* Die Funktion schaut ob ein Objekt zwischen dem Strike eines Objetes und einer der / allen 
 Lichtquellen liegt. Liegt ein Objekt dazwischen gibt es einen Schatten*/ 
@@ -202,7 +158,7 @@ bool Renderer::breaking (Strike const& strike, glm::vec3 const& lightPosition) c
 
   glm::vec3 point = strike.origin + (a * glm::normalize(strike.normal));
 
-  Strike shadow = computeStrike(Ray{point, lightPosition - point}); //Wieso light pos_ - Strikepunkt??
+  Strike shadow = computeStrike(Ray{point, lightPosition - point}); //Wieso light position - Strikepunkt??
   
   return (!shadow.hit || glm::length(point - lightPosition) < glm::length(point - shadow.origin));
 }

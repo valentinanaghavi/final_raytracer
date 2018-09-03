@@ -212,7 +212,7 @@ ________________________
 
 
 
-bool SdfReader :: operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
+bool SdfReader::operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
 {
     return lhs->name_ < rhs->name_ ;
 };
