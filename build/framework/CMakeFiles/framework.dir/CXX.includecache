@@ -701,7 +701,11 @@ color.hpp
 -
 
 /home/valentina/final_raytracer/framework/Ray.hpp
+glm/glm.hpp
+-
 glm/vec3.hpp
+-
+glm/vec4.hpp
 -
 
 /home/valentina/final_raytracer/framework/ambient.hpp

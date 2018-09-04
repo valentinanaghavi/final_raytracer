@@ -691,7 +691,11 @@ detail/func_vector_relational.hpp
 ../external/glm-0.9.5.3/glm/detail/func_vector_relational.hpp
 
 ../framework/Ray.hpp
+glm/glm.hpp
+-
 glm/vec3.hpp
+-
+glm/vec4.hpp
 -
 
 ../framework/ambient.hpp

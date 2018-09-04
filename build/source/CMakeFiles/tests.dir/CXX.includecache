@@ -843,7 +843,11 @@ detail/func_vector_relational.hpp
 ../external/glm-0.9.5.3/glm/detail/func_vector_relational.hpp
 
 /home/valentina/final_raytracer/framework/Ray.hpp
+glm/glm.hpp
+-
 glm/vec3.hpp
+-
+glm/vec4.hpp
 -
 
 /home/valentina/final_raytracer/framework/ambient.hpp
