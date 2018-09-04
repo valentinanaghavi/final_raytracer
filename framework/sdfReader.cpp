@@ -160,7 +160,8 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
                     buffer >> brightness;
     
                     std::shared_ptr<Light> light_path = std::make_shared<Light>(name , pos , color , brightness );
-                    scene.light_map.insert(std::pair<std::string,std::shared_ptr<Light>> (light_path->name_, light_path));
+                    //scene.light_map.insert(std::pair<std::string,std::shared_ptr<Light>> (light_path->name_, light_path));
+                    scene.light_vector.push_back(light_path);
 
                 }
             }
@@ -201,8 +202,7 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
                     scene.camera_vector.push_back(camera_path);
             }
 
-________________________
-            }
+        
 
         }
         myfile.close();
@@ -210,10 +210,9 @@ ________________________
 
 };
 
-
-
-bool SdfReader::operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
+//ich glaube, die Fnuktion benoetigen wir nicht bzw funktioniert sie momentan eh nicht mehr
+/*bool SdfReader::operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
 {
     return lhs->name_ < rhs->name_ ;
-};
+};*/
 
