@@ -124,7 +124,7 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
     //Falls andere Lichtquellen vorhanden werden diese durchgegangen
     for (unsigned int i = 0; i < scene_.light_vector.size(); i++)
     {
-      if (breaking(closest, scene_.light_vector[i] -> pos_)) // light muss glaub ich n vektor sein
+      if (breaking(closest, scene_.light_vector[i] -> pos_)) // wenn es keinen Schatten gibt 
       {
         ip = scene_.light_vector[i] -> intensity(); // Intensität: brightness * color
         
