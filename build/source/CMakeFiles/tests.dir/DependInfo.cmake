@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/source/CMakeFiles/tests.dir/__/framework/box.cpp.o"
-  "/home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/source/CMakeFiles/tests.dir/__/framework/material.cpp.o"
-  "/home/judith/Dokumente/Uni/final_raytracer/framework/shape.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/source/CMakeFiles/tests.dir/__/framework/shape.cpp.o"
-  "/home/judith/Dokumente/Uni/final_raytracer/framework/sphere.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/source/CMakeFiles/tests.dir/__/framework/sphere.cpp.o"
-  "/home/judith/Dokumente/Uni/final_raytracer/source/tests.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/source/CMakeFiles/tests.dir/tests.cpp.o"
+  "/home/valentina/final_raytracer/framework/box.cpp" "/home/valentina/final_raytracer/build/source/CMakeFiles/tests.dir/__/framework/box.cpp.o"
+  "/home/valentina/final_raytracer/framework/material.cpp" "/home/valentina/final_raytracer/build/source/CMakeFiles/tests.dir/__/framework/material.cpp.o"
+  "/home/valentina/final_raytracer/framework/shape.cpp" "/home/valentina/final_raytracer/build/source/CMakeFiles/tests.dir/__/framework/shape.cpp.o"
+  "/home/valentina/final_raytracer/framework/sphere.cpp" "/home/valentina/final_raytracer/build/source/CMakeFiles/tests.dir/__/framework/sphere.cpp.o"
+  "/home/valentina/final_raytracer/source/tests.cpp" "/home/valentina/final_raytracer/build/source/CMakeFiles/tests.dir/tests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

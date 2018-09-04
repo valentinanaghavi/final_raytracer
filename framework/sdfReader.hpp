@@ -23,13 +23,13 @@
 #include <fstream> //Stream class to both read and write from/to files
 #include <memory> //manage dynamic shared_ptr
 
-struct sdfReader
+struct SdfReader
 {
     Material search_material_map(std::string const& search_name , Scene& scene);
-
-    bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs);
-
     void read_sdf(std::string const& file_path , Scene& scene); 
+    
+    //bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs);
+
 };
 
 

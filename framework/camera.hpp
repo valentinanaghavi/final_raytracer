@@ -33,10 +33,22 @@ struct Camera
     up_(0.0f, 1.0f, 0.0f)
     {};
     
-    glm::vec3 camera_ray()
+    glm::vec3 camera_ray(float x, float y, float width , float height )
     {
+        float distance_ = 0.5 / tan( fovX_ * M_PI /360); // Oeffnungswinkel -> Bogenmaß
         
+        glm::vec3 direction {float(x) / float(width) - 0.5 , 
+                             float(y) / float(height)- 0.5 , 
+                             -1 * distance_};
+
+        Ray tmpRay{{0.0f,0.0f,0.0f} , direction};
+
+        glm::mat4 camera_matrix (camera_transformation());
+        
+        return direction;
+        //return transformRay(camera_matrix , tmpRay);
     }
+
     glm::mat4 camera_transformation()
     {
        glm::vec3 normalized_dir = glm::normalize(direction_);
