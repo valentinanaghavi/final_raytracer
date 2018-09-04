@@ -33,7 +33,7 @@ struct Camera
     up_(0.0f, 1.0f, 0.0f)
     {};
     
-    glm::vec3 camera_ray(float x, float y, float width , float height )
+    Ray camera_ray(float x, float y, float width , float height )
     {
         float distance_ = 0.5 / tan( fovX_ * M_PI /360); // Oeffnungswinkel -> Bogenmaß
         
@@ -43,10 +43,10 @@ struct Camera
 
         Ray tmpRay{{0.0f,0.0f,0.0f} , direction};
 
-        glm::mat4 camera_matrix (camera_transformation());
+        glm::mat4 camera_matrix(camera_transformation());
         
-        return direction;
-        //return transformRay(camera_matrix , tmpRay);
+        Ray newRay (transformRay(camera_matrix , tmpRay));
+        return newRay;
     }
 
     glm::mat4 camera_transformation()
@@ -64,6 +64,21 @@ struct Camera
        return c ;
     }
     
+
+    
+    Ray transformRay(glm::mat4 const& mat , Ray const& ray)
+    {
+        glm::vec4 ori{ray.origin , 1.0f}; //niemals or nennen :))
+        glm::vec4 diri{ray.direction , 0.0f}; //homogenes Koordinatensystem
+        
+        glm::vec3 trans_Origin(mat * ori);
+        glm::vec3 trans_Direction(mat * diri);
+
+        return Ray {trans_Origin , trans_Direction};
+    }
+
+
+
     std::string name_;
     float fovX_;  //Oeffnungswinkel der Kamera
     glm::vec3 eye_; // von position zu eye geandert
