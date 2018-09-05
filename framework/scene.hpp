@@ -28,7 +28,10 @@ struct Scene
     std::vector <std::shared_ptr<Ambient>> ambient_vector;
     std::vector <std::shared_ptr<Light>> light_vector;
     std::vector <std::shared_ptr<Camera>> camera_vector;
-
+    
+    unsigned width;
+    unsigned height;
+    std::string filename;
 };
 
 

@@ -6,6 +6,7 @@ framework/CMakeFiles/framework.dir/glew.c.o: ../external/GL/glxew.h
 framework/CMakeFiles/framework.dir/glew.c.o: ../external/GL/wglew.h
 framework/CMakeFiles/framework.dir/glew.c.o: ../framework/glew.c
 
+framework/CMakeFiles/framework.dir/box.cpp.o: ../external/catch-1.5/catch.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/common.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/detail/_fixes.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/detail/_swizzle.hpp
@@ -103,6 +104,7 @@ framework/CMakeFiles/framework.dir/ppmwriter.cpp.o: ../framework/pixel.hpp
 framework/CMakeFiles/framework.dir/ppmwriter.cpp.o: ../framework/ppmwriter.cpp
 framework/CMakeFiles/framework.dir/ppmwriter.cpp.o: ../framework/ppmwriter.hpp
 
+framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/catch-1.5/catch.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/common.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/detail/_fixes.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/detail/_swizzle.hpp
@@ -199,6 +201,7 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/shape.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/sphere.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/strike.hpp
 
+framework/CMakeFiles/framework.dir/sdfReader.cpp.o: ../external/catch-1.5/catch.hpp
 framework/CMakeFiles/framework.dir/sdfReader.cpp.o: ../external/glm-0.9.5.3/glm/common.hpp
 framework/CMakeFiles/framework.dir/sdfReader.cpp.o: ../external/glm-0.9.5.3/glm/detail/_fixes.hpp
 framework/CMakeFiles/framework.dir/sdfReader.cpp.o: ../external/glm-0.9.5.3/glm/detail/_swizzle.hpp

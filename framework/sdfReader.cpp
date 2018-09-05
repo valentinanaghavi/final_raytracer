@@ -77,7 +77,7 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
                 {
                     if (c=="box")
                     {
-                       Box box;
+                       //Box box;
                        std::string name , materialname;
                        glm::vec3 min , max ;
 
@@ -110,7 +110,7 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
 
                     if (c=="sphere")
                     {
-                       Sphere sphere;
+                       //Sphere sphere;
                        std::string name , materialname;
                        float radius;
                        glm::vec3 center;
@@ -164,10 +164,10 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
                     scene.light_vector.push_back(light_path);
 
                 }
-            }
-            else if (a == "ambient")
-            {
-                    Color color;
+            
+                else if (b == "ambient")
+                {
+                     Color color;
 
                     buffer >> a;
                     buffer >> color.r;
@@ -176,9 +176,9 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
 
                     std::shared_ptr<Ambient> ambient_path = std::make_shared<Ambient>(color);
                     scene.ambient_vector.push_back(ambient_path);
-            }
-            else if (a == "camera")
-            {
+                }
+                else if (b == "camera")
+                {
                     std::string name;
                     float fovX;
                     glm::vec3 eye;
@@ -200,10 +200,83 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
 
                     std::shared_ptr<Camera> camera_path = std::make_shared<Camera>(name , fovX, eye, dir, up);
                     scene.camera_vector.push_back(camera_path);
+                }
             }
+/***********************************DEFINE-END***************TRANSFORM-START***********************************************************/
+            else if (a == "transform")
+            {
+                //fuer cam auch??
+                std::string shape_name;
 
+                buffer >> shape_name;
+
+                //auto foundShape = findShape.find(shape_name);
+
+                if(foundShape != findShape.end())
+                {
+                    buffer >> c ;
+
+                    if(c == "scale")
+                    {
+                        glm::vec3 s;
+
+                        buffer >> s.x;
+                        buffer >> s.y;
+                        buffer >> s.z;
+
+                        glm::mat4 scale_mat = scale(s);
+                        glm::mat4 trans_mat = shape -> getWorld_trans;
+                        trans_mat *= translate_mat ;
+                        shape -> setWorld_trans(trans_mat);
+                        shape -> setWorld_trans_inv(glm::inverse(trans_mat));
+                    
+                    }
+                    else if(c == "translate")
+                    {
+                        glm::vec3 t;
+
+                        buffer >> t.x;
+                        buffer >> t.y;
+                        buffer >> t.z;
+
+                        glm::mat4 translate_mat = translate(s);
+                        glm::mat4 trans_mat = shape -> getWorld_trans;
+                        trans_mat *= translate_mat ;
+                        shape -> setWorld_trans(trans_mat);
+                        shape -> setWorld_trans_inv(glm::inverse(trans_mat));
+
+                    }
+                    else if(c == "rotate")
+                    {
+                        float winkel;
+                        glm::vec3 r;
+                        
+                        buffer >> winkel;
+                        buffer >> r.x;
+                        buffer >> r.y;
+                        buffer >> r.z;
+                        
+                        glm::mat4 rotate_mat = rotate(winkel,r);
+                        glm::mat4 trans_mat = shape -> getWorld_trans;
+                        trans_mat *= rotate_mat ;
+                        shape -> setWorld_trans(trans_mat);
+                        shape -> setWorld_trans_inv(glm::inverse(trans_mat));
+                    }
+                    else
+                    {
+                        std::cout << "Transform Funktion kann nicht gelesen werden."<< std::endl;
+                    }
+                }               
+            }
+/***********************************TRANSFROM_END************RENDER-START**************************************************************/
+            else if( a == "render")
+            {
+                buffer >> scene_.width;
+                buffer >> scene_.height;
+                buffer >> scene_.filename;
+
+            }
         
-
         }
         myfile.close();
     
@@ -279,7 +352,7 @@ glm::mat4 SdfReader :: rotation(glm::vec3 rotation_vec, float winkel) //Winkel i
     return rotation_mat;
 }
 
-//ich glaube, die Fnuktion benoetigen wir nicht bzw funktioniert sie momentan eh nicht mehr
+
 bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
 {
     return lhs->name_ < rhs->name_ ;

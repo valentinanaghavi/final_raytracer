@@ -31,12 +31,14 @@
 struct SdfReader
 {
     Material search_material_map(std::string const& search_name , Scene& scene);
+
     void read_sdf(std::string const& file_path , Scene& scene); 
+
     glm::mat4 translation(glm::vec3 trans_vec) ;
     glm::mat4 inverse_translation(glm::vec3 trans_vec) ;
     glm::mat4 scale(glm::vec3 scale_vec) ;
     glm::mat4 rotation(glm::vec3 rotation_vec, float winkel) ;
-
+    
 };
 
 bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs);

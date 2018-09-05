@@ -7,6 +7,7 @@ framework/CMakeFiles/framework.dir/glew.c.o
  ../external/GL/wglew.h
  /home/valentina/final_raytracer/framework/glew.c
 framework/CMakeFiles/framework.dir/box.cpp.o
+ ../external/catch-1.5/catch.hpp
  ../external/glm-0.9.5.3/glm/common.hpp
  ../external/glm-0.9.5.3/glm/detail/_fixes.hpp
  ../external/glm-0.9.5.3/glm/detail/_swizzle.hpp
@@ -104,6 +105,7 @@ framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
  /home/valentina/final_raytracer/framework/ppmwriter.cpp
  /home/valentina/final_raytracer/framework/ppmwriter.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o
+ ../external/catch-1.5/catch.hpp
  ../external/glm-0.9.5.3/glm/common.hpp
  ../external/glm-0.9.5.3/glm/detail/_fixes.hpp
  ../external/glm-0.9.5.3/glm/detail/_swizzle.hpp
@@ -200,6 +202,7 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o
  /home/valentina/final_raytracer/framework/sphere.hpp
  /home/valentina/final_raytracer/framework/strike.hpp
 framework/CMakeFiles/framework.dir/sdfReader.cpp.o
+ ../external/catch-1.5/catch.hpp
  ../external/glm-0.9.5.3/glm/common.hpp
  ../external/glm-0.9.5.3/glm/detail/_fixes.hpp
  ../external/glm-0.9.5.3/glm/detail/_swizzle.hpp
