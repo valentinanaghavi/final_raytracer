@@ -37,10 +37,9 @@ struct SdfReader
     glm::mat4 scale(glm::vec3 scale_vec) ;
     glm::mat4 rotation(glm::vec3 rotation_vec, float winkel) ;
 
-    //bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs);
-
 };
 
+bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs);
 
 
 #endif //SDFREADER_HPP

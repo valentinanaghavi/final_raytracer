@@ -240,14 +240,14 @@ glm::mat4 SdfReader :: scale(glm::vec3 scale_vec)
 
     scale_mat[0] = glm::vec4 {scale_vec.x , 0.0f , 0.0f , 0.0f};
     scale_mat[1] = glm::vec4 {0.0f , scale_vec.y , 0.0f , 0.0f};
-    scale_mat[2] = glm::vec4 {1.0f , 0.0f , scale.z , 0.0f};
+    scale_mat[2] = glm::vec4 {1.0f , 0.0f , scale_vec.z , 0.0f};
     scale_mat[3] = glm::vec4 {0.0f,  0.0f , 0.0f , 1.0f};
     
     return scale_mat ;   
 
 } 
 
-glm::mat4 SdfReader :: rotation(glm::vec3 rotation_vec, float winkel) 
+glm::mat4 SdfReader :: rotation(glm::vec3 rotation_vec, float winkel) //Winkel in Bogenmaß !!
 {
     glm::mat4 rotation_mat;
 
@@ -280,8 +280,8 @@ glm::mat4 SdfReader :: rotation(glm::vec3 rotation_vec, float winkel)
 }
 
 //ich glaube, die Fnuktion benoetigen wir nicht bzw funktioniert sie momentan eh nicht mehr
-/*bool SdfReader::operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
+bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
 {
     return lhs->name_ < rhs->name_ ;
-};*/
+};
 

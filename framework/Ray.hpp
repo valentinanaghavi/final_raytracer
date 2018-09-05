@@ -31,4 +31,15 @@ struct Ray
     }*/
 };
 
+Ray transformRay(glm::mat4 const& mat , Ray const& ray)
+    {
+        glm::vec4 ori{ray.origin , 1.0f}; //niemals or nennen :))
+        glm::vec4 diri{ray.direction , 0.0f}; //homogenes Koordinatensystem
+        
+        glm::vec3 trans_Origin(mat * ori);
+        glm::vec3 trans_Direction(mat * diri);
+
+        return Ray {trans_Origin , trans_Direction};
+    };
+    
 #endif //define RAY_HPP
