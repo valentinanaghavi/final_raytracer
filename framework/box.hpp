@@ -2,10 +2,12 @@
 #define BOX_HPP
 
 
-#include <iostream>
 #include "shape.hpp"
 
+#include <iostream>
 #include <glm/vec3.hpp>
+#include <catch.hpp>
+
 
 class Box : public Shape
 {
@@ -27,7 +29,7 @@ public:
 
     //aufgabe 6.3
     bool intersect( Ray const& ray , float& t ) const override;
-    //Strike intersection (Ray const& ray, float& t) const override;
+    Strike intersection (Ray const& ray, float& t) const override;
 
 private:
     glm::vec3 min_ ;

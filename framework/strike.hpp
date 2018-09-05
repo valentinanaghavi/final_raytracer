@@ -11,11 +11,12 @@ struct Strike
     float distance;
     glm::vec3 origin {0, 0, 0};
     glm::vec3 normal {0, 0, 0};
-    Shape* nearestShape;
+    //Shape* nearestShape;
+    std::shared_ptr<Shape> nearestShape;
     
     Strike():
       hit{false},
-      distance{100000.0f}, //distance für Kamera bei 401 x 401 -> 400, beim Strahl aber länger um Objekte zu treffen (gleich der Tiefe?)
+      distance{INFINITY}, //distance für Kamera bei 401 x 401 -> 400, beim Strahl aber länger um Objekte zu treffen (gleich der Tiefe?)
       origin{glm::vec3(0.0f, 0.0f, 0.0f)},
       normal{glm::vec3(0.0f, 0.0f, 0.0f)}, //Normale die wenn es einen Treffer gibt vom Schnittpunkt abgeht (fürs spiegeln)
       nearestShape{nullptr}
@@ -26,6 +27,14 @@ struct Strike
       distance{d},
       origin{o},
       normal{n},
+      nearestShape{s}
+      {}
+
+    Strike(std::shared_ptr<Shape> const& s):
+      hit{false},
+      distance{INFINITY},
+      origin{glm::vec3(INFINITY)},
+      normal{glm::vec3(INFINITY)},
       nearestShape{s}
       {}
 
