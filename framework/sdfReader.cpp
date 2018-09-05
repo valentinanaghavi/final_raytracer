@@ -210,6 +210,75 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
 
 };
 
+glm::mat4 SdfReader :: translation(glm::vec3 trans_vec)
+{
+    glm::mat4 trans_mat;
+
+    trans_mat[0] = glm::vec4 {1.0f , 0.0f , 0.0f , 0.0f};
+    trans_mat[1] = glm::vec4 {0.0f , 1.0f , 0.0f , 0.0f};
+    trans_mat[2] = glm::vec4 {1.0f , 0.0f , 1.0f , 0.0f};
+    trans_mat[3] = glm::vec4 {trans_vec , 1.0f};
+    
+    return trans_mat ;
+}
+
+glm::mat4 SdfReader :: inverse_translation(glm::vec3 trans_vec)
+{
+    glm::mat4 trans_mat;
+
+    trans_mat[0] = glm::vec4 {1.0f , 0.0f , 0.0f , 0.0f};
+    trans_mat[1] = glm::vec4 {0.0f , 1.0f , 0.0f , 0.0f};
+    trans_mat[2] = glm::vec4 {1.0f , 0.0f , 1.0f , 0.0f};
+    trans_mat[3] = glm::vec4 {trans_vec *(-1.0f) , 1.0f};
+    
+    return trans_mat ;    
+}
+
+glm::mat4 SdfReader :: scale(glm::vec3 scale_vec)
+{
+    glm::mat4 scale_mat;
+
+    scale_mat[0] = glm::vec4 {scale_vec.x , 0.0f , 0.0f , 0.0f};
+    scale_mat[1] = glm::vec4 {0.0f , scale_vec.y , 0.0f , 0.0f};
+    scale_mat[2] = glm::vec4 {1.0f , 0.0f , scale.z , 0.0f};
+    scale_mat[3] = glm::vec4 {0.0f,  0.0f , 0.0f , 1.0f};
+    
+    return scale_mat ;   
+
+} 
+
+glm::mat4 SdfReader :: rotation(glm::vec3 rotation_vec, float winkel) 
+{
+    glm::mat4 rotation_mat;
+
+    if (rotation_vec.x == 1.0f) //Drehung um X-Achse
+    {
+        rotation_mat[0] = {1.0f , 0.0f , 0.0f , 0.0f};
+        rotation_mat[1] = {0.0f , cos(winkel) , sin(winkel) , 0.0f};
+        rotation_mat[2] = {0.0f , - sin(winkel) , cos(winkel) , 0.0f};
+        rotation_mat[3] = {0.0f , 0.0f , 0.0f , 1.0f};
+
+    }
+    if (rotation_vec.y == 1.0f)  //Drehung um Y-Achse
+    {
+        rotation_mat[0] = {cos(winkel) , 0.0f , -sin(winkel) , 0.0f};
+        rotation_mat[1] = {0.0f , 1.0f , 0.0f , 0.0f};
+        rotation_mat[2] = {sin(winkel) , 0.0f , cos(winkel) , 0.0f};
+        rotation_mat[3] = {0.0f , 0.0f , 0.0f , 1.0f};
+  
+    }
+    if (rotation_vec.z == 1.0f)  //Drehung um Z-Achse
+    {
+        rotation_mat[0] = {cos(winkel) , sin(winkel) , 0.0f , 0.0f};
+        rotation_mat[1] = { - sin(winkel) , cos(winkel) , 0.0f , 0.0f};
+        rotation_mat[2] = {0.0f , 0.0f , 1.0f , 0.0f};
+        rotation_mat[3] = {0.0f , 0.0f , 0.0f , 1.0f};
+
+    }
+
+    return rotation_mat;
+}
+
 //ich glaube, die Fnuktion benoetigen wir nicht bzw funktioniert sie momentan eh nicht mehr
 /*bool SdfReader::operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
 {
