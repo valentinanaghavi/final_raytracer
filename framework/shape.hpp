@@ -5,6 +5,7 @@
 #include "Ray.hpp"
 #include "material.hpp"
 #include "strike.hpp"
+#include <glm/glm.hpp>
 
 #include <iostream>
 #include <string>
@@ -27,10 +28,14 @@ public:
 
     void setName(std::string name) ;
     void setMaterial(Material material) ;
+    void setWorld_trans(glm::mat4 world_transformation);
+    void setWorld_trans_inv(glm::mat4 world_transformation_inv);
 
     std::string getName() const;
     Material getMaterial() const;
-
+    glm::mat4 getWorld_trans() const;
+    glm::mat4 getWorld_trans_inv() const;
+    
     virtual std::ostream& print(std::ostream& os ) const ;
 
     //aufgabe 6.3
@@ -41,6 +46,9 @@ public:
 private:
     std::string name_ ;
     Material material_ ;
+
+    glm::mat4 world_transformation_ ;
+    glm::mat4 world_tranformation_inv_;
 
 
 };

@@ -19,7 +19,7 @@ Renderer::Renderer(unsigned w, unsigned h, std::string const& file)
 
 
 //erste Versuch
-void Renderer::render()
+/*void Renderer::render()
 {
   std::size_t const checker_pattern_size = 20;
   Ray ray;
@@ -46,8 +46,8 @@ void Renderer::render()
     }
   }
   ppm_.save(filename_);
-}
-/*void Renderer::render()
+}*/
+void Renderer::render()
 {
   std::size_t const checker_pattern_size = 20;
 
@@ -64,7 +64,7 @@ void Renderer::render()
     }
   }
   ppm_.save(filename_);
-}*/
+}
 
 void Renderer::write(Pixel const& p)
 {

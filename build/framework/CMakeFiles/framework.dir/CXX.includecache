@@ -923,6 +923,8 @@ material.hpp
 /home/valentina/final_raytracer/framework/material.hpp
 strike.hpp
 /home/valentina/final_raytracer/framework/strike.hpp
+glm/glm.hpp
+-
 iostream
 -
 string

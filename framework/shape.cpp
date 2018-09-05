@@ -28,6 +28,14 @@ void Shape :: setMaterial(Material material)
     {
         material_ = material ;
     }
+void Shape :: setWorld_trans(glm::mat4 world_transformation)
+    {
+        world_transformation_ = world_transformation;
+    }
+void Shape ::setWorld_trans_inv(glm::mat4 world_transformation_inv)
+   {
+       world_tranformation_inv_ = world_tranformation_inv;
+   }
 
 std::string Shape :: getName() const
     {
@@ -36,6 +44,14 @@ std::string Shape :: getName() const
 Material Shape :: getMaterial() const
     {
         return material_ ;
+    }
+glm::mat4 Shape :: getWorld_trans() const
+    {
+        return world_transformation_ ;
+    }
+glm::mat4 Shape :: getWorld_trans_inv() const
+    {
+        return world_tranformation_inv_;
     }
 
 std::ostream& Shape::print(std::ostream& os) const
