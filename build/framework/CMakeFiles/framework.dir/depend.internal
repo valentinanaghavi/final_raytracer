@@ -198,6 +198,7 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o
  /home/valentina/final_raytracer/framework/renderer.cpp
  /home/valentina/final_raytracer/framework/renderer.hpp
  /home/valentina/final_raytracer/framework/scene.hpp
+ /home/valentina/final_raytracer/framework/sdfReader.hpp
  /home/valentina/final_raytracer/framework/shape.hpp
  /home/valentina/final_raytracer/framework/sphere.hpp
  /home/valentina/final_raytracer/framework/strike.hpp

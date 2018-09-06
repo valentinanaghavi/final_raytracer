@@ -137,10 +137,10 @@ Strike Box::intersection(Ray const& ray_intersect, float& t) const
     auto pointer = std::make_shared<Box>(*this);
     Strike strike(pointer);
 
-    //auto ray = transform_ray (world_transformation_invers_, ray_intersect);
+    auto ray = transformRay (getWorld_trans_inv(), ray_intersect);
 
-    Ray normalRay {ray_intersect.origin, ray_intersect.direction};
-    normalRay.direction = glm::normalize(ray_intersect.direction);
+    Ray normalRay {ray.origin, ray.direction};
+    normalRay.direction = glm::normalize(ray.direction);
 
     float t1 = (min_.x - normalRay.origin.x) / normalRay.direction.x;
     float t2 = (max_.x - normalRay.origin.x) / normalRay.direction.x;
@@ -196,9 +196,9 @@ Strike Box::intersection(Ray const& ray_intersect, float& t) const
             strike.normal = glm::vec3{0.0f, 0.0f, 1.0f};
         }
 
-        //glm::mat4 transposed = glm::transpose(world_transformatio_inv);
-        //glm::vec3 transformedNormale(transposed * glm::vec4{strike.normal, 0.0f});
-        //strike.normal = glm::normalize(transformedNormale);
+        glm::mat4 transposed = glm::transpose(getWorld_trans_inv());
+        glm::vec3 transformedNormale(transposed * glm::vec4{strike.normal, 0.0f});
+        strike.normal = glm::normalize(transformedNormale);
 
         return strike;
     }

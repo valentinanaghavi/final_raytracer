@@ -12,6 +12,7 @@
 #include "color.hpp"
 #include "ambient.hpp"
 #include "camera.hpp"
+#include "scene.hpp"
 
 #include <glm/glm.hpp>
 #include <glm/vec3.hpp>
@@ -34,14 +35,16 @@ struct SdfReader
 
     std::shared_ptr<Shape> search_shape_vector(std::string const& search_name , std::vector <std::shared_ptr<Shape>> shape_container);
 
-    void read_sdf(std::string const& file_path , Scene& scene); 
-
     glm::mat4 translation(glm::vec3 trans_vec) ;
     glm::mat4 inverse_translation(glm::vec3 trans_vec) ;
     glm::mat4 scale(glm::vec3 scale_vec) ;
     glm::mat4 rotation(glm::vec3 rotation_vec, float winkel) ;
+
+    //Scene scene;
     
 };
+
+Scene read_sdf(std::string const& file_path); //, Scene& scene); 
 
 bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs);
 
