@@ -184,7 +184,7 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
 Lichtquellen liegt. Liegt ein Objekt dazwischen gibt es einen Schatten*/ 
 bool Renderer::breaking (Strike const& strike, glm::vec3 const& lightPosition) const
 {
-  float a = 0.001f; //wieso 0.001?
+  float a = 0.001f;
 
   glm::vec3 point = strike.origin + (a * glm::normalize(strike.normal));
 
