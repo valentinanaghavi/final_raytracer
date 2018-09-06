@@ -3,7 +3,7 @@
 
 #include <glm/glm.hpp>
 #include <memory>
-#include "shape.hpp"
+//#include "shape.hpp"
 #include <glm/vec3.hpp>
 #include <string>
 class Shape; //???
@@ -25,7 +25,7 @@ struct Strike
       nearestShape{nullptr}
       {}
 
-    Strike(bool h, float d, glm::vec3 const& o, glm::vec3 const& n, Shape* s):
+    Strike(bool h, float d, glm::vec3 const& o, glm::vec3 const& n, std::shared_ptr<Shape> s): //Shape*s zu shared ptr
       hit{h},
       distance{d},
       origin{o},

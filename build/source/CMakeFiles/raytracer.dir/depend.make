@@ -3,6 +3,7 @@
 
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/GL/glew.h
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/GL/glext.h
+source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/catch-1.5/catch.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glfw-3.2.1/include/GLFW/glfw3.h
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/common.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/detail/_fixes.hpp

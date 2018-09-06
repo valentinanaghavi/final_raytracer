@@ -4,6 +4,7 @@
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o
  ../external/GL/glew.h
  ../external/GL/glext.h
+ ../external/catch-1.5/catch.hpp
  ../external/glfw-3.2.1/include/GLFW/glfw3.h
  ../external/glm-0.9.5.3/glm/common.hpp
  ../external/glm-0.9.5.3/glm/detail/_fixes.hpp

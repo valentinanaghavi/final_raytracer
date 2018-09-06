@@ -3,10 +3,10 @@
 
 
 #include "shape.hpp"
-
 #include <iostream>
 #include <glm/vec3.hpp>
 #include <catch.hpp>
+#include "strike.hpp"
 
 
 class Box : public Shape

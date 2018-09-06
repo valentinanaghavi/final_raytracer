@@ -2,15 +2,17 @@
 #define SPHERE_HPP
 
 #include "shape.hpp"
-#include "Ray.hpp"
-
+//#include "Ray.hpp"
+#include"strike.hpp"
 #include<glm/glm.hpp>
 #include<glm/gtx/intersect.hpp>
 #include <glm/vec3.hpp>
+#include <glm/vec4.hpp>
 
 #include <iostream>
 #include <string>
 
+//struct Strike;
 
 class Sphere : public Shape
 {

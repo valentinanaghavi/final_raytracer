@@ -15,17 +15,19 @@
 #include "ppmwriter.hpp"
 #include "Ray.hpp"
 #include "scene.hpp"
-#include "strike.hpp"
-#include "sphere.hpp"
+//#include "strike.hpp"
+//#include "sphere.hpp"
 #include "shape.hpp"
 #include "camera.hpp"
 
 #include <string>
 #include <glm/glm.hpp>
 #include <glm/vec3.hpp>
+#include <glm/vec4.hpp>
 #include <algorithm>
 #include <iostream>
 
+//class Shape;
 
 class Renderer
 {

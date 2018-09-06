@@ -19,7 +19,7 @@ struct Ray
     direction(direction_)
     {}
 
-   /* Ray transformRay(glm::mat4 const& mat , Ray const& ray)
+   friend Ray transformRay(glm::mat4 const& mat , Ray const& ray)
     {
         glm::vec4 ori{ray.origin , 1.0f}; //niemals or nennen :))
         glm::vec4 diri{ray.direction , 0.0f}; //homogenes Koordinatensystem
@@ -28,18 +28,9 @@ struct Ray
         glm::vec3 trans_Direction(mat * diri);
 
         return Ray {trans_Origin , trans_Direction};
-    }*/
+    }
 };
 
-Ray transformRay(glm::mat4 const& mat , Ray const& ray)
-    {
-        glm::vec4 ori{ray.origin , 1.0f}; //niemals or nennen :))
-        glm::vec4 diri{ray.direction , 0.0f}; //homogenes Koordinatensystem
-        
-        glm::vec3 trans_Origin(mat * ori);
-        glm::vec3 trans_Direction(mat * diri);
 
-        return Ray {trans_Origin , trans_Direction};
-    };
     
 #endif //define RAY_HPP

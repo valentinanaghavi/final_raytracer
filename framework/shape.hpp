@@ -12,7 +12,7 @@
 #include <memory> //manage dynamic shared_ptr
 
 
-struct Strike;
+//struct Strike;
 
 class Shape //abstrakte Basisklasse
 {
@@ -48,7 +48,7 @@ private:
     Material material_ ;
 
     glm::mat4 world_transformation_ ;
-    glm::mat4 world_tranformation_inv_;
+    glm::mat4 world_transformation_inv_;
 
 
 };

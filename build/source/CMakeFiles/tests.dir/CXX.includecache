@@ -863,6 +863,8 @@ iostream
 -
 string
 -
+math.h
+-
 glm/vec3.hpp
 -
 
@@ -875,6 +877,8 @@ glm/vec3.hpp
 -
 catch.hpp
 -
+strike.hpp
+/home/valentina/final_raytracer/framework/strike.hpp
 
 /home/valentina/final_raytracer/framework/camera.hpp
 Ray.hpp
@@ -989,13 +993,15 @@ Ray.hpp
 /home/valentina/final_raytracer/framework/sphere.hpp
 shape.hpp
 /home/valentina/final_raytracer/framework/shape.hpp
-Ray.hpp
-/home/valentina/final_raytracer/framework/Ray.hpp
+strike.hpp
+/home/valentina/final_raytracer/framework/strike.hpp
 glm/glm.hpp
 -
 glm/gtx/intersect.hpp
 -
 glm/vec3.hpp
+-
+glm/vec4.hpp
 -
 iostream
 -
@@ -1004,6 +1010,12 @@ string
 
 /home/valentina/final_raytracer/framework/strike.hpp
 glm/glm.hpp
+-
+memory
+-
+glm/vec3.hpp
+-
+string
 -
 
 /home/valentina/final_raytracer/source/tests.cpp

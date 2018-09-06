@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <math.h>
 #include <glm/vec3.hpp>
 
 Box :: Box(glm::vec3 const& min  , glm::vec3 const& max , std::string const& name, Material const& material):
@@ -136,7 +137,7 @@ Strike Box::intersection(Ray const& ray_intersect, float& t) const
     auto pointer = std::make_shared<Box>(*this);
     Strike strike(pointer);
 
-    //auto ray = transform_ray (world_tranformation_invers, ray_intersect);
+    //auto ray = transform_ray (world_transformation_invers_, ray_intersect);
 
     Ray normalRay {ray_intersect.origin, ray_intersect.direction};
     normalRay.direction = glm::normalize(ray_intersect.direction);
@@ -162,12 +163,12 @@ Strike Box::intersection(Ray const& ray_intersect, float& t) const
         strike.distance = sqrt(sqrt(t_min) * (sqrt(normalRay.direction.x) + 
                          sqrt(normalRay.direction.y) + sqrt(normalRay.direction.z)));
 
-        glm::vec3 intersection {ray_intersect.origin.x + strike.distance * normalRay.direction.x,
+        glm::vec3 intersection_ray {ray_intersect.origin.x + strike.distance * normalRay.direction.x, //intersection zu intersection_ray geaendert
                                 ray_intersect.origin.y + strike.distance * normalRay.direction.y,
                                 ray_intersect.origin.z + strike.distance * normalRay.direction.z};
         
         
-        strike.origin = intersection;
+        strike.origin = intersection_ray;
 
         //Seite der Box finden wo der Strike seinen Ursprung hat
         if((strike.origin.x) == Approx(min_.x))

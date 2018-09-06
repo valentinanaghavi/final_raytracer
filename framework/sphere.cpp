@@ -77,35 +77,21 @@ bool Sphere::intersect (Ray const& ray, float& distance) const
         // ray starting - normalisierte Richtung des Strahl - Kugel Mittelpunkt - quadrierter radius - Schnitt Abstand
     }
 
-Strike Sphere::intersection (Ray const& ray_intersect, float& distance) const
+Strike Sphere::intersection (Ray const& ray_intersect, float& t) const
 {
-    
-    //glm::vec3 position;        // Arne fragen wieso die beiden
-    //glm::vec3 normal;   // so genutzt werden können
-    
+    float distance = t ;
 
-    //auto ray = transformRay(world_transformation_inv, ray_intersect);
+    auto ray = transformRay(getWorld_trans_inv(), ray_intersect);
     auto normalized_direction = glm::normalize(ray.direction);
-    
-    /*bool glm::gtx::intersect::intersectRaySphere 	( 	genType const &  	orig,
-		genType const &  	dir,
-		genType const &  	center,
-		typename genType::value_type  	radius,
-		genType &  	position,
-		genType &  	normal 
-	) 		   */
-    bool intersectRay = glm::intersectRaySphere(ray.origin, normalized_direction,
-                    center_, radius_  * radius_, distance);
-
-    glm::vec3 intersection = ray_intersect.origin + normalized_direction * distance; //strike origin
+    glm::vec3 intersection_ray = ray_intersect.origin + normalized_direction * distance; //strike origin
     auto pointer = std::make_shared<Sphere>(*this);
-    Strike strike (intersectRay, distance, intersection, pointer);
 
-    strike.normal = glm::normalize(intersection - strike.origin);
+    Strike strike (intersect(ray, distance), distance, ray_intersect.origin, intersection_ray, pointer);
+    strike.normal = glm::normalize(intersection_ray - strike.origin);
 
-    //glm::mat4 transposed = glm::transpose(world_transformation_inv);
-    //glm::vec3 transformedNormale(transposed * glm::vec4{strike.normal, 0.0f});
-    //strike.normal = = glm::normalize(transformedNormale);
+    glm::mat4 transposed = glm::transpose(getWorld_trans_inv());
+    glm::vec3 transformedNormale(transposed * glm::vec4{strike.normal, 0.0f});
+    strike.normal = glm::normalize(transformedNormale);
 
     return strike;
 }
