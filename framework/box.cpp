@@ -146,15 +146,15 @@ Strike Box::intersection(Ray const& ray_intersect, float& t) const
     float t_min = std::min(t1, t2); //Returns the smaller of a and b. 
     float t_max = std::max(t1, t2);
 
-    float t1 = (min_.y - normalRay.origin.y) / normalRay.direction.y;
-    float t2 = (max_.y - normalRay.origin.y) / normalRay.direction.y;
-    float t_min = std::max(t_min ,std::min(t1, t2)); 
-    float t_max = std::min(t_max ,std::max(t1, t2));
+     t1 = (min_.y - normalRay.origin.y) / normalRay.direction.y;
+     t2 = (max_.y - normalRay.origin.y) / normalRay.direction.y;
+     t_min = std::max(t_min ,std::min(t1, t2)); 
+     t_max = std::min(t_max ,std::max(t1, t2));
 
-    float t1 = (min_.z - normalRay.origin.z) / normalRay.direction.z;
-    float t2 = (max_.z - normalRay.origin.z) / normalRay.direction.z;
-    float t_min = std::max(t_min ,std::min(t1, t2)); 
-    float t_max = std::min(t_max ,std::max(t1, t2));
+     t1 = (min_.z - normalRay.origin.z) / normalRay.direction.z;
+     t2 = (max_.z - normalRay.origin.z) / normalRay.direction.z;
+     t_min = std::max(t_min ,std::min(t1, t2)); 
+     t_max = std::min(t_max ,std::max(t1, t2));
 
     if (t_max > std::max(t_min, 0.0f))
     {

@@ -83,6 +83,7 @@ Strike Sphere::intersection (Ray const& ray_intersect, float& distance) const
     //glm::vec3 position;        // Arne fragen wieso die beiden
     //glm::vec3 normal;   // so genutzt werden können
     
+
     //auto ray = transformRay(world_transformation_inv, ray_intersect);
     auto normalized_direction = glm::normalize(ray.direction);
     

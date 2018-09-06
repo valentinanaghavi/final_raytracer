@@ -15,6 +15,22 @@ Material SdfReader :: search_material_map(std::string const& search_name , Scene
         return it->second;
     }
 };
+std::shared_ptr<Shape> SdfReader :: search_shape_vector(std::string const& search_name , std::vector <std::shared_ptr<Shape>> shape_container)
+{
+    auto it = std::find_if(shape_container.begin() , shape_container.end(), [&search_name](std::shared_ptr<Shape> const& s){return (s ->getName()) == search_name;});
+
+    if(it == shape_container.end())
+    {
+        std::cout << "Der Name existiert nicht. \n";
+        return nullptr;
+    }
+    else
+    {
+        std::cout << "Die Shape existiert und kann transformiert werden. \n";
+        return *it;
+    }
+
+}
 
 
 void SdfReader :: read_sdf(std::string const& file_path , Scene& scene) 
@@ -209,10 +225,10 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
                 std::string shape_name;
 
                 buffer >> shape_name;
+                std::shared_ptr<Shape> foundShape = search_shape_vector( shape_name, scene.shape_vector ); 
+                //auto foundShape = shape_vector.find(shape_name);
 
-                //auto foundShape = findShape.find(shape_name);
-
-                if(foundShape != findShape.end())
+                if(foundShape != nullptr)
                 {
                     buffer >> c ;
 
@@ -225,10 +241,10 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
                         buffer >> s.z;
 
                         glm::mat4 scale_mat = scale(s);
-                        glm::mat4 trans_mat = shape -> getWorld_trans;
-                        trans_mat *= translate_mat ;
-                        shape -> setWorld_trans(trans_mat);
-                        shape -> setWorld_trans_inv(glm::inverse(trans_mat));
+                        glm::mat4 trans_mat = foundShape -> getWorld_trans();
+                        trans_mat *= scale_mat ;
+                        foundShape -> setWorld_trans(trans_mat);
+                        foundShape -> setWorld_trans_inv(glm::inverse(trans_mat));
                     
                     }
                     else if(c == "translate")
@@ -239,11 +255,11 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
                         buffer >> t.y;
                         buffer >> t.z;
 
-                        glm::mat4 translate_mat = translate(s);
-                        glm::mat4 trans_mat = shape -> getWorld_trans;
+                        glm::mat4 translate_mat = translation(t);
+                        glm::mat4 trans_mat = foundShape -> getWorld_trans();
                         trans_mat *= translate_mat ;
-                        shape -> setWorld_trans(trans_mat);
-                        shape -> setWorld_trans_inv(glm::inverse(trans_mat));
+                        foundShape -> setWorld_trans(trans_mat);
+                        foundShape -> setWorld_trans_inv(glm::inverse(trans_mat));
 
                     }
                     else if(c == "rotate")
@@ -256,11 +272,11 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
                         buffer >> r.y;
                         buffer >> r.z;
                         
-                        glm::mat4 rotate_mat = rotate(winkel,r);
-                        glm::mat4 trans_mat = shape -> getWorld_trans;
+                        glm::mat4 rotate_mat = rotation(r, winkel);
+                        glm::mat4 trans_mat = foundShape -> getWorld_trans();
                         trans_mat *= rotate_mat ;
-                        shape -> setWorld_trans(trans_mat);
-                        shape -> setWorld_trans_inv(glm::inverse(trans_mat));
+                        foundShape -> setWorld_trans(trans_mat);
+                        foundShape -> setWorld_trans_inv(glm::inverse(trans_mat));
                     }
                     else
                     {
@@ -271,9 +287,9 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
 /***********************************TRANSFROM_END************RENDER-START**************************************************************/
             else if( a == "render")
             {
-                buffer >> scene_.width;
-                buffer >> scene_.height;
-                buffer >> scene_.filename;
+                buffer >> scene.width;
+                buffer >> scene.height;
+                buffer >> scene.filename;
 
             }
         
@@ -326,26 +342,26 @@ glm::mat4 SdfReader :: rotation(glm::vec3 rotation_vec, float winkel) //Winkel i
 
     if (rotation_vec.x == 1.0f) //Drehung um X-Achse
     {
-        rotation_mat[0] = {1.0f , 0.0f , 0.0f , 0.0f};
-        rotation_mat[1] = {0.0f , cos(winkel) , sin(winkel) , 0.0f};
-        rotation_mat[2] = {0.0f , - sin(winkel) , cos(winkel) , 0.0f};
-        rotation_mat[3] = {0.0f , 0.0f , 0.0f , 1.0f};
+        rotation_mat[0] =  glm::vec4 {1.0f , 0.0f , 0.0f , 0.0f};
+        rotation_mat[1] =  glm::vec4 {0.0f , cos(winkel) , sin(winkel) , 0.0f};
+        rotation_mat[2] =  glm::vec4 {0.0f , - sin(winkel) , cos(winkel) , 0.0f};
+        rotation_mat[3] =  glm::vec4 {0.0f , 0.0f , 0.0f , 1.0f};
 
     }
     if (rotation_vec.y == 1.0f)  //Drehung um Y-Achse
     {
-        rotation_mat[0] = {cos(winkel) , 0.0f , -sin(winkel) , 0.0f};
-        rotation_mat[1] = {0.0f , 1.0f , 0.0f , 0.0f};
-        rotation_mat[2] = {sin(winkel) , 0.0f , cos(winkel) , 0.0f};
-        rotation_mat[3] = {0.0f , 0.0f , 0.0f , 1.0f};
+        rotation_mat[0] =  glm::vec4 {cos(winkel) , 0.0f , -sin(winkel) , 0.0f};
+        rotation_mat[1] =  glm::vec4 {0.0f , 1.0f , 0.0f , 0.0f};
+        rotation_mat[2] =  glm::vec4 {sin(winkel) , 0.0f , cos(winkel) , 0.0f};
+        rotation_mat[3] =  glm::vec4 {0.0f , 0.0f , 0.0f , 1.0f};
   
     }
     if (rotation_vec.z == 1.0f)  //Drehung um Z-Achse
     {
-        rotation_mat[0] = {cos(winkel) , sin(winkel) , 0.0f , 0.0f};
-        rotation_mat[1] = { - sin(winkel) , cos(winkel) , 0.0f , 0.0f};
-        rotation_mat[2] = {0.0f , 0.0f , 1.0f , 0.0f};
-        rotation_mat[3] = {0.0f , 0.0f , 0.0f , 1.0f};
+        rotation_mat[0] =  glm::vec4 {cos(winkel) , sin(winkel) , 0.0f , 0.0f};
+        rotation_mat[1] =  glm::vec4 { - sin(winkel) , cos(winkel) , 0.0f , 0.0f};
+        rotation_mat[2] =  glm::vec4 {0.0f , 0.0f , 1.0f , 0.0f};
+        rotation_mat[3] =  glm::vec4 {0.0f , 0.0f , 0.0f , 1.0f};
 
     }
 

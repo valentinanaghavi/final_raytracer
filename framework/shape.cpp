@@ -34,7 +34,7 @@ void Shape :: setWorld_trans(glm::mat4 world_transformation)
     }
 void Shape ::setWorld_trans_inv(glm::mat4 world_transformation_inv)
    {
-       world_tranformation_inv_ = world_tranformation_inv;
+       world_tranformation_inv_ = world_transformation_inv;
    }
 
 std::string Shape :: getName() const

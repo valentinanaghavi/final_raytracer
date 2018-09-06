@@ -2,7 +2,10 @@
 #define STRIKE_HPP
 
 #include <glm/glm.hpp>
-
+#include <memory>
+#include "shape.hpp"
+#include <glm/vec3.hpp>
+#include <string>
 class Shape; //???
 
 struct Strike 

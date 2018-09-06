@@ -867,11 +867,13 @@ glm/vec3.hpp
 -
 
 /home/valentina/final_raytracer/framework/box.hpp
-iostream
--
 shape.hpp
 /home/valentina/final_raytracer/framework/shape.hpp
+iostream
+-
 glm/vec3.hpp
+-
+catch.hpp
 -
 
 /home/valentina/final_raytracer/framework/camera.hpp
@@ -957,6 +959,8 @@ material.hpp
 /home/valentina/final_raytracer/framework/material.hpp
 strike.hpp
 /home/valentina/final_raytracer/framework/strike.hpp
+glm/glm.hpp
+-
 iostream
 -
 string

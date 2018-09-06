@@ -30,7 +30,9 @@
 
 struct SdfReader
 {
-    Material search_material_map(std::string const& search_name , Scene& scene);
+    Material search_material_map(std::string const& search_name , Scene& scene);   
+
+    std::shared_ptr<Shape> search_shape_vector(std::string const& search_name , std::vector <std::shared_ptr<Shape>> shape_container);
 
     void read_sdf(std::string const& file_path , Scene& scene); 
 
@@ -45,3 +47,5 @@ bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> 
 
 
 #endif //SDFREADER_HPP
+
+
