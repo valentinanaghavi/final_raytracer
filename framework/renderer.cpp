@@ -9,8 +9,9 @@
 
 #include "renderer.hpp"
 
-Renderer::Renderer(unsigned w, unsigned h, std::string const& file)
-  : width_(w)
+Renderer::Renderer(Scene const& scene , unsigned w, unsigned h, std::string const& file)
+  : scene_(scene)
+  , width_(w)
   , height_(h)
   , color_buffer_(w*h, Color(0.0, 0.0, 0.0))
   , filename_(file)
@@ -49,17 +50,18 @@ Renderer::Renderer(unsigned w, unsigned h, std::string const& file)
 }*/
 void Renderer::render()
 {
-  std::size_t const checker_pattern_size = 20;
+ // std::size_t const checker_pattern_size = 20;
 
   for (unsigned y = 0; y < height_; ++y) {
     for (unsigned x = 0; x < width_; ++x) {
       Pixel p(x,y);
-      if ( ((x/checker_pattern_size)%2) != ((y/checker_pattern_size)%2)) {
+     /* if ( ((x/checker_pattern_size)%2) != ((y/checker_pattern_size)%2)) {
         p.color = Color(0.0, 1.0, float(x)/height_);
       } else {
         p.color = Color(1.0, 0.0, float(y)/width_);
-      }
-
+      }*/
+      Ray ray = scene_.camera.camera_ray(x,y,width_,height_);
+      p.color = raytrace(ray,15);
       write(p);
     }
   }
@@ -200,7 +202,7 @@ Strike Renderer::computeStrike(Ray const& rayStrike) const
 
   for (auto const& shape: scene_.shape_vector)
   {
-  /*  if(shape != nullptr)
+    if(shape != nullptr)
     {
       Ray ray{rayStrike.origin, glm::normalize(rayStrike.direction)};
 
@@ -214,7 +216,7 @@ Strike Renderer::computeStrike(Ray const& rayStrike) const
     else
     {
       std::cout<< "shape == nullptr"<< std::endl;
-    }*/
+    }
     return closest;
   }
 }

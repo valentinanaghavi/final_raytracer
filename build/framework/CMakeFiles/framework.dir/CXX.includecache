@@ -1103,6 +1103,10 @@ fstream
 -
 memory
 -
+camera.hpp
+/home/valentina/final_raytracer/framework/camera.hpp
+sdfReader.hpp
+/home/valentina/final_raytracer/framework/sdfReader.hpp
 
 /home/valentina/final_raytracer/framework/sdfReader.cpp
 sdfReader.hpp
@@ -1129,6 +1133,8 @@ ambient.hpp
 /home/valentina/final_raytracer/framework/ambient.hpp
 camera.hpp
 /home/valentina/final_raytracer/framework/camera.hpp
+scene.hpp
+/home/valentina/final_raytracer/framework/scene.hpp
 glm/glm.hpp
 -
 glm/vec3.hpp

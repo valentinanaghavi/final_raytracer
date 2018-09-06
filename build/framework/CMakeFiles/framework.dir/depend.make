@@ -197,6 +197,7 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/ppmwriter.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/renderer.cpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/renderer.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/scene.hpp
+framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/sdfReader.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/shape.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/sphere.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/strike.hpp

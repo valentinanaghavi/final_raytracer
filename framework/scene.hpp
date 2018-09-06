@@ -20,6 +20,8 @@
 #include <algorithm>
 #include <fstream> //Stream class to both read and write from/to files
 #include <memory> //manage dynamic shared_ptr
+#include "camera.hpp"
+#include "sdfReader.hpp"
 
 struct Scene
 {
@@ -29,6 +31,7 @@ struct Scene
     std::vector <std::shared_ptr<Light>> light_vector;
     std::vector <std::shared_ptr<Camera>> camera_vector;
     
+    Camera camera;
     unsigned width;
     unsigned height;
     std::string filename;

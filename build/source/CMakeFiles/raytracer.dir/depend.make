@@ -98,6 +98,7 @@ source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/pixel.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/ppmwriter.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/renderer.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/scene.hpp
+source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/sdfReader.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/shape.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/sphere.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/strike.hpp

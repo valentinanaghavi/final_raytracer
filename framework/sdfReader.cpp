@@ -33,8 +33,9 @@ std::shared_ptr<Shape> SdfReader :: search_shape_vector(std::string const& searc
 }
 
 
-void SdfReader :: read_sdf(std::string const& file_path , Scene& scene) 
+Scene read_sdf(std::string const& file_path) //, Scene& scene) 
 {
+    Scene scene;
     std::ifstream myfile (file_path);
     std::string line;
 
@@ -296,6 +297,7 @@ void SdfReader :: read_sdf(std::string const& file_path , Scene& scene)
         }
         myfile.close();
     
+    return scene;
 
 };
 
