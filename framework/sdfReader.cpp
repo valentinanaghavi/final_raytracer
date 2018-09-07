@@ -34,12 +34,12 @@ std::shared_ptr<Shape> search_shape_vector(std::string const& search_name , std:
 
 Scene read_sdf(std::string const& file_path) //, Scene& scene) 
 {
-    Scene scene;
-    std::ifstream myfile;
+    Scene scene{};
+    std::fstream myfile;
     myfile.open(file_path);
     std::string line;
 
-    if(!myfile.is_open())
+    if(!myfile)
     {
         std::cout << "Unable to open file" ;
     }
