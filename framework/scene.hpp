@@ -21,6 +21,7 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include <iterator>
 #include <algorithm>
 #include <fstream> //Stream class to both read and write from/to files
 #include <memory> //manage dynamic shared_ptr

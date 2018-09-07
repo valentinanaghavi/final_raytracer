@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
   std::string const filename = "./checkerboard.ppm";
 
   Scene s;
-  std::string const ofile = "example.txt";
+  std::string const ofile = "../example1.sdf";
 
   s.read_sdf(ofile);
 

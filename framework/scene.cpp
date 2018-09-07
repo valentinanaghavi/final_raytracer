@@ -2,13 +2,13 @@
 
 void Scene :: read_sdf(std::string const& file_path) //, Scene& scene) 
 {
-    std::ifstream myfile (file_path);
+    std::ifstream file;
     //myfile.open(file_path);
     std::string line;
-
     Scene scene;
-
-    if(myfile.is_open())
+    file.open(file_path, std::ios::in);
+    std::cout << "loadScene (openFile): " << file_path << std::endl;
+    if(!file.eof())
     {
         std::cout << "Able to read file" ;
     }
@@ -17,7 +17,7 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
         std::cout << "Unable to open file" ;        
 
     }
-        while( std::getline( myfile , line ))
+      /*  while( std::getline( file , line ))
         {
            
             std::stringstream buffer(line);
@@ -153,11 +153,6 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                 {
                     Camera camera;
 
-                    /*std::string name;
-                    float fovX;
-                    glm::vec3 eye_;
-                    glm::vec3 dir;
-                    glm::vec3 up; */
 
                     buffer >> a;
                     buffer >> camera.name_;
@@ -176,7 +171,7 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                 }
             }
 /***********************************DEFINE-END***************TRANSFORM-START***********************************************************/
-            else if (a == "transform")
+          /*  else if (a == "transform")
             {
                 //fuer cam auch??
                 std::string shape_name;
@@ -242,7 +237,7 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                 }               
             }
 /***********************************TRANSFROM_END************RENDER-START**************************************************************/
-            else if( a == "render")
+           /* else if( a == "render")
             {
                 buffer >> width;
                 buffer >> height;
@@ -250,8 +245,8 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
 
             }
         
-        }
-        myfile.close();
+        }*/
+        file.close();
     
 
 };
