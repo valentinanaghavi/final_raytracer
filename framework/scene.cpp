@@ -3,12 +3,13 @@
 void Scene :: read_sdf(std::string const& file_path) //, Scene& scene) 
 {
     std::ifstream file;
+    file.open (file_path, std::ifstream::in);
     //myfile.open(file_path);
     std::string line;
     Scene scene;
-    file.open(file_path, std::ios::in);
+    //file.open(file_path, std::ios::in);
     std::cout << "loadScene (openFile): " << file_path << std::endl;
-    if(!file.eof())
+    if(file.is_open())
     {
         std::cout << "Able to read file" ;
     }
