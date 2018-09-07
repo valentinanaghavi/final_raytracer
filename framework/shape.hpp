@@ -26,15 +26,15 @@ public:
     virtual float area() const = 0; //pure virtual -> muss in der abgl. Klasse ueberschrieben werden, um Objekt instanziieren zu koennen , Klasse kann nicht instanziiert werden
     virtual float volume() const = 0; // Methodeninterface wird vererbt, keine Implementierung 
 
-    void setName(std::string name) ;
-    void setMaterial(Material material) ;
-    void setWorld_trans(glm::mat4 world_transformation);
-    void setWorld_trans_inv(glm::mat4 world_transformation_inv);
+    virtual void setName(std::string name) ;
+    virtual void setMaterial(Material material) ;
+    virtual void setWorld_trans(glm::mat4 world_transformation);
+    virtual void setWorld_trans_inv(glm::mat4 world_transformation_inv);
 
-    std::string getName() const;
-    Material getMaterial() const;
-    glm::mat4 getWorld_trans() const;
-    glm::mat4 getWorld_trans_inv() const;
+    virtual std::string getName() const;
+    virtual Material getMaterial() const;
+    virtual glm::mat4 getWorld_trans() const;
+    virtual glm::mat4 getWorld_trans_inv() const;
     
     virtual std::ostream& print(std::ostream& os ) const ;
 
