@@ -14,7 +14,7 @@
         return it->second;
     }
 };*/
-std::shared_ptr<Shape> SdfReader :: search_shape_vector(std::string const& search_name , std::vector <std::shared_ptr<Shape>> shape_container)
+std::shared_ptr<Shape> search_shape_vector(std::string const& search_name , std::vector <std::shared_ptr<Shape>> shape_container)
 {
     auto it = std::find_if(shape_container.begin() , shape_container.end(), [&search_name](std::shared_ptr<Shape> const& s){return (s ->getName()) == search_name;});
 
@@ -286,7 +286,7 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
 
 };
 
-glm::mat4 SdfReader :: translation(glm::vec3 trans_vec)
+glm::mat4 translation(glm::vec3 trans_vec)
 {
     glm::mat4 trans_mat;
 
@@ -298,7 +298,7 @@ glm::mat4 SdfReader :: translation(glm::vec3 trans_vec)
     return trans_mat ;
 }
 
-glm::mat4 SdfReader :: inverse_translation(glm::vec3 trans_vec)
+glm::mat4 inverse_translation(glm::vec3 trans_vec)
 {
     glm::mat4 trans_mat;
 
@@ -310,7 +310,7 @@ glm::mat4 SdfReader :: inverse_translation(glm::vec3 trans_vec)
     return trans_mat ;    
 }
 
-glm::mat4 SdfReader :: scale(glm::vec3 scale_vec)
+glm::mat4 scale(glm::vec3 scale_vec)
 {
     glm::mat4 scale_mat;
 
@@ -323,7 +323,7 @@ glm::mat4 SdfReader :: scale(glm::vec3 scale_vec)
 
 } 
 
-glm::mat4 SdfReader :: rotation(glm::vec3 rotation_vec, float winkel) //Winkel in Bogenmaß !!
+glm::mat4 rotation(glm::vec3 rotation_vec, float winkel) //Winkel in Bogenmaß !!
 {
     glm::mat4 rotation_mat;
 
