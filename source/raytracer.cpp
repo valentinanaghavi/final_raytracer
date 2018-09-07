@@ -15,9 +15,10 @@ int main(int argc, char* argv[])
   //unsigned const image_width = 1600;
   //unsigned const image_height = 900;
   std::string const filename = "./checkerboard.ppm";
-  Scene s = read_sdf("/home/final_raytracer/source/example.sdf");
+  Scene s = read_sdf("example.txt");
+  //std::cout<< "file loaded";
   Renderer renderer{s ,image_width, image_height, filename};
-  std::cout << "renderer generiert:" ;
+  //std::cout << "renderer generiert:" ;
   //create separate thread to see updates of pixels while rendering
   std::thread render_thread([&renderer]() {renderer.render();});
 

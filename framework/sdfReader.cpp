@@ -227,7 +227,7 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                         buffer >> s.y;
                         buffer >> s.z;
 
-                        glm::mat4 scale_mat = glm::mat4 sdfReader::scale(s);
+                        glm::mat4 scale_mat = scale(s);
                         glm::mat4 trans_mat = foundShape -> getWorld_trans();
                         trans_mat *= scale_mat ;
                         foundShape -> setWorld_trans(trans_mat);
