@@ -1,13 +1,13 @@
 #include "sdfReader.hpp"
 
-Material SdfReader :: search_material_map(std::string const& search_name , Scene& scene)
+std::shared_ptr<Material> search_material_map(std::string const& search_name , std::map<std::string name, Material> material_container)
 {
     auto it = scene.material_map.find(search_name);
     if(it == scene.material_map.end())
     {
         std::cout << "Der Name existiert nicht. \n";
        // Material mat =  Material ();
-        return Material ();
+        return nullptr;
     }
     else
     {
