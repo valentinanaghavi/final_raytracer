@@ -181,27 +181,28 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                 }
                 else if (b == "camera")
                 {
-                    std::string name;
+                    Camera camera;
+
+                    /*std::string name;
                     float fovX;
-                    glm::vec3 eye;
+                    glm::vec3 eye_;
                     glm::vec3 dir;
-                    glm::vec3 up;
+                    glm::vec3 up; */
 
                     buffer >> a;
-                    buffer >> name;
-                    buffer >> fovX;
-                    buffer >> eye.x;
-                    buffer >> eye.y;
-                    buffer >> eye.z;
-                    buffer >> dir.x;
-                    buffer >> dir.y;
-                    buffer >> dir.z;
-                    buffer >> up.x;
-                    buffer >> up.y;
-                    buffer >> up.z;
-
-                    std::shared_ptr<Camera> camera_path = std::make_shared<Camera>(name , fovX, eye, dir, up);
-                    scene.camera_vector.push_back(camera_path);
+                    buffer >> camera.name_;
+                    buffer >> camera.fovX_;
+                    buffer >> camera.eye_.x;
+                    buffer >> camera.eye_.y;
+                    buffer >> camera.eye_.z;
+                    buffer >> camera.direction_.x;
+                    buffer >> camera.direction_.y;
+                    buffer >> camera.direction_.z;
+                    buffer >> camera.up_.x;
+                    buffer >> camera.up_.y;
+                    buffer >> camera.up_.z;
+                   
+                    scene.camera_ = camera;
                 }
             }
 /***********************************DEFINE-END***************TRANSFORM-START***********************************************************/
