@@ -201,28 +201,28 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o.provides: framework/CMakeFiles
 framework/CMakeFiles/framework.dir/renderer.cpp.o.provides.build: framework/CMakeFiles/framework.dir/renderer.cpp.o
 
 
-framework/CMakeFiles/framework.dir/sdfReader.cpp.o: framework/CMakeFiles/framework.dir/flags.make
-framework/CMakeFiles/framework.dir/sdfReader.cpp.o: ../framework/sdfReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object framework/CMakeFiles/framework.dir/sdfReader.cpp.o"
-	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/sdfReader.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/sdfReader.cpp
+framework/CMakeFiles/framework.dir/scene.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object framework/CMakeFiles/framework.dir/scene.cpp.o"
+	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/scene.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/scene.cpp
 
-framework/CMakeFiles/framework.dir/sdfReader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/sdfReader.cpp.i"
-	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/IN/wobi3451/final_raytracer/framework/sdfReader.cpp > CMakeFiles/framework.dir/sdfReader.cpp.i
+framework/CMakeFiles/framework.dir/scene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/scene.cpp.i"
+	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/IN/wobi3451/final_raytracer/framework/scene.cpp > CMakeFiles/framework.dir/scene.cpp.i
 
-framework/CMakeFiles/framework.dir/sdfReader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/sdfReader.cpp.s"
-	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/sdfReader.cpp -o CMakeFiles/framework.dir/sdfReader.cpp.s
+framework/CMakeFiles/framework.dir/scene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/scene.cpp.s"
+	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/scene.cpp -o CMakeFiles/framework.dir/scene.cpp.s
 
-framework/CMakeFiles/framework.dir/sdfReader.cpp.o.requires:
+framework/CMakeFiles/framework.dir/scene.cpp.o.requires:
 
-.PHONY : framework/CMakeFiles/framework.dir/sdfReader.cpp.o.requires
+.PHONY : framework/CMakeFiles/framework.dir/scene.cpp.o.requires
 
-framework/CMakeFiles/framework.dir/sdfReader.cpp.o.provides: framework/CMakeFiles/framework.dir/sdfReader.cpp.o.requires
-	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfReader.cpp.o.provides.build
-.PHONY : framework/CMakeFiles/framework.dir/sdfReader.cpp.o.provides
+framework/CMakeFiles/framework.dir/scene.cpp.o.provides: framework/CMakeFiles/framework.dir/scene.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/scene.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/scene.cpp.o.provides
 
-framework/CMakeFiles/framework.dir/sdfReader.cpp.o.provides.build: framework/CMakeFiles/framework.dir/sdfReader.cpp.o
+framework/CMakeFiles/framework.dir/scene.cpp.o.provides.build: framework/CMakeFiles/framework.dir/scene.cpp.o
 
 
 framework/CMakeFiles/framework.dir/shape.cpp.o: framework/CMakeFiles/framework.dir/flags.make
@@ -305,7 +305,7 @@ framework_OBJECTS = \
 "CMakeFiles/framework.dir/pixel.cpp.o" \
 "CMakeFiles/framework.dir/ppmwriter.cpp.o" \
 "CMakeFiles/framework.dir/renderer.cpp.o" \
-"CMakeFiles/framework.dir/sdfReader.cpp.o" \
+"CMakeFiles/framework.dir/scene.cpp.o" \
 "CMakeFiles/framework.dir/shape.cpp.o" \
 "CMakeFiles/framework.dir/sphere.cpp.o" \
 "CMakeFiles/framework.dir/window.cpp.o"
@@ -319,7 +319,7 @@ framework/libframework.a: framework/CMakeFiles/framework.dir/material.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/pixel.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/renderer.cpp.o
-framework/libframework.a: framework/CMakeFiles/framework.dir/sdfReader.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/scene.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/shape.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/sphere.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/window.cpp.o
@@ -340,7 +340,7 @@ framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/pixel.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/renderer.cpp.o.requires
-framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/sdfReader.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/scene.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/shape.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/sphere.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/window.cpp.o.requires

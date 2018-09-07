@@ -350,7 +350,6 @@ source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/color.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/light.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/material.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/scene.hpp
-source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/sdfReader.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/shape.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/sphere.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/strike.hpp

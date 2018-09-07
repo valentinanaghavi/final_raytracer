@@ -99,7 +99,6 @@ source/CMakeFiles/raytracer.dir/raytracer.cpp.o
  ../framework/ppmwriter.hpp
  ../framework/renderer.hpp
  ../framework/scene.hpp
- ../framework/sdfReader.hpp
  ../framework/shape.hpp
  ../framework/sphere.hpp
  ../framework/strike.hpp

@@ -30,7 +30,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/IN/wobi3451/final_raytracer/framework/pixel.cpp" "/home/IN/wobi3451/final_raytracer/build/framework/CMakeFiles/framework.dir/pixel.cpp.o"
   "/home/IN/wobi3451/final_raytracer/framework/ppmwriter.cpp" "/home/IN/wobi3451/final_raytracer/build/framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
   "/home/IN/wobi3451/final_raytracer/framework/renderer.cpp" "/home/IN/wobi3451/final_raytracer/build/framework/CMakeFiles/framework.dir/renderer.cpp.o"
-  "/home/IN/wobi3451/final_raytracer/framework/sdfReader.cpp" "/home/IN/wobi3451/final_raytracer/build/framework/CMakeFiles/framework.dir/sdfReader.cpp.o"
+  "/home/IN/wobi3451/final_raytracer/framework/scene.cpp" "/home/IN/wobi3451/final_raytracer/build/framework/CMakeFiles/framework.dir/scene.cpp.o"
   "/home/IN/wobi3451/final_raytracer/framework/shape.cpp" "/home/IN/wobi3451/final_raytracer/build/framework/CMakeFiles/framework.dir/shape.cpp.o"
   "/home/IN/wobi3451/final_raytracer/framework/sphere.cpp" "/home/IN/wobi3451/final_raytracer/build/framework/CMakeFiles/framework.dir/sphere.cpp.o"
   "/home/IN/wobi3451/final_raytracer/framework/window.cpp" "/home/IN/wobi3451/final_raytracer/build/framework/CMakeFiles/framework.dir/window.cpp.o"

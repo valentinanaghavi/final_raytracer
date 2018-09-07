@@ -198,11 +198,10 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o
  /home/IN/wobi3451/final_raytracer/framework/renderer.cpp
  /home/IN/wobi3451/final_raytracer/framework/renderer.hpp
  /home/IN/wobi3451/final_raytracer/framework/scene.hpp
- /home/IN/wobi3451/final_raytracer/framework/sdfReader.hpp
  /home/IN/wobi3451/final_raytracer/framework/shape.hpp
  /home/IN/wobi3451/final_raytracer/framework/sphere.hpp
  /home/IN/wobi3451/final_raytracer/framework/strike.hpp
-framework/CMakeFiles/framework.dir/sdfReader.cpp.o
+framework/CMakeFiles/framework.dir/scene.cpp.o
  ../external/catch-1.5/catch.hpp
  ../external/glm-0.9.5.3/glm/common.hpp
  ../external/glm-0.9.5.3/glm/detail/_fixes.hpp
@@ -291,9 +290,8 @@ framework/CMakeFiles/framework.dir/sdfReader.cpp.o
  /home/IN/wobi3451/final_raytracer/framework/color.hpp
  /home/IN/wobi3451/final_raytracer/framework/light.hpp
  /home/IN/wobi3451/final_raytracer/framework/material.hpp
+ /home/IN/wobi3451/final_raytracer/framework/scene.cpp
  /home/IN/wobi3451/final_raytracer/framework/scene.hpp
- /home/IN/wobi3451/final_raytracer/framework/sdfReader.cpp
- /home/IN/wobi3451/final_raytracer/framework/sdfReader.hpp
  /home/IN/wobi3451/final_raytracer/framework/shape.hpp
  /home/IN/wobi3451/final_raytracer/framework/sphere.hpp
  /home/IN/wobi3451/final_raytracer/framework/strike.hpp

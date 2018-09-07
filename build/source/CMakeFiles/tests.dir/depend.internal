@@ -351,7 +351,6 @@ source/CMakeFiles/tests.dir/tests.cpp.o
  /home/IN/wobi3451/final_raytracer/framework/light.hpp
  /home/IN/wobi3451/final_raytracer/framework/material.hpp
  /home/IN/wobi3451/final_raytracer/framework/scene.hpp
- /home/IN/wobi3451/final_raytracer/framework/sdfReader.hpp
  /home/IN/wobi3451/final_raytracer/framework/shape.hpp
  /home/IN/wobi3451/final_raytracer/framework/sphere.hpp
  /home/IN/wobi3451/final_raytracer/framework/strike.hpp

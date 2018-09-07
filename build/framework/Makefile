@@ -333,32 +333,32 @@ renderer.cpp.s:
 	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.s
 .PHONY : renderer.cpp.s
 
-sdfReader.o: sdfReader.cpp.o
+scene.o: scene.cpp.o
 
-.PHONY : sdfReader.o
+.PHONY : scene.o
 
 # target to build an object file
-sdfReader.cpp.o:
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfReader.cpp.o
-.PHONY : sdfReader.cpp.o
+scene.cpp.o:
+	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/scene.cpp.o
+.PHONY : scene.cpp.o
 
-sdfReader.i: sdfReader.cpp.i
+scene.i: scene.cpp.i
 
-.PHONY : sdfReader.i
+.PHONY : scene.i
 
 # target to preprocess a source file
-sdfReader.cpp.i:
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfReader.cpp.i
-.PHONY : sdfReader.cpp.i
+scene.cpp.i:
+	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/scene.cpp.i
+.PHONY : scene.cpp.i
 
-sdfReader.s: sdfReader.cpp.s
+scene.s: scene.cpp.s
 
-.PHONY : sdfReader.s
+.PHONY : scene.s
 
 # target to generate assembly for a file
-sdfReader.cpp.s:
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfReader.cpp.s
-.PHONY : sdfReader.cpp.s
+scene.cpp.s:
+	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/scene.cpp.s
+.PHONY : scene.cpp.s
 
 shape.o: shape.cpp.o
 
@@ -472,9 +472,9 @@ help:
 	@echo "... renderer.o"
 	@echo "... renderer.i"
 	@echo "... renderer.s"
-	@echo "... sdfReader.o"
-	@echo "... sdfReader.i"
-	@echo "... sdfReader.s"
+	@echo "... scene.o"
+	@echo "... scene.i"
+	@echo "... scene.s"
 	@echo "... shape.o"
 	@echo "... shape.i"
 	@echo "... shape.s"

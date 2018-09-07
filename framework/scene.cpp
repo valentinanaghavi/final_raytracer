@@ -1,51 +1,20 @@
-#include "sdfReader.hpp"
+#include "scene.hpp"
 
-/*std::shared_ptr<Material> search_material_map(std::string const& search_name ,  std::map <std::string name , Material> material_container)
+void Scene :: read_sdf(std::string const& file_path) //, Scene& scene) 
 {
-    auto it = scene.material_map.find(search_name);
-    if(it == scene.material_map.end())
-    {
-        std::cout << "Der Name existiert nicht. \n";
-        return nullptr;
-    }
-    else
-    {
-        std::cout << "Der Name existiert. \n";
-        return it->second;
-    }
-};*/
-std::shared_ptr<Shape> search_shape_vector(std::string const& search_name , std::vector <std::shared_ptr<Shape>> shape_container)
-{
-    auto it = std::find_if(shape_container.begin() , shape_container.end(), [&search_name](std::shared_ptr<Shape> const& s){return (s ->getName()) == search_name;});
-
-    if(it == shape_container.end())
-    {
-        std::cout << "Der Name existiert nicht. \n";
-        return nullptr;
-    }
-    else
-    {
-        std::cout << "Die Shape existiert und kann transformiert werden. \n";
-        return *it;
-    }
-
-}
-
-
-Scene read_sdf(std::string const& file_path) //, Scene& scene) 
-{
-    Scene scene;
-    std::ifstream myfile;
-    myfile.open(file_path);
+    std::ifstream myfile (file_path);
+    //myfile.open(file_path);
     std::string line;
 
-    if(!myfile.is_open())
+    Scene scene;
+
+    if(myfile.is_open())
     {
-        std::cout << "Unable to open file" ;
+        std::cout << "Able to read file" ;
     }
     else
     {   
-        std::cout << "Able to read file" ;
+        std::cout << "Unable to open file" ;        
 
     }
         while( std::getline( myfile , line ))
@@ -83,7 +52,7 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                 >> material.m_;
 
                 //std::shared_ptr<Material> material_path = std::make_shared<Material>(material);
-                scene.material_map[material.name_] = material;
+                material_map[material.name_] = material;
                 //scene.material_map.insert(std::make_pair(material_path->name_ , material_path));
                 //scene.material_set.insert(material_path);
                 //scene.material_vector.push_back(material_path);
@@ -110,10 +79,10 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                        buffer >> materialname;
 
                      
-                           Material material = scene.material_map[materialname];
+                           Material material = material_map[materialname];
 
                            std::shared_ptr<Shape> box_path = std::make_shared<Box>(min , max , name , material);
-                           scene.shape_vector.push_back(box_path);
+                            shape_vector.push_back(box_path);
                        
 
                     }
@@ -135,10 +104,10 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                        buffer >> materialname;
                        
         
-                           Material material = scene.material_map[materialname];
+                           Material material =    material_map[materialname];
 
                            std::shared_ptr<Shape> sphere_path = std::make_shared<Sphere>(center , radius , name , material);
-                           scene.shape_vector.push_back(sphere_path);
+                            shape_vector.push_back(sphere_path);
                        
                     }
 
@@ -163,8 +132,8 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                     buffer >> brightness;
     
                     std::shared_ptr<Light> light_path = std::make_shared<Light>(name , pos , color , brightness );
-                    //scene.light_map.insert(std::pair<std::string,std::shared_ptr<Light>> (light_path->name_, light_path));
-                    scene.light_vector.push_back(light_path);
+                    //    light_map.insert(std::pair<std::string,std::shared_ptr<Light>> (light_path->name_, light_path));
+                    light_vector.push_back(light_path);
 
                 }
             
@@ -178,7 +147,7 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                     buffer >> color.b;
 
                     std::shared_ptr<Ambient> ambient_path = std::make_shared<Ambient>(color);
-                    scene.ambient_vector.push_back(ambient_path);
+                    ambient_vector.push_back(ambient_path);
                 }
                 else if (b == "camera")
                 {
@@ -203,7 +172,7 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                     buffer >> camera.up_.y;
                     buffer >> camera.up_.z;
                    
-                    scene.camera_ = camera;
+                    camera_ = camera;
                 }
             }
 /***********************************DEFINE-END***************TRANSFORM-START***********************************************************/
@@ -213,7 +182,7 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                 std::string shape_name;
 
                 buffer >> shape_name;
-                std::shared_ptr<Shape> foundShape = search_shape_vector( shape_name, scene.shape_vector ); 
+                std::shared_ptr<Shape> foundShape = search_shape_vector( shape_name,    shape_vector ); 
                 //auto foundShape = shape_vector.find(shape_name);
 
                 if(foundShape != nullptr)
@@ -275,18 +244,37 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
 /***********************************TRANSFROM_END************RENDER-START**************************************************************/
             else if( a == "render")
             {
-                buffer >> scene.width;
-                buffer >> scene.height;
-                buffer >> scene.filename;
+                buffer >> width;
+                buffer >> height;
+                buffer >> filename;
 
             }
         
         }
         myfile.close();
     
-    return scene;
 
 };
+
+
+std::shared_ptr<Shape> search_shape_vector(std::string const& search_name , std::vector <std::shared_ptr<Shape>> shape_container)
+{
+    auto it = std::find_if(shape_container.begin() , shape_container.end(), [&search_name](std::shared_ptr<Shape> const& s){return (s ->getName()) == search_name;});
+
+    if(it == shape_container.end())
+    {
+        std::cout << "Der Name existiert nicht. \n";
+        return nullptr;
+    }
+    else
+    {
+        std::cout << "Die Shape existiert und kann transformiert werden. \n";
+        return *it;
+    }
+
+}
+
+
 
 glm::mat4 translation(glm::vec3 trans_vec)
 {
@@ -358,8 +346,11 @@ glm::mat4 rotation(glm::vec3 rotation_vec, float winkel) //Winkel in Bogenmaß !
 }
 
 
+
+
+
+
 bool operator<(std::shared_ptr<Material> const& lhs , std::shared_ptr<Material> const& rhs)
 {
     return lhs->name_ < rhs->name_ ;
 };
-

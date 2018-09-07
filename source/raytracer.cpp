@@ -1,6 +1,5 @@
 #include <renderer.hpp>
 #include <window.hpp>
-#include <sdfReader.hpp>
 #include <scene.hpp>
 
 #include <GLFW/glfw3.h>
@@ -10,12 +9,18 @@
 
 int main(int argc, char* argv[])
 {
+
   unsigned const image_width = 800;
   unsigned const image_height = 600;
   //unsigned const image_width = 1600;
   //unsigned const image_height = 900;
   std::string const filename = "./checkerboard.ppm";
-  Scene s = read_sdf("/home/final_raytracer/source/example.sdf");
+
+  Scene s;
+  std::string const ofile = "example.txt";
+
+  s.read_sdf(ofile);
+
   Renderer renderer{s ,image_width, image_height, filename};
   std::cout << "renderer generiert:" ;
   //create separate thread to see updates of pixels while rendering
