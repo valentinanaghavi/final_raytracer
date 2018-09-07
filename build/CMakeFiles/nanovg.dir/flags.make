@@ -6,7 +6,11 @@ C_FLAGS =
 
 C_DEFINES = -DGLEW_STATIC
 
+<<<<<<< HEAD
 C_INCLUDES = -I/home/judith/Dokumente/Uni/final_raytracer/external -I/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/include -I/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src -I/home/judith/Dokumente/Uni/final_raytracer/external/catch-1.5 -I/home/judith/Dokumente/Uni/final_raytracer/external/glm-0.9.5.3 -I/home/judith/Dokumente/Uni/final_raytracer/framework 
+=======
+C_INCLUDES = -I/home/IN/wobi3451/final_raytracer/external -I/home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/include -I/home/IN/wobi3451/final_raytracer/external/nanovg/src -I/home/IN/wobi3451/final_raytracer/external/catch-1.5 -I/home/IN/wobi3451/final_raytracer/external/glm-0.9.5.3 -I/home/IN/wobi3451/final_raytracer/framework 
+>>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 
 # Custom flags: CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o_FLAGS = -Wno-unused-result
 

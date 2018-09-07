@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/judith/Dokumente/Uni/final_raytracer
+=======
+# Install script for directory: /home/IN/wobi3451/final_raytracer
+>>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +33,12 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
+  set(CMAKE_INSTALL_SO_NO_EXE "0")
+endif()
+
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
 # Is this installation the result of a crosscompile?
@@ -39,9 +48,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+<<<<<<< HEAD
   include("/home/judith/Dokumente/Uni/final_raytracer/build/external/glfw-3.2.1/cmake_install.cmake")
   include("/home/judith/Dokumente/Uni/final_raytracer/build/framework/cmake_install.cmake")
   include("/home/judith/Dokumente/Uni/final_raytracer/build/source/cmake_install.cmake")
+=======
+  include("/home/IN/wobi3451/final_raytracer/build/external/glfw-3.2.1/cmake_install.cmake")
+  include("/home/IN/wobi3451/final_raytracer/build/framework/cmake_install.cmake")
+  include("/home/IN/wobi3451/final_raytracer/build/source/cmake_install.cmake")
+>>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 
 endif()
 
@@ -53,5 +68,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/home/judith/Dokumente/Uni/final_raytracer/build/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/home/IN/wobi3451/final_raytracer/build/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

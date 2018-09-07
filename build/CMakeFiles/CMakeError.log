@@ -1,4 +1,5 @@
 Determining if the pthread_create exist failed with the following output:
+<<<<<<< HEAD
 Change Dir: /home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_fbfb6/fast"
@@ -19,6 +20,26 @@ Makefile:126: recipe for target 'cmTC_fbfb6/fast' failed
 make: *** [cmTC_fbfb6/fast] Error 2
 
 File /home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+=======
+Change Dir: /home/IN/wobi3451/final_raytracer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_568db/fast"
+/usr/bin/make -f CMakeFiles/cmTC_568db.dir/build.make CMakeFiles/cmTC_568db.dir/build
+make[1]: Entering directory '/home/IN/wobi3451/final_raytracer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_568db.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_568db.dir/CheckSymbolExists.c.o   -c /home/IN/wobi3451/final_raytracer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_568db
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_568db.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_568db.dir/CheckSymbolExists.c.o  -o cmTC_568db 
+CMakeFiles/cmTC_568db.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_568db.dir/build.make:98: cmTC_568db] Error 1
+make[1]: Leaving directory '/home/IN/wobi3451/final_raytracer/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:126: cmTC_568db/fast] Error 2
+
+File /home/IN/wobi3451/final_raytracer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+>>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 /* */
 #include <pthread.h>
 
@@ -33,6 +54,7 @@ int main(int argc, char** argv)
 #endif
 }
 
+<<<<<<< HEAD
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles/CMakeTmp
 
@@ -53,3 +75,5 @@ Makefile:126: recipe for target 'cmTC_c9b62/fast' failed
 make: *** [cmTC_c9b62/fast] Error 2
 
 
+=======
+>>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8

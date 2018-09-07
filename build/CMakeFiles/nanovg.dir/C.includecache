@@ -6,15 +6,25 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/fontstash.h
+=======
+/home/IN/wobi3451/final_raytracer/external/nanovg/src/fontstash.h
+>>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 ft2build.h
 -
 math.h
 -
 stb_truetype.h
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_truetype.h
 
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/nanovg.c
+=======
+/home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_truetype.h
+
+/home/IN/wobi3451/final_raytracer/external/nanovg/src/nanovg.c
+>>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 stdlib.h
 -
 stdio.h
@@ -24,6 +34,7 @@ math.h
 memory.h
 -
 nanovg.h
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/nanovg.h
 fontstash.h
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/fontstash.h
@@ -35,6 +46,19 @@ stb_image.h
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_image.h
 stb_image.h
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_image.h
+=======
+/home/IN/wobi3451/final_raytracer/external/nanovg/src/nanovg.h
+fontstash.h
+/home/IN/wobi3451/final_raytracer/external/nanovg/src/fontstash.h
+stb_image.h
+/home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_image.h
+
+/home/IN/wobi3451/final_raytracer/external/nanovg/src/nanovg.h
+
+/home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_image.h
+stb_image.h
+/home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_image.h
+>>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 stdio.h
 -
 stdarg.h
@@ -60,6 +84,7 @@ intrin.h
 arm_neon.h
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_truetype.h
 stb_truetype.h
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_truetype.h
@@ -67,6 +92,15 @@ stdio.h
 -
 stb_truetype.h
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_truetype.h
+=======
+/home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_truetype.h
+stb_truetype.h
+/home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_truetype.h
+stdio.h
+-
+stb_truetype.h
+/home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_truetype.h
+>>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 math.h
 -
 math.h
