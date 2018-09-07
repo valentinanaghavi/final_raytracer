@@ -1,12 +1,11 @@
 #include "sdfReader.hpp"
 
-std::shared_ptr<Material> search_material_map(std::string const& search_name , std::map<std::string name, Material> material_container)
+/*std::shared_ptr<Material> search_material_map(std::string const& search_name ,  std::map <std::string name , Material> material_container)
 {
     auto it = scene.material_map.find(search_name);
     if(it == scene.material_map.end())
     {
         std::cout << "Der Name existiert nicht. \n";
-       // Material mat =  Material ();
         return nullptr;
     }
     else
@@ -14,7 +13,7 @@ std::shared_ptr<Material> search_material_map(std::string const& search_name , s
         std::cout << "Der Name existiert. \n";
         return it->second;
     }
-};
+};*/
 std::shared_ptr<Shape> SdfReader :: search_shape_vector(std::string const& search_name , std::vector <std::shared_ptr<Shape>> shape_container)
 {
     auto it = std::find_if(shape_container.begin() , shape_container.end(), [&search_name](std::shared_ptr<Shape> const& s){return (s ->getName()) == search_name;});
@@ -109,19 +108,12 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                        buffer >> max.z;
                        buffer >> materialname;
 
-                     //ueberpruefen , ob materialname in der sdf existiert bzw gespeichert wurde
-                       Material mat_test = search_material_map(materialname , scene) ;
-                       if (mat_test.name_.compare("no Name") == 0)
-                       {
-                           std::cout << "Der Materialname existiert nicht. Die Sphere kann nicht bearbeitet werden. \n";
-                       }
-                       else
-                       {
+                     
                            Material material = scene.material_map[materialname];
 
                            std::shared_ptr<Shape> box_path = std::make_shared<Box>(min , max , name , material);
                            scene.shape_vector.push_back(box_path);
-                       }
+                       
 
                     }
 
@@ -141,19 +133,12 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                        buffer >> radius;
                        buffer >> materialname;
                        
-                       //ueberpruefen , ob materialname in der sdf existiert bzw gespeichert wurde
-                       Material mat_test = search_material_map(materialname , scene) ;
-                       if (mat_test.name_.compare("no Name") == 0)
-                       {
-                           std::cout << "Der Materialname existiert nicht. Die Sphere kann nicht bearbeitet werden. \n";
-                       }
-                       else
-                       {
+        
                            Material material = scene.material_map[materialname];
 
                            std::shared_ptr<Shape> sphere_path = std::make_shared<Sphere>(center , radius , name , material);
                            scene.shape_vector.push_back(sphere_path);
-                       }
+                       
                     }
 
                 }
@@ -241,7 +226,7 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                         buffer >> s.y;
                         buffer >> s.z;
 
-                        glm::mat4 scale_mat = scale(s);
+                        glm::mat4 scale_mat = glm::mat4 sdfReader::scale(s);
                         glm::mat4 trans_mat = foundShape -> getWorld_trans();
                         trans_mat *= scale_mat ;
                         foundShape -> setWorld_trans(trans_mat);

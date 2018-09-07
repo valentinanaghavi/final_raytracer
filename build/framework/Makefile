@@ -48,17 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/judith/Dokumente/Uni/final_raytracer
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/judith/Dokumente/Uni/final_raytracer/build
-=======
-CMAKE_SOURCE_DIR = /home/IN/wobi3451/final_raytracer
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/IN/wobi3451/final_raytracer/build
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -77,13 +70,8 @@ install/strip/fast: preinstall/fast
 
 # Special rule for the target edit_cache
 edit_cache:
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
 	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -138,24 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles /home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/progress.marks
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles 0
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/IN/wobi3451/final_raytracer/build/CMakeFiles /home/IN/wobi3451/final_raytracer/build/framework/CMakeFiles/progress.marks
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/IN/wobi3451/final_raytracer/build/CMakeFiles 0
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : all
 
 # The main clean target
 clean:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/clean
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/clean
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : clean
 
 # The main clean target
@@ -165,38 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/preinstall
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/preinstall
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/preinstall
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/preinstall
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : depend
 
 # Convenience name for target.
 framework/CMakeFiles/framework.dir/rule:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/CMakeFiles/framework.dir/rule
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/CMakeFiles/framework.dir/rule
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : framework/CMakeFiles/framework.dir/rule
 
 # Convenience name for target.
@@ -206,11 +168,7 @@ framework: framework/CMakeFiles/framework.dir/rule
 
 # fast build rule for target.
 framework/fast:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/build
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/build
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : framework/fast
 
 box.o: box.cpp.o
@@ -219,11 +177,7 @@ box.o: box.cpp.o
 
 # target to build an object file
 box.cpp.o:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.o
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.o
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : box.cpp.o
 
 box.i: box.cpp.i
@@ -232,11 +186,7 @@ box.i: box.cpp.i
 
 # target to preprocess a source file
 box.cpp.i:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.i
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.i
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : box.cpp.i
 
 box.s: box.cpp.s
@@ -245,11 +195,7 @@ box.s: box.cpp.s
 
 # target to generate assembly for a file
 box.cpp.s:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.s
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.s
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : box.cpp.s
 
 glew.o: glew.c.o
@@ -258,11 +204,7 @@ glew.o: glew.c.o
 
 # target to build an object file
 glew.c.o:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.o
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.o
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : glew.c.o
 
 glew.i: glew.c.i
@@ -271,11 +213,7 @@ glew.i: glew.c.i
 
 # target to preprocess a source file
 glew.c.i:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.i
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.i
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : glew.c.i
 
 glew.s: glew.c.s
@@ -284,11 +222,7 @@ glew.s: glew.c.s
 
 # target to generate assembly for a file
 glew.c.s:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.s
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.s
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : glew.c.s
 
 material.o: material.cpp.o
@@ -297,11 +231,7 @@ material.o: material.cpp.o
 
 # target to build an object file
 material.cpp.o:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.o
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.o
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : material.cpp.o
 
 material.i: material.cpp.i
@@ -310,11 +240,7 @@ material.i: material.cpp.i
 
 # target to preprocess a source file
 material.cpp.i:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.i
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.i
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : material.cpp.i
 
 material.s: material.cpp.s
@@ -323,11 +249,7 @@ material.s: material.cpp.s
 
 # target to generate assembly for a file
 material.cpp.s:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.s
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.s
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : material.cpp.s
 
 pixel.o: pixel.cpp.o
@@ -336,11 +258,7 @@ pixel.o: pixel.cpp.o
 
 # target to build an object file
 pixel.cpp.o:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.o
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.o
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : pixel.cpp.o
 
 pixel.i: pixel.cpp.i
@@ -349,11 +267,7 @@ pixel.i: pixel.cpp.i
 
 # target to preprocess a source file
 pixel.cpp.i:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.i
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.i
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : pixel.cpp.i
 
 pixel.s: pixel.cpp.s
@@ -362,11 +276,7 @@ pixel.s: pixel.cpp.s
 
 # target to generate assembly for a file
 pixel.cpp.s:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.s
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.s
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : pixel.cpp.s
 
 ppmwriter.o: ppmwriter.cpp.o
@@ -375,11 +285,7 @@ ppmwriter.o: ppmwriter.cpp.o
 
 # target to build an object file
 ppmwriter.cpp.o:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : ppmwriter.cpp.o
 
 ppmwriter.i: ppmwriter.cpp.i
@@ -388,11 +294,7 @@ ppmwriter.i: ppmwriter.cpp.i
 
 # target to preprocess a source file
 ppmwriter.cpp.i:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.i
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.i
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : ppmwriter.cpp.i
 
 ppmwriter.s: ppmwriter.cpp.s
@@ -401,11 +303,7 @@ ppmwriter.s: ppmwriter.cpp.s
 
 # target to generate assembly for a file
 ppmwriter.cpp.s:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.s
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.s
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : ppmwriter.cpp.s
 
 renderer.o: renderer.cpp.o
@@ -414,11 +312,7 @@ renderer.o: renderer.cpp.o
 
 # target to build an object file
 renderer.cpp.o:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.o
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.o
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : renderer.cpp.o
 
 renderer.i: renderer.cpp.i
@@ -427,11 +321,7 @@ renderer.i: renderer.cpp.i
 
 # target to preprocess a source file
 renderer.cpp.i:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.i
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.i
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : renderer.cpp.i
 
 renderer.s: renderer.cpp.s
@@ -440,11 +330,7 @@ renderer.s: renderer.cpp.s
 
 # target to generate assembly for a file
 renderer.cpp.s:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.s
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.s
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : renderer.cpp.s
 
 sdfReader.o: sdfReader.cpp.o
@@ -453,11 +339,7 @@ sdfReader.o: sdfReader.cpp.o
 
 # target to build an object file
 sdfReader.cpp.o:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfReader.cpp.o
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfReader.cpp.o
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : sdfReader.cpp.o
 
 sdfReader.i: sdfReader.cpp.i
@@ -466,11 +348,7 @@ sdfReader.i: sdfReader.cpp.i
 
 # target to preprocess a source file
 sdfReader.cpp.i:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfReader.cpp.i
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfReader.cpp.i
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : sdfReader.cpp.i
 
 sdfReader.s: sdfReader.cpp.s
@@ -479,11 +357,7 @@ sdfReader.s: sdfReader.cpp.s
 
 # target to generate assembly for a file
 sdfReader.cpp.s:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfReader.cpp.s
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfReader.cpp.s
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : sdfReader.cpp.s
 
 shape.o: shape.cpp.o
@@ -492,11 +366,7 @@ shape.o: shape.cpp.o
 
 # target to build an object file
 shape.cpp.o:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.o
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.o
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : shape.cpp.o
 
 shape.i: shape.cpp.i
@@ -505,11 +375,7 @@ shape.i: shape.cpp.i
 
 # target to preprocess a source file
 shape.cpp.i:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.i
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.i
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : shape.cpp.i
 
 shape.s: shape.cpp.s
@@ -518,11 +384,7 @@ shape.s: shape.cpp.s
 
 # target to generate assembly for a file
 shape.cpp.s:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.s
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.s
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : shape.cpp.s
 
 sphere.o: sphere.cpp.o
@@ -531,11 +393,7 @@ sphere.o: sphere.cpp.o
 
 # target to build an object file
 sphere.cpp.o:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sphere.cpp.o
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sphere.cpp.o
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : sphere.cpp.o
 
 sphere.i: sphere.cpp.i
@@ -544,11 +402,7 @@ sphere.i: sphere.cpp.i
 
 # target to preprocess a source file
 sphere.cpp.i:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sphere.cpp.i
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sphere.cpp.i
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : sphere.cpp.i
 
 sphere.s: sphere.cpp.s
@@ -557,11 +411,7 @@ sphere.s: sphere.cpp.s
 
 # target to generate assembly for a file
 sphere.cpp.s:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sphere.cpp.s
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sphere.cpp.s
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : sphere.cpp.s
 
 window.o: window.cpp.o
@@ -570,11 +420,7 @@ window.o: window.cpp.o
 
 # target to build an object file
 window.cpp.o:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/window.cpp.o
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/window.cpp.o
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : window.cpp.o
 
 window.i: window.cpp.i
@@ -583,11 +429,7 @@ window.i: window.cpp.i
 
 # target to preprocess a source file
 window.cpp.i:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/window.cpp.i
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/window.cpp.i
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : window.cpp.i
 
 window.s: window.cpp.s
@@ -596,11 +438,7 @@ window.s: window.cpp.s
 
 # target to generate assembly for a file
 window.cpp.s:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/window.cpp.s
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/window.cpp.s
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : window.cpp.s
 
 # Help Target
@@ -657,10 +495,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-<<<<<<< HEAD
 	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
-=======
-	cd /home/IN/wobi3451/final_raytracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
->>>>>>> f8e4304dc790ba012a7e0deb36c39b857f1549b8
 .PHONY : cmake_check_build_system
 
