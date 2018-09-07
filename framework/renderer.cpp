@@ -60,7 +60,7 @@ void Renderer::render()
       } else {
         p.color = Color(1.0, 0.0, float(y)/width_);
       }*/
-      Ray ray = scene_.camera.camera_ray(x,y,width_,height_);
+      Ray ray = scene_.camera_.camera_ray(x,y,width_,height_);
       p.color = raytrace(ray,15);
       write(p);
     }
