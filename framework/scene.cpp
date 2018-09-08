@@ -11,242 +11,241 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
     std::cout << "loadScene (openFile): " << file_path << std::endl;
     if(file.is_open())
     {
-        std::cout << "Able to read file" ;
+        std::cout << "Able to read file \n" ;
     }
     else
     {   
-        std::cout << "Unable to open file" ;        
+        std::cout << "Unable to open file \n" ;        
 
     }
-      /*  while( std::getline( file , line ))
+        while( std::getline( file , line ))
         {
            
             std::stringstream buffer(line);
-            std::string a;
-            std::string b;
-            std::string c;
-            std::string d;
+            std::string word ;
 
-            buffer >> a >> b >> c >> d;
+            buffer<<line;
+            buffer >> word;
             
-            if(a=="define")
-
+            if(word=="define")
             {
-                if(b=="material")
-                {
+                    buffer >> word;
 
-                Material material;
+                    if(word=="material")
+                    {
 
-                buffer 
-                >> a
-                >> b
-                >> material.name_
-                >> material.ka_.r
-                >> material.ka_.g
-                >> material.ka_.b
-                >> material.kd_.r
-                >> material.kd_.g
-                >> material.kd_.b
-                >> material.ks_.r
-                >> material.ks_.g
-                >> material.ks_.b
-                >> material.m_;
+                        Material material; 
+
+                        buffer >> material.name_;
+                        buffer >> material.ka_.r;
+                        buffer >> material.ka_.g;
+                        buffer >> material.ka_.b;
+                        buffer >> material.kd_.r;
+                        buffer >> material.kd_.g;
+                        buffer >> material.kd_.b;
+                        buffer >> material.ks_.r;
+                        buffer >> material.ks_.g;
+                        buffer >> material.ks_.b;
+                        buffer >> material.m_;
 
                 //std::shared_ptr<Material> material_path = std::make_shared<Material>(material);
-                material_map[material.name_] = material;
+                        material_map[material.name_] = material;
+                        std::cout << "new material added:" << material.name_ << "\n";
                 //scene.material_map.insert(std::make_pair(material_path->name_ , material_path));
                 //scene.material_set.insert(material_path);
                 //scene.material_vector.push_back(material_path);
                // scene.material_map.insert(std::pair<std::string,std::shared_ptr<Material>> (material_path->name_,material_path));
-                }
+                    }
 
-                if(b=="shape")
-                {
-                    if (c=="box")
+                    if(word=="shape")
                     {
-                       //Box box;
-                       std::string name , materialname;
-                       glm::vec3 min , max ;
+                        buffer >> word ;
+                        if (word=="box")
+                        {
+                            std::string name , materialname;
+                            glm::vec3 min , max ;
 
-                       buffer >> a;
-                       buffer >> b;
-                       buffer >> name;
-                       buffer >> min.x;
-                       buffer >> min.y;
-                       buffer >> min.z;
-                       buffer >> max.x;
-                       buffer >> max.y;
-                       buffer >> max.z;
-                       buffer >> materialname;
+                            buffer >> name;
+                            buffer >> min.x;
+                            buffer >> min.y;
+                            buffer >> min.z;
+                            buffer >> max.x;
+                            buffer >> max.y;
+                            buffer >> max.z;
+                            buffer >> materialname;
 
                      
-                           Material material = material_map[materialname];
+                            Material material = material_map[materialname];
 
-                           std::shared_ptr<Shape> box_path = std::make_shared<Box>(min , max , name , material);
+                            std::shared_ptr<Shape> box_path = std::make_shared<Box>(min , max , name , material);
                             shape_vector.push_back(box_path);
-                       
+                            
+                            std::cout << "new box added:"  << name << "\n";;
+                        }
 
-                    }
-
-                    if (c=="sphere")
-                    {
+                        if (word=="sphere")
+                        {
                        //Sphere sphere;
-                       std::string name , materialname;
-                       float radius;
-                       glm::vec3 center;
+                            std::string name , materialname;
+                            float radius;
+                            glm::vec3 center;
                        
-                       buffer >> a;
-                       buffer >> b;
-                       buffer >> name;
-                       buffer >> center.x;
-                       buffer >> center.y;
-                       buffer >> center.z;
-                       buffer >> radius;
-                       buffer >> materialname;
+                            buffer >> name;
+                            buffer >> center.x;
+                            buffer >> center.y;
+                            buffer >> center.z;
+                            buffer >> radius;
+                            buffer >> materialname;
                        
         
-                           Material material =    material_map[materialname];
+                            Material material = material_map[materialname];
 
-                           std::shared_ptr<Shape> sphere_path = std::make_shared<Sphere>(center , radius , name , material);
+                            std::shared_ptr<Shape> sphere_path = std::make_shared<Sphere>(center , radius , name , material);
                             shape_vector.push_back(sphere_path);
-                       
+                            
+                            std::cout << "new sphere added:" << name << "\n";
+                        }
+
                     }
 
-                }
-                else if (b == "light")
-                {
-                    Light light;
-                    std::string name;
-                    glm::vec3 pos;
-                    Color color;
-                    float brightness;
+                    else if (word == "light")
+                    {
+                        std::string name;
+                        glm::vec3 pos;
+                        Color color;
+                        float brightness;
 
-                    buffer >> a;
-                    buffer >> b;
-                    buffer >> name;
-                    buffer >> pos.x;
-                    buffer >> pos.y;
-                    buffer >> pos.z;
-                    buffer >> color.r;
-                    buffer >> color.g;
-                    buffer >> color.b;
-                    buffer >> brightness;
+
+                        buffer >> name;
+                        buffer >> pos.x;
+                        buffer >> pos.y;
+                        buffer >> pos.z;
+                        buffer >> color.r;
+                        buffer >> color.g;
+                        buffer >> color.b;
+                        buffer >> brightness;
     
-                    std::shared_ptr<Light> light_path = std::make_shared<Light>(name , pos , color , brightness );
+                        std::shared_ptr<Light> light_path = std::make_shared<Light>(name , pos , color , brightness );
                     //    light_map.insert(std::pair<std::string,std::shared_ptr<Light>> (light_path->name_, light_path));
-                    light_vector.push_back(light_path);
+                        light_vector.push_back(light_path);
+                        std::cout << "new light added:" << name << "\n";
 
-                }
+                    }
             
-                else if (b == "ambient")
-                {
-                     Color color;
+                    else if (word == "ambient")
+                    {
+                        Color color;
 
-                    buffer >> a;
-                    buffer >> color.r;
-                    buffer >> color.g;
-                    buffer >> color.b;
+                        buffer >> color.r;
+                        buffer >> color.g;
+                        buffer >> color.b;
 
-                    std::shared_ptr<Ambient> ambient_path = std::make_shared<Ambient>(color);
-                    ambient_vector.push_back(ambient_path);
-                }
-                else if (b == "camera")
-                {
-                    Camera camera;
+                        std::shared_ptr<Ambient> ambient_path = std::make_shared<Ambient>(color);
+                        ambient_vector.push_back(ambient_path);
+                        
+                        std::cout << "new ambient added \n";
 
+                    }
+                    else if (word == "camera")
+                    {
+                        Camera camera;
 
-                    buffer >> a;
-                    buffer >> camera.name_;
-                    buffer >> camera.fovX_;
-                    buffer >> camera.eye_.x;
-                    buffer >> camera.eye_.y;
-                    buffer >> camera.eye_.z;
-                    buffer >> camera.direction_.x;
-                    buffer >> camera.direction_.y;
-                    buffer >> camera.direction_.z;
-                    buffer >> camera.up_.x;
-                    buffer >> camera.up_.y;
-                    buffer >> camera.up_.z;
+                        buffer >> camera.name_;
+                        buffer >> camera.fovX_;
+                        buffer >> camera.eye_.x;
+                        buffer >> camera.eye_.y;
+                        buffer >> camera.eye_.z;
+                        buffer >> camera.direction_.x;
+                        buffer >> camera.direction_.y;
+                        buffer >> camera.direction_.z;
+                        buffer >> camera.up_.x;
+                        buffer >> camera.up_.y;
+                        buffer >> camera.up_.z;
                    
-                    camera_ = camera;
+                        camera_ = camera;
+                        std::cout << "new camera added:" << camera_.name_ << "\n";
+
                 }
             }
 /***********************************DEFINE-END***************TRANSFORM-START***********************************************************/
-          /*  else if (a == "transform")
+            else if (word == "transform")
             {
                 //fuer cam auch??
-                std::string shape_name;
+                    std::string shape_name;
 
-                buffer >> shape_name;
-                std::shared_ptr<Shape> foundShape = search_shape_vector( shape_name,    shape_vector ); 
+                    buffer >> shape_name;
+                    std::shared_ptr<Shape> foundShape = search_shape_vector( shape_name,    shape_vector ); 
                 //auto foundShape = shape_vector.find(shape_name);
 
-                if(foundShape != nullptr)
-                {
-                    buffer >> c ;
-
-                    if(c == "scale")
+                    if(foundShape != nullptr)
                     {
-                        glm::vec3 s;
+                        buffer >> word ;
 
-                        buffer >> s.x;
-                        buffer >> s.y;
-                        buffer >> s.z;
+                        if(word == "scale")
+                        {
+                            glm::vec3 s;
 
-                        glm::mat4 scale_mat = scale(s);
-                        glm::mat4 trans_mat = foundShape -> getWorld_trans();
-                        trans_mat *= scale_mat ;
-                        foundShape -> setWorld_trans(trans_mat);
-                        foundShape -> setWorld_trans_inv(glm::inverse(trans_mat));
+                            buffer >> s.x;
+                            buffer >> s.y;
+                            buffer >> s.z;
+
+                            glm::mat4 scale_mat = scale(s);
+                            glm::mat4 trans_mat = foundShape -> getWorld_trans();
+                            trans_mat *= scale_mat ;
+                            foundShape -> setWorld_trans(trans_mat);
+                            foundShape -> setWorld_trans_inv(glm::inverse(trans_mat));
                     
-                    }
-                    else if(c == "translate")
-                    {
-                        glm::vec3 t;
+                        }
+                        else if(word == "translate")
+                        {
+                            glm::vec3 t;
 
-                        buffer >> t.x;
-                        buffer >> t.y;
-                        buffer >> t.z;
+                            buffer >> t.x;
+                            buffer >> t.y;
+                            buffer >> t.z;
 
-                        glm::mat4 translate_mat = translation(t);
-                        glm::mat4 trans_mat = foundShape -> getWorld_trans();
-                        trans_mat *= translate_mat ;
-                        foundShape -> setWorld_trans(trans_mat);
-                        foundShape -> setWorld_trans_inv(glm::inverse(trans_mat));
+                            glm::mat4 translate_mat = translation(t);
+                            glm::mat4 trans_mat = foundShape -> getWorld_trans();
+                            trans_mat *= translate_mat ;
+                            foundShape -> setWorld_trans(trans_mat);
+                            foundShape -> setWorld_trans_inv(glm::inverse(trans_mat));
 
-                    }
-                    else if(c == "rotate")
-                    {
-                        float winkel;
-                        glm::vec3 r;
+                        }
+                        else if(word == "rotate")
+                        {
+                            float winkel;
+                            glm::vec3 r;
+                         
+                            buffer >> winkel;
+                            buffer >> r.x;
+                            buffer >> r.y;
+                            buffer >> r.z;
                         
-                        buffer >> winkel;
-                        buffer >> r.x;
-                        buffer >> r.y;
-                        buffer >> r.z;
-                        
-                        glm::mat4 rotate_mat = rotation(r, winkel);
-                        glm::mat4 trans_mat = foundShape -> getWorld_trans();
-                        trans_mat *= rotate_mat ;
-                        foundShape -> setWorld_trans(trans_mat);
-                        foundShape -> setWorld_trans_inv(glm::inverse(trans_mat));
-                    }
-                    else
-                    {
-                        std::cout << "Transform Funktion kann nicht gelesen werden."<< std::endl;
-                    }
-                }               
+                            glm::mat4 rotate_mat = rotation(r, winkel);
+                            glm::mat4 trans_mat = foundShape -> getWorld_trans();
+                            trans_mat *= rotate_mat ;
+                            foundShape -> setWorld_trans(trans_mat);
+                            foundShape -> setWorld_trans_inv(glm::inverse(trans_mat));
+                        }
+                        else
+                        {
+                            std::cout << "Transform Funktion kann nicht gelesen werden."<< std::endl;
+                        }
+                    }               
             }
 /***********************************TRANSFROM_END************RENDER-START**************************************************************/
-           /* else if( a == "render")
-            {
+            else if( word == "render")
+            {   
+                buffer >> word;
                 buffer >> width;
                 buffer >> height;
                 buffer >> filename;
+                
+                std::cout << "rendern des filenames " << filename << "\n";
 
             }
         
-        }*/
+        }
         file.close();
     
 
