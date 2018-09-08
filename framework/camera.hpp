@@ -3,6 +3,9 @@
 
 #include "Ray.hpp"
 #include <glm/vec3.hpp>
+#include <glm/vec4.hpp>
+#include <glm/glm.hpp>
+
 #include <string>
 #include <iostream>
 
@@ -15,6 +18,8 @@ struct Camera
     glm::vec3 eye_; // von position zu eye geandert
     glm::vec3 direction_;
     glm::vec3 up_;
+    glm::mat4 world_transformation_;
+    glm::mat4 world_transformation_inv_;
 
 
     Camera(std::string const& name, float fovX, glm::vec3 const& eye, glm::vec3 const& direction, glm::vec3 const& up):
@@ -22,15 +27,30 @@ struct Camera
     fovX_(fovX),
     eye_(eye),
     direction_(direction),
-    up_(up)
-    {};
+    up_(up),
+    world_transformation_{  1.0f, 0.0f, 0.0f, 0.0f,
+                            0.0f, 1.0f, 0.0f, 0.0f,
+                            0.0f, 0.0f, 1.0f, 0.0f,
+                            0.0f, 0.0f, 0.0f, 1.0},
+    world_transformation_inv_{glm::inverse(world_transformation_)}
+    {
+        world_transformation_ = camera_transformation();
+        std::cout << "Added eye dir up stuff when construction";
+        world_transformation_inv_ = glm::inverse(world_transformation_);
+
+    };
 
     Camera(std::string const& name, float fovX):
     name_(name),
     fovX_(fovX),
     eye_(0.0f, 0.0f, 0.0f),
     direction_(0.0f, 0.0f, -1.0f),
-    up_(0.0f, 0.0f, 0.0f)
+    up_(0.0f, 0.0f, 0.0f),
+    world_transformation_{  1.0f, 0.0f, 0.0f, 0.0f,
+                            0.0f, 1.0f, 0.0f, 0.0f,
+                            0.0f, 0.0f, 1.0f, 0.0f,
+                            0.0f, 0.0f, 0.0f, 1.0},
+    world_transformation_inv_{glm::inverse(world_transformation_)}
     {};
 
     Camera():
@@ -38,7 +58,12 @@ struct Camera
     fovX_(45),
     eye_(0.0f, 0.0f, 0.0f),
     direction_(0.0f, 0.0f, -1.0f),
-    up_(0.0f, 1.0f, 0.0f)
+    up_(0.0f, 1.0f, 0.0f),
+    world_transformation_{  1.0f, 0.0f, 0.0f, 0.0f,
+                            0.0f, 1.0f, 0.0f, 0.0f,
+                            0.0f, 0.0f, 1.0f, 0.0f,
+                            0.0f, 0.0f, 0.0f, 1.0},
+    world_transformation_inv_{glm::inverse(world_transformation_)}
     {};
     
     Ray camera_ray(float x, float y, float width , float height )

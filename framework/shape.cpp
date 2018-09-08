@@ -2,14 +2,24 @@
 
 Shape :: Shape():
     name_{"NoName"},
-    material_{Material{}}
+    material_{Material{}},
+    world_transformation_{  1.0f, 0.0f, 0.0f, 0.0f,
+                            0.0f, 1.0f, 0.0f, 0.0f,
+                            0.0f, 0.0f, 1.0f, 0.0f,
+                            0.0f, 0.0f, 0.0f, 1.0},
+    world_transformation_inv_{glm::inverse(world_transformation_)}
     {
        // std::cout << "default C'tor class Shape" << std::endl ;
     };
 
 Shape :: Shape(std::string const& name , Material const& material):
     name_{name},
-    material_{material}
+    material_{material},
+    world_transformation_{  1.0f, 0.0f, 0.0f, 0.0f,
+                            0.0f, 1.0f, 0.0f, 0.0f,
+                            0.0f, 0.0f, 1.0f, 0.0f,
+                            0.0f, 0.0f, 0.0f, 1.0},
+    world_transformation_inv_{glm::inverse(world_transformation_)}
     {
        // std::cout << "Constructor class Shape" << std::endl ;
     };
