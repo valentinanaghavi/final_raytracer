@@ -247,7 +247,18 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
         
         }
         file.close();
-    
+        
+        //ausgabe der Material Map und Shape Vector
+        std::cout <<"\n" <<"Material Map: "<< std::endl;
+        for(auto& mat : material_map)
+        {
+             std::cout << "[" << mat.first << "] \n";
+        }
+        std::cout <<"\n" <<"Shape Vector: "<< std::endl;
+        for(auto it = shape_vector.cbegin(); it != shape_vector.cend(); ++it)
+        {
+            std::cout << *it << "\n";
+        }
 
 };
 
