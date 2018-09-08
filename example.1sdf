@@ -5,4 +5,3 @@ define shape box rbottom -100 -80 -200 100 80 -100 red
 define shape sphere bsphere 0 0 -100 50 blue
 define light sun 1000 700 0  0.2 0.2 0.2 100
 define camera eye 45.0
-

@@ -236,19 +236,24 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
 /***********************************TRANSFROM_END************RENDER-START**************************************************************/
             else if( word == "render")
             {   
-                buffer >> word;
-                buffer >> width;
-                buffer >> height;
-                buffer >> filename;
+                //buffer >> word;
+                buffer >> width_;
+                buffer >> height_;
+                buffer >> filename_;
                 
-                std::cout << "rendern des filenames " << filename << "\n";
+                /*width_ = width;
+                height_ = height;
+                filename_ = filename;*/
+                std::cout << "rendern des filenames " << filename_ << "\n";
 
             }
         
         }
         file.close();
-        
-        //ausgabe der Material Map und Shape Vector
+
+
+        std::cout <<"*************************************** "<< std::endl;
+        //Ausgabe der Material Map und Shape Vector
         std::cout <<"\n" <<"Material Map: "<< std::endl;
         for(auto& mat : material_map)
         {
@@ -259,6 +264,17 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
         {
             std::cout << *it << "\n";
         }
+        std::cout <<"*************************************** "<< std::endl;
+        //Ausgabe der Kamera Vector
+        std::cout << "Camera:\n" << camera_ << "\n";
+        std::cout <<"*************************************** "<< std::endl;
+        //Ausgabe Render Bedingungen
+        std::cout << "Render Stuff:\n";
+        std::cout << "filename: " << filename_ << "\n";
+        std::cout << "width: " << width_ << "\n";
+        std::cout << "height: " << height_ << "\n";
+        std::cout <<"*************************************** "<< std::endl;
+
 
 };
 

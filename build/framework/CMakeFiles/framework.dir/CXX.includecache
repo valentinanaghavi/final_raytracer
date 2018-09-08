@@ -977,6 +977,8 @@ glm/vec3.hpp
 -
 string
 -
+iostream
+-
 
 /home/valentina/final_raytracer/framework/color.hpp
 iostream

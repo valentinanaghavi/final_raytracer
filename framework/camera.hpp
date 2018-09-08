@@ -4,10 +4,19 @@
 #include "Ray.hpp"
 #include <glm/vec3.hpp>
 #include <string>
+#include <iostream>
 
 struct Camera 
 {
     
+
+    std::string name_;
+    float fovX_;  //Oeffnungswinkel der Kamera
+    glm::vec3 eye_; // von position zu eye geandert
+    glm::vec3 direction_;
+    glm::vec3 up_;
+
+
     Camera(std::string const& name, float fovX, glm::vec3 const& eye, glm::vec3 const& direction, glm::vec3 const& up):
     name_(name),
     fovX_(fovX),
@@ -16,7 +25,6 @@ struct Camera
     up_(up)
     {};
 
-//Dieser Konstruktor vermutlich nicht mehr noetig , durch 7.3 erweiterung s.o.
     Camera(std::string const& name, float fovX):
     name_(name),
     fovX_(fovX),
@@ -65,21 +73,20 @@ struct Camera
     }
     
 
-
-
-    std::string name_;
-    float fovX_;  //Oeffnungswinkel der Kamera
-    glm::vec3 eye_; // von position zu eye geandert
-    glm::vec3 direction_;
-    glm::vec3 up_;
-
-
-
-
-
-
+  friend std::ostream& operator<<(std::ostream& os, Camera const& c)
+  {
+    os << "Name: " << c.name_ << "\n" << "fovX: " << c.fovX_
+    << "eye: (" << c.eye_.x << "," << c.eye_.y << "," << c.eye_.z <<") \n"
+    << "direction: (" << c.direction_.x << "," << c.direction_.y << "," << c.direction_.z <<") \n"
+	<< "up: (" << c.up_.x << "," << c.up_.y << "," << c.up_.z <<")"
+    << " \n";
+    return os;
+  }
 
 };
+
+
+
 
 
 

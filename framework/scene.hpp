@@ -38,9 +38,9 @@ struct Scene
     std::vector <std::shared_ptr<Light>> light_vector;
     
     Camera camera_;
-    unsigned width;
-    unsigned height;
-    std::string filename;
+    unsigned width_;
+    unsigned height_;
+    std::string filename_;
 
 
 
