@@ -40,7 +40,7 @@ public:
 
     //aufgabe 6.3
     virtual bool intersect ( Ray const& ray , float& t ) const = 0;
-    virtual Strike intersection (Ray const& ray, float& t) const = 0;
+    virtual Strike intersection (Ray const& ray) const = 0;
 
 
 private:

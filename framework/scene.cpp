@@ -1,4 +1,7 @@
 #include "scene.hpp"
+#include "Ray.hpp"
+#include <glm/glm.hpp>
+#include <glm/vec3.hpp>
 
 void Scene :: read_sdf(std::string const& file_path) //, Scene& scene) 
 {
@@ -140,9 +143,9 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                         buffer >> color.g;
                         buffer >> color.b;
 
-                        std::shared_ptr<Ambient> ambient = std::make_shared<Ambient>(color);
+                        //std::shared_ptr<Ambient> ambient = std::make_shared<Ambient>(color);
                         //ambient_vector.push_back(ambient_path);
-                        ambient_ = ambient;
+                        ambient_ = color;
                         std::cout << "new ambient added \n";
                         //std::cout << "Ambient:\n" << *ambient << "\n";
 
@@ -270,7 +273,8 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
         std::cout << "Camera:\n" << camera_ << "\n";
         std::cout <<"*************************************** "<< std::endl;
         //Ausgabe der Ambient
-        std::cout << "Ambient:\n" << *ambient_ << "\n";
+        //std::cout << "Ambient:\n" << *ambient_ << "\n";
+        std::cout << "Ambient:\n" << ambient_ << "\n";
         std::cout <<"*************************************** "<< std::endl;
         //Ausgabe Render Bedingungen
         std::cout << "Render Stuff:\n";
@@ -278,8 +282,19 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
         std::cout << "width: " << width_ << "\n";
         std::cout << "height: " << height_ << "\n";
         std::cout <<"*************************************** "<< std::endl;
+       /* std::cout << "Intersect ueberprufen sphere:\n";
+        float t = 0.0f;
+        glm::vec3 ctr_ (0.0 , 0.0 , 0.0);
+        float rad_ = 50;
+        Ray ray1;
+        //ray1.origin(0.0f,0.0f,0.0f);
+        //ray1.direction(50.0f,50.0f,60.0f);
+    
 
-
+        bool res = glm::intersectRaySphere(ray1.origin, ray1.direction,
+            ctr_, rad_*rad_, t);
+            std::cout << "dis: " << t << "\n ja oder nein: " << res << "\n";
+            */
 };
 
 

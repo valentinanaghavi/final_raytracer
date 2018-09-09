@@ -55,11 +55,6 @@ void Renderer::render()
   for (unsigned y = 0; y < height_; ++y) {
     for (unsigned x = 0; x < width_; ++x) {
       Pixel p(x,y);
-     /* if ( ((x/checker_pattern_size)%2) != ((y/checker_pattern_size)%2)) {
-        p.color = Color(0.0, 1.0, float(x)/height_);
-      } else {
-        p.color = Color(1.0, 0.0, float(y)/width_);
-      }*/
       Ray ray = scene_.camera_.camera_ray(x,y,width_,height_);
       p.color = raytrace(ray,200);
       p.color = toneMapping(p.color);
@@ -103,10 +98,9 @@ Color Renderer :: toneMapping (Color const& c) const
 
 }
 
-
 Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
 {
-  
+
   Strike closest = computeStrike(ray);
 
   
@@ -116,15 +110,15 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
     /* Ambiente Beleuchtung = I_a*k_a   I_a: Intensität des ambienten Lichts, bestimmt
     durch konstante I_a = 0.10     k_a: ambienter Reflexionskoeffizient (in Material
     ka = ambiente Reflexion*/
-    Color tmp_color (0.0, 0.0, 0.0);
-    Ambient ambient {tmp_color}; //ambient aendern zum typ Ambient von Color ! bekommt der wirklich den wert 0.0 , oder das in der sdf??
-    Color c (0.0, 0.0, 0.0);
-    float ia = 0.10;
+    Color tmp_color (1.0, 1.0, 1.0);
+    Color ambient {tmp_color}; //ambient aendern zum typ Ambient von Color ! bekommt der wirklich den wert 0.0 , oder das in der sdf??
+    Color c {0.0, 0.0, 0.0};
+    float ia = 0.01;
     Color ip {0.0, 0.0, 0.0};
     float ln = 0;
     float rv = 0;
     ambient = ia * (closest.nearestShape -> getMaterial().ka_); //closest braucht pointer im Strike ist es ein nullptr muss im Strike intersect in den Shapes geändert werden dass es einen pointer bekommt beim methodenausführen 
- 
+    c = ambient;
     //Falls andere Lichtquellen vorhanden werden diese durchgegangen
     for (unsigned int i = 0; i < scene_.light_vector.size(); i++)
     {
@@ -179,10 +173,18 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
       * m (specular reflection exponent)*/
       float m = closest.nearestShape -> getMaterial().m_;
       Color ks = closest.nearestShape -> getMaterial().ks_;
-      c = c * 0.5f + c * 0.5f * reflection * ks * m;  
+      c = c * 0.5f + c * 0.5f * reflection * ks * m; 
+      return c;  
     }
-    return c;      
+
   }
+  else
+  {
+    Color c = scene_.ambient_;
+    return c;
+  }
+
+    
 }
 /* Die Funktion schaut ob ein Objekt zwischen dem Strike eines Objetes und einer der / allen 
 Lichtquellen liegt. Liegt ein Objekt dazwischen gibt es einen Schatten*/ 
@@ -200,7 +202,7 @@ bool Renderer::breaking (Strike const& strike, glm::vec3 const& lightPosition) c
 Strike Renderer::computeStrike(Ray const& rayStrike) const
 {
   Strike closest;
-  float d = 2000;
+  //float d = 2000;
 
   for (auto const& shape: scene_.shape_vector)
   {
@@ -208,7 +210,7 @@ Strike Renderer::computeStrike(Ray const& rayStrike) const
     {
       Ray ray{rayStrike.origin, glm::normalize(rayStrike.direction)};
 
-      Strike newStrike = shape -> intersection(ray, d);
+      Strike newStrike = shape -> intersection(ray);
 
       if (newStrike.hit && 0.000001 < newStrike.distance && newStrike.distance < closest.distance) 
       {

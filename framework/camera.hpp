@@ -45,7 +45,7 @@ struct Camera
     fovX_(fovX),
     eye_(0.0f, 0.0f, 0.0f),
     direction_(0.0f, 0.0f, -1.0f),
-    up_(0.0f, 0.0f, 0.0f),
+    up_(0.0f, 1.0f, 0.0f),
     world_transformation_{  1.0f, 0.0f, 0.0f, 0.0f,
                             0.0f, 1.0f, 0.0f, 0.0f,
                             0.0f, 0.0f, 1.0f, 0.0f,
@@ -85,7 +85,7 @@ struct Camera
     glm::mat4 camera_transformation()
     {   
 
-        glm::vec3 normalized_dir = glm::normalize(direction_);
+        //glm::vec3 normalized_dir = glm::normalize(direction_);
         glm::vec3 n = glm::normalize(direction_);
        // glm::vec3 u_ = glm::normalize(glm::cross(normalized_dir, up_)); //u steht senkrecht auf direction(n) und up
        // glm::vec3 v_ = glm::normalize(glm::cross(u_ , normalized_dir));  //stellt sicher , dass up senkrecht auf u und n ist
@@ -96,10 +96,10 @@ struct Camera
 
 
         glm::mat4 tc;
-        tc[3] = glm::vec4(e,1.0);
-        tc[2] = glm::vec4(n* -1.0f,0.0) ;
-        tc[1] = glm::vec4(v,0.0);
-        tc[0] = glm::vec4(u,0.0);
+        tc[3] = glm::vec4(e,1.0f);
+        tc[2] = glm::vec4(-1.0f * n,0.0f) ;
+        tc[1] = glm::vec4(v,0.0f);
+        tc[0] = glm::vec4(u,0.0f);
       /* glm::mat4 c{ u_.x , v_.x , -normalized_dir.x , eye_.x,
                     u_.y , v_.y , -normalized_dir.y , eye_.y,
                     u_.z , v_.z , -normalized_dir.z , eye_.z, 

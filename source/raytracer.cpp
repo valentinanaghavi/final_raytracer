@@ -10,15 +10,16 @@
 int main(int argc, char* argv[])
 {
 
-  //unsigned const image_width = 800;
-  //unsigned const image_height = 600;
-  unsigned const image_width = 480;
-  unsigned const image_height = 320;
+  unsigned const image_width = 1500;
+  unsigned const image_height = 1000;
+  //unsigned const image_width = 480;
+  //unsigned const image_height = 320;
   std::string const filename = "./checkerboard.ppm";
 
   Scene s;
-  std::string const ofile = "/home/valentina/final_raytracer/source/example.txt";
-
+  //std::string const ofile = "/home/valentina/final_raytracer/source/example.txt";
+  std::string const ofile = "../../source/example.txt";
+  
   s.read_sdf(ofile);
 
   Renderer renderer{s ,image_width, image_height, filename};
