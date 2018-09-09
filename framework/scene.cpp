@@ -2,46 +2,6 @@
 
 void Scene :: read_sdf(std::string const& file_path) //, Scene& scene) 
 {
-<<<<<<< HEAD:framework/sdfReader.cpp
-    auto it = scene.material_map.find(search_name);
-    if(it == scene.material_map.end())
-    {
-        std::cout << "Der Name existiert nicht. \n";
-        return nullptr;
-    }
-    else
-    {
-        std::cout << "Der Name existiert. \n";
-        return it->second;
-    }
-};*/
-std::shared_ptr<Shape> search_shape_vector(std::string const& search_name , std::vector <std::shared_ptr<Shape>> shape_container)
-{
-    auto it = std::find_if(shape_container.begin() , shape_container.end(), [&search_name](std::shared_ptr<Shape> const& s){return (s ->getName()) == search_name;});
-
-    if(it == shape_container.end())
-    {
-        std::cout << "Der Name existiert nicht. \n";
-        return nullptr;
-    }
-    else
-    {
-        std::cout << "Die Shape existiert und kann transformiert werden. \n";
-        return *it;
-    }
-
-}
-
-
-Scene read_sdf(std::string const& file_path) //, Scene& scene) 
-{
-    Scene scene{};
-    std::fstream myfile;
-    myfile.open(file_path);
-    std::string line;
-
-    if(!myfile)
-=======
     std::ifstream file;
     file.open (file_path, std::ifstream::in);
     //myfile.open(file_path);
@@ -50,7 +10,6 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
     //file.open(file_path, std::ios::in);
     std::cout << "loadScene (openFile): " << file_path << std::endl;
     if(file.is_open())
->>>>>>> b3f05f70ab594639923f6260e031785a9c2aa3d1:framework/scene.cpp
     {
         std::cout << "Able to read file" ;
     }
@@ -59,7 +18,7 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
         std::cout << "Unable to open file" ;        
 
     }
-      /*  while( std::getline( file , line ))
+        while( std::getline( file , line ))
         {
            
             std::stringstream buffer(line);
@@ -279,7 +238,7 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
                 }               
             }
 /***********************************TRANSFROM_END************RENDER-START**************************************************************/
-           /* else if( a == "render")
+            else if( a == "render")
             {
                 buffer >> width;
                 buffer >> height;
@@ -287,7 +246,7 @@ Scene read_sdf(std::string const& file_path) //, Scene& scene)
 
             }
         
-        }*/
+        }
         file.close();
     
 

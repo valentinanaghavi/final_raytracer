@@ -5,11 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-<<<<<<< HEAD
   "/home/judith/Dokumente/Uni/final_raytracer/framework/glew.c" "/home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/framework.dir/glew.c.o"
-=======
-  "/home/valentina/final_raytracer/framework/glew.c" "/home/valentina/final_raytracer/build/framework/CMakeFiles/framework.dir/glew.c.o"
->>>>>>> b3f05f70ab594639923f6260e031785a9c2aa3d1
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -29,27 +25,15 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../framework/.."
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-<<<<<<< HEAD
   "/home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/framework.dir/box.cpp.o"
   "/home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/framework.dir/material.cpp.o"
   "/home/judith/Dokumente/Uni/final_raytracer/framework/pixel.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/framework.dir/pixel.cpp.o"
   "/home/judith/Dokumente/Uni/final_raytracer/framework/ppmwriter.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
   "/home/judith/Dokumente/Uni/final_raytracer/framework/renderer.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/framework.dir/renderer.cpp.o"
-  "/home/judith/Dokumente/Uni/final_raytracer/framework/sdfReader.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/framework.dir/sdfReader.cpp.o"
+  "/home/judith/Dokumente/Uni/final_raytracer/framework/scene.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/framework.dir/scene.cpp.o"
   "/home/judith/Dokumente/Uni/final_raytracer/framework/shape.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/framework.dir/shape.cpp.o"
   "/home/judith/Dokumente/Uni/final_raytracer/framework/sphere.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/framework.dir/sphere.cpp.o"
   "/home/judith/Dokumente/Uni/final_raytracer/framework/window.cpp" "/home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/framework.dir/window.cpp.o"
-=======
-  "/home/valentina/final_raytracer/framework/box.cpp" "/home/valentina/final_raytracer/build/framework/CMakeFiles/framework.dir/box.cpp.o"
-  "/home/valentina/final_raytracer/framework/material.cpp" "/home/valentina/final_raytracer/build/framework/CMakeFiles/framework.dir/material.cpp.o"
-  "/home/valentina/final_raytracer/framework/pixel.cpp" "/home/valentina/final_raytracer/build/framework/CMakeFiles/framework.dir/pixel.cpp.o"
-  "/home/valentina/final_raytracer/framework/ppmwriter.cpp" "/home/valentina/final_raytracer/build/framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
-  "/home/valentina/final_raytracer/framework/renderer.cpp" "/home/valentina/final_raytracer/build/framework/CMakeFiles/framework.dir/renderer.cpp.o"
-  "/home/valentina/final_raytracer/framework/scene.cpp" "/home/valentina/final_raytracer/build/framework/CMakeFiles/framework.dir/scene.cpp.o"
-  "/home/valentina/final_raytracer/framework/shape.cpp" "/home/valentina/final_raytracer/build/framework/CMakeFiles/framework.dir/shape.cpp.o"
-  "/home/valentina/final_raytracer/framework/sphere.cpp" "/home/valentina/final_raytracer/build/framework/CMakeFiles/framework.dir/sphere.cpp.o"
-  "/home/valentina/final_raytracer/framework/window.cpp" "/home/valentina/final_raytracer/build/framework/CMakeFiles/framework.dir/window.cpp.o"
->>>>>>> b3f05f70ab594639923f6260e031785a9c2aa3d1
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

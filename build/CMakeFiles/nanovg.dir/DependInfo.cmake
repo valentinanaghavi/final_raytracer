@@ -4,11 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-<<<<<<< HEAD
   "/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/nanovg.c" "/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o"
-=======
-  "/home/valentina/final_raytracer/external/nanovg/src/nanovg.c" "/home/valentina/final_raytracer/build/CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o"
->>>>>>> b3f05f70ab594639923f6260e031785a9c2aa3d1
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

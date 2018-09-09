@@ -6,25 +6,15 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/fontstash.h
-=======
-/home/valentina/final_raytracer/external/nanovg/src/fontstash.h
->>>>>>> b3f05f70ab594639923f6260e031785a9c2aa3d1
 ft2build.h
 -
 math.h
 -
 stb_truetype.h
-<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_truetype.h
 
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/nanovg.c
-=======
-/home/valentina/final_raytracer/external/nanovg/src/stb_truetype.h
-
-/home/valentina/final_raytracer/external/nanovg/src/nanovg.c
->>>>>>> b3f05f70ab594639923f6260e031785a9c2aa3d1
 stdlib.h
 -
 stdio.h
@@ -34,7 +24,6 @@ math.h
 memory.h
 -
 nanovg.h
-<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/nanovg.h
 fontstash.h
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/fontstash.h
@@ -46,19 +35,6 @@ stb_image.h
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_image.h
 stb_image.h
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_image.h
-=======
-/home/valentina/final_raytracer/external/nanovg/src/nanovg.h
-fontstash.h
-/home/valentina/final_raytracer/external/nanovg/src/fontstash.h
-stb_image.h
-/home/valentina/final_raytracer/external/nanovg/src/stb_image.h
-
-/home/valentina/final_raytracer/external/nanovg/src/nanovg.h
-
-/home/valentina/final_raytracer/external/nanovg/src/stb_image.h
-stb_image.h
-/home/valentina/final_raytracer/external/nanovg/src/stb_image.h
->>>>>>> b3f05f70ab594639923f6260e031785a9c2aa3d1
 stdio.h
 -
 stdarg.h
@@ -84,7 +60,6 @@ intrin.h
 arm_neon.h
 -
 
-<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_truetype.h
 stb_truetype.h
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_truetype.h
@@ -92,15 +67,6 @@ stdio.h
 -
 stb_truetype.h
 /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_truetype.h
-=======
-/home/valentina/final_raytracer/external/nanovg/src/stb_truetype.h
-stb_truetype.h
-/home/valentina/final_raytracer/external/nanovg/src/stb_truetype.h
-stdio.h
--
-stb_truetype.h
-/home/valentina/final_raytracer/external/nanovg/src/stb_truetype.h
->>>>>>> b3f05f70ab594639923f6260e031785a9c2aa3d1
 math.h
 -
 math.h
