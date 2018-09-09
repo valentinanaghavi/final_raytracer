@@ -140,10 +140,11 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                         buffer >> color.g;
                         buffer >> color.b;
 
-                        std::shared_ptr<Ambient> ambient_path = std::make_shared<Ambient>(color);
-                        ambient_vector.push_back(ambient_path);
-                        
+                        std::shared_ptr<Ambient> ambient = std::make_shared<Ambient>(color);
+                        //ambient_vector.push_back(ambient_path);
+                        ambient_ = ambient;
                         std::cout << "new ambient added \n";
+                        //std::cout << "Ambient:\n" << *ambient << "\n";
 
                     }
                     else if (word == "camera")
@@ -267,6 +268,9 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
         std::cout <<"*************************************** "<< std::endl;
         //Ausgabe der Kamera Vector
         std::cout << "Camera:\n" << camera_ << "\n";
+        std::cout <<"*************************************** "<< std::endl;
+        //Ausgabe der Ambient
+        std::cout << "Ambient:\n" << *ambient_ << "\n";
         std::cout <<"*************************************** "<< std::endl;
         //Ausgabe Render Bedingungen
         std::cout << "Render Stuff:\n";

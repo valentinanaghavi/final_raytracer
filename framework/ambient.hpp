@@ -16,9 +16,9 @@ struct Ambient
   {};
 
   friend std::ostream& operator<<(std::ostream& os, Ambient const& a)
-  {
-    os << "AMBIENT: color: (" << a.color_.r  << a.color_.g << ","  << a.color_.b <<  ")\n";
-    return os;
+  {    
+         os << a.color_ << "\n";    
+         return os;
   }
 
   Color color_ ;
