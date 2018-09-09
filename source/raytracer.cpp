@@ -10,10 +10,10 @@
 int main(int argc, char* argv[])
 {
 
-  unsigned const image_width = 800;
-  unsigned const image_height = 600;
-  //unsigned const image_width = 1600;
-  //unsigned const image_height = 900;
+  //unsigned const image_width = 800;
+  //unsigned const image_height = 600;
+  unsigned const image_width = 480;
+  unsigned const image_height = 320;
   std::string const filename = "./checkerboard.ppm";
 
   Scene s;
@@ -22,9 +22,14 @@ int main(int argc, char* argv[])
   s.read_sdf(ofile);
 
   Renderer renderer{s ,image_width, image_height, filename};
+<<<<<<< HEAD
   //std::cout << "renderer generiert:" ;
+=======
+  std::cout << "renderer generiert \n" ;
+>>>>>>> a76f0285a22e5e87705413e286ae3e22b282edb0
   //create separate thread to see updates of pixels while rendering
   std::thread render_thread([&renderer]() {renderer.render();});
+  std::cout << "fertig mit rendern \n" ;
 
   Window window{{image_width, image_height}};
 

@@ -21,7 +21,7 @@ Material::Material(std::string const& name, Color const& ka, Color const& kd, Co
 
 std::ostream& Material :: print(std::ostream& os ) const 
 {
-    os << "Name: " << name_ << "\n"
+    os << "\n Name: " << name_ << "\n"
 	<< "ambient reflection: " << ka_
 	<< "diffuse reflection: " << kd_
 	<< "specular reflection: " << ks_

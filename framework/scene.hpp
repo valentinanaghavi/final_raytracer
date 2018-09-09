@@ -34,13 +34,13 @@ struct Scene
 
     std::map <std::string , Material> material_map;
     std::vector <std::shared_ptr<Shape>> shape_vector;
-    std::vector <std::shared_ptr<Ambient>> ambient_vector;
+    std::shared_ptr<Ambient> ambient_;
     std::vector <std::shared_ptr<Light>> light_vector;
     
     Camera camera_;
-    unsigned width;
-    unsigned height;
-    std::string filename;
+    unsigned width_;
+    unsigned height_;
+    std::string filename_;
 
 
 

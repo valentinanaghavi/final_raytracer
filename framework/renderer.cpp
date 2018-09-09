@@ -61,7 +61,8 @@ void Renderer::render()
         p.color = Color(1.0, 0.0, float(y)/width_);
       }*/
       Ray ray = scene_.camera_.camera_ray(x,y,width_,height_);
-      p.color = raytrace(ray,15);
+      p.color = raytrace(ray,200);
+      p.color = toneMapping(p.color);
       write(p);
     }
   }
@@ -115,7 +116,8 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
     /* Ambiente Beleuchtung = I_a*k_a   I_a: Intensität des ambienten Lichts, bestimmt
     durch konstante I_a = 0.10     k_a: ambienter Reflexionskoeffizient (in Material
     ka = ambiente Reflexion*/
-    Color ambient {0.0, 0.0, 0.0};
+    Color tmp_color (0.0, 0.0, 0.0);
+    Ambient ambient {tmp_color}; //ambient aendern zum typ Ambient von Color ! bekommt der wirklich den wert 0.0 , oder das in der sdf??
     Color c (0.0, 0.0, 0.0);
     float ia = 0.10;
     Color ip {0.0, 0.0, 0.0};

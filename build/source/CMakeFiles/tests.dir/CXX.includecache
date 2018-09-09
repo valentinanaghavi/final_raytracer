@@ -885,7 +885,13 @@ Ray.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
 glm/vec3.hpp
 -
+glm/vec4.hpp
+-
+glm/glm.hpp
+-
 string
+-
+iostream
 -
 
 /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
