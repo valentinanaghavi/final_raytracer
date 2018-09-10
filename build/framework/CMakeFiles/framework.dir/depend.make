@@ -186,7 +186,6 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/v
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/vec4.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/vector_relational.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/Ray.hpp
-framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/ambient.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/box.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/camera.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/color.hpp
@@ -283,7 +282,6 @@ framework/CMakeFiles/framework.dir/scene.cpp.o: ../external/glm-0.9.5.3/glm/vec3
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../external/glm-0.9.5.3/glm/vec4.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../external/glm-0.9.5.3/glm/vector_relational.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/Ray.hpp
-framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/ambient.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/box.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/camera.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/color.hpp

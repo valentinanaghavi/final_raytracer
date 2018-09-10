@@ -344,7 +344,6 @@ source/CMakeFiles/tests.dir/tests.cpp.o
  ../external/glm-0.9.5.3/glm/vec4.hpp
  ../external/glm-0.9.5.3/glm/vector_relational.hpp
  /home/IN/wobi3451/final_raytracer/framework/Ray.hpp
- /home/IN/wobi3451/final_raytracer/framework/ambient.hpp
  /home/IN/wobi3451/final_raytracer/framework/box.hpp
  /home/IN/wobi3451/final_raytracer/framework/camera.hpp
  /home/IN/wobi3451/final_raytracer/framework/color.hpp

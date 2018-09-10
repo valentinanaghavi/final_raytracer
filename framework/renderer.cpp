@@ -100,9 +100,9 @@ Color Renderer :: toneMapping (Color const& c) const
 
 Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
 {
-
   Strike closest = computeStrike(ray);
 
+  Color ia = scene_.ambient_;
   
 
   if(closest.hit == true) // -> in shape unterklassen muss Strike intersect geändert werden damit Strike.hit true wird
@@ -110,18 +110,33 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
     /* Ambiente Beleuchtung = I_a*k_a   I_a: Intensität des ambienten Lichts, bestimmt
     durch konstante I_a = 0.10     k_a: ambienter Reflexionskoeffizient (in Material
     ka = ambiente Reflexion*/
-    Color tmp_color (1.0, 1.0, 1.0);
-    Color ambient {tmp_color}; //ambient aendern zum typ Ambient von Color ! bekommt der wirklich den wert 0.0 , oder das in der sdf??
     Color c {0.0, 0.0, 0.0};
-    float ia = 0.01;
     Color ip {0.0, 0.0, 0.0};
     float ln = 0;
     float rv = 0;
-    ambient = ia * (closest.nearestShape -> getMaterial().ka_); //closest braucht pointer im Strike ist es ein nullptr muss im Strike intersect in den Shapes geändert werden dass es einen pointer bekommt beim methodenausführen 
-    c = ambient;
+    c = ia * (closest.nearestShape -> getMaterial().ka_); //ia (ambient light) * ambient reflektion der Shape 
+
     //Falls andere Lichtquellen vorhanden werden diese durchgegangen
     for (unsigned int i = 0; i < scene_.light_vector.size(); i++)
     {
+      /*if(c.r < 1.0f || c.g < 1.0f ||c.b < 1.0f)
+      {
+        bool noObject = false;
+        
+                //Vector von Intersection zu Lichtquelle berechnen
+                glm::vec3 dirToLight = glm::normalize(light -> m_pos - closestHit.m_intersection); //normalize that light!!!
+        
+                //bisschen verschieben, damit intersect richtig funktioniert
+                glm::vec3 newOrigin = closestHit.m_intersection + dirToLight * 0.001f; //so intersect works properly
+                Ray rayToLight{newOrigin, dirToLight}; //vec from hit to lightsource
+                
+                //Liegt Objekt zwischen Shape und Lichtquelle?
+                //Trifft der Ray eine andere Shape?
+                Hit shadowHit = m_scene.m_composite -> intersect(rayToLight); //does the vec meet another object?
+                //wenn OShape getroffen wird:
+        //std::cout << "shadow hit: " << shadowHit << std::endl;*/
+
+
       if (breaking(closest, scene_.light_vector[i] -> pos_)) // wenn es keinen Schatten gibt 
       {
         ip = scene_.light_vector[i] -> intensity(); // Intensität: brightness * color
@@ -153,6 +168,7 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
             * std::pow(rv, (closest.nearestShape -> getMaterial().m_)));
         
       }
+    
     }
 
     //Reflektion anderer Objekte
@@ -180,7 +196,7 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
   }
   else
   {
-    Color c = scene_.ambient_;
+    Color c = ia;
     return c;
   }
 

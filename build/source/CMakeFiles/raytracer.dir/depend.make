@@ -88,7 +88,6 @@ source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/vec
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/vec4.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/vector_relational.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/Ray.hpp
-source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/ambient.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/box.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/camera.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/color.hpp

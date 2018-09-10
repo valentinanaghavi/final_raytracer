@@ -850,12 +850,6 @@ glm/vec3.hpp
 glm/vec4.hpp
 -
 
-/home/IN/wobi3451/final_raytracer/framework/ambient.hpp
-iostream
--
-color.hpp
-/home/IN/wobi3451/final_raytracer/framework/color.hpp
-
 /home/IN/wobi3451/final_raytracer/framework/box.cpp
 box.hpp
 /home/IN/wobi3451/final_raytracer/framework/box.hpp
@@ -933,8 +927,6 @@ light.hpp
 /home/IN/wobi3451/final_raytracer/framework/light.hpp
 color.hpp
 /home/IN/wobi3451/final_raytracer/framework/color.hpp
-ambient.hpp
-/home/IN/wobi3451/final_raytracer/framework/ambient.hpp
 camera.hpp
 /home/IN/wobi3451/final_raytracer/framework/camera.hpp
 glm/glm.hpp

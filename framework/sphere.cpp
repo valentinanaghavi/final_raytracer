@@ -83,18 +83,20 @@ Strike Sphere::intersection (Ray const& ray_intersect) const
 
     auto ray = transformRay(getWorld_trans_inv(), ray_intersect);
     auto normalized_direction = glm::normalize(ray.direction);
-    glm::vec3 intersection_ray = ray_intersect.origin + normalized_direction * distance; //strike origin
+    
     auto pointer = std::make_shared<Sphere>(*this);
 
     bool hitting = intersect(ray, distance);
     if (hitting == true)
     {
+        glm::vec3 intersection_ray = ray_intersect.origin + normalized_direction * distance; //strike origin
+        
         Strike strike (true, distance, ray_intersect.origin, intersection_ray, pointer);
         strike.normal = glm::normalize(intersection_ray - strike.origin);
 
-        /*glm::mat4 transposed = glm::transpose(getWorld_trans_inv());
+        glm::mat4 transposed = glm::transpose(getWorld_trans_inv());
         glm::vec3 transformedNormale(transposed * glm::vec4{strike.normal, 0.0f});
-        strike.normal = glm::normalize(transformedNormale);*/
+        strike.normal = glm::normalize(transformedNormale);
 
         return strike;
     }
