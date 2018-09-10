@@ -227,7 +227,7 @@ Strike Box::intersection(Ray const& ray_in) const
     glm::vec3 invers{1.0f / nray.direction.x,
         1.0f / nray.direction.y,
         1.0f / nray.direction.z};
-
+    //t = (x_min - p_0.x ) / d_x   || P_0.x : Ursprung vom Strahl , d_x : direction.x
     float t0 = (getMin().x - nray.origin.x) * invers.x;
     float t1 = (getMax().x - nray.origin.x) * invers.x;
     float tmin = std::min(t0, t1);
