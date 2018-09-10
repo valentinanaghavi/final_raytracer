@@ -1,0 +1,18 @@
+define material red     1 0 0 1 0 0 1 0 0 10
+define material green 0 0.9 0 0 0.9 0 0 0.9 0 810 0.9
+define material blue    0 0 1 0 0 1 0 0 1 10
+define material red2 	0.9 0 0 	0.7 0.01 0.01 	0.7 0.01 0.01 	0.8 0.5 1
+define material blue2 	0 0 0.9 	0.01 0.01 0.3	0.01 0.01 0.3	0.8 0.5 1
+define material white   1.0 1.0 1.0     1.0 1.0 1.0     1.0 1.0 1.0     0.8 0.5 1
+define material turquoise 0.3 0.9 0.9	0.3 0.9 0.9	0.3 0.9 0.9	0.8 0.5 1
+define material pink	1.0 0.6 0.65	1.0 0.6 0.65	1.0 0.7 0.75	0.8 0.5 1
+define shape box    green_box -15 0 -8 -10 3 -3  red2
+define shape sphere asphere   -0.5 3 -5   3      turquoise
+define shape sphere bsphere   -9.5 4 -15   4     green
+define shape sphere csphere -6.5 0.8 -3.5 0.8    blue2
+define shape box ground -20 -1 -30 10 0 0 red2
+define shape composite root green_box ground asphere bsphere csphere
+define light sun  -50 200 100  0.2 0.2 0.2 4
+ambient 0.2 0.2 0.2 
+define camera eye 90.0 -7 2.5 0.8  0 0 -1  0 1 0
+render eye 1500 1000 ./checkerboard.ppm

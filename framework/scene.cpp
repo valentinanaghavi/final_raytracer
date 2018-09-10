@@ -51,10 +51,10 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                 //std::shared_ptr<Material> material_path = std::make_shared<Material>(material);
                         material_map[material.name_] = material;
                         std::cout << "new material added:" << material.name_ << "\n";
-                //scene.material_map.insert(std::make_pair(material_path->name_ , material_path));
-                //scene.material_set.insert(material_path);
-                //scene.material_vector.push_back(material_path);
-               // scene.material_map.insert(std::pair<std::string,std::shared_ptr<Material>> (material_path->name_,material_path));
+                //material_map.insert(std::make_pair(material_path->name_ , material_path));
+                //material_set.insert(material_path);
+                //material_vector.push_back(material_path);
+               // material_map.insert(std::pair<std::string,std::shared_ptr<Material>> (material_path->name_,material_path));
                     }
 
                     if(word=="shape")
@@ -268,20 +268,91 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                         {
                             std::cout << "Transform Funktion kann nicht gelesen werden."<< std::endl;
                         }
-                    }               
+                    }
+                    else if (shape_name == camera_.name_)
+                    {
+                        buffer >> word ;
+
+                        if(word == "scale")
+                        {
+                            glm::vec3 s;
+
+                            buffer >> s.x;
+                            buffer >> s.y;
+                            buffer >> s.z;
+
+                            glm::mat4 scale_mat = scale(s);
+                            glm::mat4 trans_mat = camera_.world_transformation_;
+                            trans_mat *= scale_mat ;
+                            camera_.world_transformation_ =trans_mat;
+                            camera_.world_transformation_inv_ = glm::inverse(trans_mat);
+                    
+                        }
+                        else if(word == "translate")
+                        {
+                            glm::vec3 t;
+
+                            buffer >> t.x;
+                            buffer >> t.y;
+                            buffer >> t.z;
+
+                            glm::mat4 translate_mat = translation(t);
+                            glm::mat4 trans_mat = camera_.world_transformation_;
+                            trans_mat *= translate_mat ;
+                            camera_.world_transformation_ =trans_mat;
+                            camera_.world_transformation_inv_ = glm::inverse(trans_mat);
+
+                        }
+                        else if(word == "rotate")
+                        {
+                            float winkel;
+                            glm::vec3 r;
+                         
+                            buffer >> winkel;
+                            buffer >> r.x;
+                            buffer >> r.y;
+                            buffer >> r.z;
+                        
+                            glm::mat4 rotate_mat = rotation(r, winkel);
+                            glm::mat4 trans_mat = camera_.world_transformation_;
+                            trans_mat *= rotate_mat ;
+                            camera_.world_transformation_ =trans_mat;
+                            camera_.world_transformation_inv_ = glm::inverse(trans_mat);
+                        }
+                        else
+                        {
+                            std::cout << "Transform Funktion kann nicht gelesen werden."<< std::endl;
+                        }
+                    }
+                    else
+                    {
+                        std::cout << "Befehl kann nicht ausgeführt werden."<< std::endl;
+                        
+                    }
             }
 /***********************************TRANSFROM_END************RENDER-START**************************************************************/
             else if( word == "render")
             {   
-                //buffer >> word;
-                buffer >> width_;
-                buffer >> height_;
-                buffer >> filename_;
+                std::string cameraName;
+
+                buffer >> cameraName;
+
+                if (cameraName == camera_.name_)
+                {
+
+                    buffer >> width_;
+                    buffer >> height_;
+                    buffer >> filename_;
                 
                 /*width_ = width;
                 height_ = height;
                 filename_ = filename;*/
-                std::cout << "rendern des filenames " << filename_ << "\n";
+                    std::cout << "rendern des filenames " << cameraName << "," <<  width_  << "," <<  height_<< "," <<  filename_ << "\n";
+                }
+                else
+                {
+                    std::cout << "Kamera fuer das rendern nicht gefunden."<< std::endl;                    
+                }
 
             }
         

@@ -18,13 +18,19 @@ int main(int argc, char* argv[])
 
   Scene s;
   //std::string const ofile = "/home/valentina/final_raytracer/source/example.txt";
-  std::string const ofile = "../../source/example.txt";
+  std::string const ofile = "../../source/exampleFolie.txt";
   
   s.read_sdf(ofile);
 
-  Renderer renderer{s ,image_width, image_height, filename};
-  std::cout << "renderer generiert \n" ;
+  unsigned const widthR = s.width_;
+  unsigned const heightR = s.height_;
+  std::string const fileTXT = s.filename_ ;
+  std::cout << "renderer Bedingungen werden verarbeitet \n" << widthR << "\n" << heightR << "\n";
+  
+  Renderer renderer{s , widthR, heightR, fileTXT};
+  //Renderer renderer{s ,image_width, image_height, filename};
   //create separate thread to see updates of pixels while rendering
+  
   std::thread render_thread([&renderer]() {renderer.render();});
   std::cout << "fertig mit rendern \n" ;
 
