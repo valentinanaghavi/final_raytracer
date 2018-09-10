@@ -7,11 +7,19 @@ C_FLAGS =
 
 C_DEFINES = -DGLEW_STATIC
 
+<<<<<<< HEAD
 C_INCLUDES = -I/home/judith/Dokumente/Uni/final_raytracer/external -I/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/include -I/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src -I/home/judith/Dokumente/Uni/final_raytracer/external/catch-1.5 -I/home/judith/Dokumente/Uni/final_raytracer/external/glm-0.9.5.3 -I/home/judith/Dokumente/Uni/final_raytracer/framework -I/home/judith/Dokumente/Uni/final_raytracer/framework/.. 
+=======
+C_INCLUDES = -I/home/IN/wobi3451/final_raytracer/external -I/home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/include -I/home/IN/wobi3451/final_raytracer/external/nanovg/src -I/home/IN/wobi3451/final_raytracer/external/catch-1.5 -I/home/IN/wobi3451/final_raytracer/external/glm-0.9.5.3 -I/home/IN/wobi3451/final_raytracer/framework -I/home/IN/wobi3451/final_raytracer/framework/.. 
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 
 CXX_FLAGS =  -std=c++14  
 
 CXX_DEFINES = -DGLEW_STATIC
 
+<<<<<<< HEAD
 CXX_INCLUDES = -I/home/judith/Dokumente/Uni/final_raytracer/external -I/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/include -I/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src -I/home/judith/Dokumente/Uni/final_raytracer/external/catch-1.5 -I/home/judith/Dokumente/Uni/final_raytracer/external/glm-0.9.5.3 -I/home/judith/Dokumente/Uni/final_raytracer/framework -I/home/judith/Dokumente/Uni/final_raytracer/framework/.. 
+=======
+CXX_INCLUDES = -I/home/IN/wobi3451/final_raytracer/external -I/home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/include -I/home/IN/wobi3451/final_raytracer/external/nanovg/src -I/home/IN/wobi3451/final_raytracer/external/catch-1.5 -I/home/IN/wobi3451/final_raytracer/external/glm-0.9.5.3 -I/home/IN/wobi3451/final_raytracer/framework -I/home/IN/wobi3451/final_raytracer/framework/.. 
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 

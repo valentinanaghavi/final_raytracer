@@ -696,9 +696,15 @@ array
 string
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/source/example.cpp
 fensterchen.hpp
 /home/judith/Dokumente/Uni/final_raytracer/source/fensterchen.hpp
+=======
+/home/IN/wobi3451/final_raytracer/source/example.cpp
+fensterchen.hpp
+/home/IN/wobi3451/final_raytracer/source/fensterchen.hpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 GLFW/glfw3.h
 -
 utility

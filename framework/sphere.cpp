@@ -77,23 +77,30 @@ bool Sphere::intersect (Ray const& ray, float& distance) const
         // ray starting - normalisierte Richtung des Strahl - Kugel Mittelpunkt - quadrierter radius - Schnitt Abstand
     }
 
-Strike Sphere::intersection (Ray const& ray_intersect, float& t) const
+Strike Sphere::intersection (Ray const& ray_intersect) const
 {
-    float distance = t ;
+    float distance = 0.0f;
 
     auto ray = transformRay(getWorld_trans_inv(), ray_intersect);
     auto normalized_direction = glm::normalize(ray.direction);
     glm::vec3 intersection_ray = ray_intersect.origin + normalized_direction * distance; //strike origin
     auto pointer = std::make_shared<Sphere>(*this);
 
-    Strike strike (intersect(ray, distance), distance, ray_intersect.origin, intersection_ray, pointer);
-    strike.normal = glm::normalize(intersection_ray - strike.origin);
+    bool hitting = intersect(ray, distance);
+    if (hitting == true)
+    {
+        Strike strike (true, distance, ray_intersect.origin, intersection_ray, pointer);
+        strike.normal = glm::normalize(intersection_ray - strike.origin);
 
-    glm::mat4 transposed = glm::transpose(getWorld_trans_inv());
-    glm::vec3 transformedNormale(transposed * glm::vec4{strike.normal, 0.0f});
-    strike.normal = glm::normalize(transformedNormale);
+        /*glm::mat4 transposed = glm::transpose(getWorld_trans_inv());
+        glm::vec3 transformedNormale(transposed * glm::vec4{strike.normal, 0.0f});
+        strike.normal = glm::normalize(transformedNormale);*/
 
-    return strike;
+        return strike;
+    }
+ 
+
+    return Strike{};
 }
 
 

@@ -842,7 +842,11 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../external/glm-0.9.5.3/glm/detail/func_vector_relational.hpp
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/Ray.hpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 glm/glm.hpp
 -
 glm/vec3.hpp
@@ -850,6 +854,7 @@ glm/vec3.hpp
 glm/vec4.hpp
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/ambient.hpp
 iostream
 -
@@ -859,6 +864,17 @@ color.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp
 box.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/ambient.hpp
+iostream
+-
+color.hpp
+/home/IN/wobi3451/final_raytracer/framework/color.hpp
+
+/home/IN/wobi3451/final_raytracer/framework/box.cpp
+box.hpp
+/home/IN/wobi3451/final_raytracer/framework/box.hpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 iostream
 -
 string
@@ -868,9 +884,15 @@ math.h
 glm/vec3.hpp
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
 shape.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/box.hpp
+shape.hpp
+/home/IN/wobi3451/final_raytracer/framework/shape.hpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 iostream
 -
 glm/vec3.hpp
@@ -878,11 +900,19 @@ glm/vec3.hpp
 catch.hpp
 -
 strike.hpp
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
 
 /home/judith/Dokumente/Uni/final_raytracer/framework/camera.hpp
 Ray.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/strike.hpp
+
+/home/IN/wobi3451/final_raytracer/framework/camera.hpp
+Ray.hpp
+/home/IN/wobi3451/final_raytracer/framework/Ray.hpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 glm/vec3.hpp
 -
 glm/vec4.hpp
@@ -894,11 +924,19 @@ string
 iostream
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
 iostream
 -
 
 /home/judith/Dokumente/Uni/final_raytracer/framework/light.hpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/color.hpp
+iostream
+-
+
+/home/IN/wobi3451/final_raytracer/framework/light.hpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 iostream
 -
 string
@@ -906,6 +944,7 @@ string
 glm/vec3.hpp
 -
 color.hpp
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
 
 /home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp
@@ -937,6 +976,39 @@ ambient.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/ambient.hpp
 camera.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/camera.hpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/color.hpp
+
+/home/IN/wobi3451/final_raytracer/framework/material.cpp
+material.hpp
+/home/IN/wobi3451/final_raytracer/framework/material.hpp
+iostream
+-
+
+/home/IN/wobi3451/final_raytracer/framework/material.hpp
+string
+-
+color.hpp
+/home/IN/wobi3451/final_raytracer/framework/color.hpp
+
+/home/IN/wobi3451/final_raytracer/framework/scene.hpp
+material.hpp
+/home/IN/wobi3451/final_raytracer/framework/material.hpp
+box.hpp
+/home/IN/wobi3451/final_raytracer/framework/box.hpp
+sphere.hpp
+/home/IN/wobi3451/final_raytracer/framework/sphere.hpp
+shape.hpp
+/home/IN/wobi3451/final_raytracer/framework/shape.hpp
+light.hpp
+/home/IN/wobi3451/final_raytracer/framework/light.hpp
+color.hpp
+/home/IN/wobi3451/final_raytracer/framework/color.hpp
+ambient.hpp
+/home/IN/wobi3451/final_raytracer/framework/ambient.hpp
+camera.hpp
+/home/IN/wobi3451/final_raytracer/framework/camera.hpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 glm/glm.hpp
 -
 glm/vec3.hpp
@@ -964,6 +1036,7 @@ fstream
 memory
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/shape.cpp
 shape.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
@@ -977,6 +1050,21 @@ material.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/material.hpp
 strike.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/shape.cpp
+shape.hpp
+/home/IN/wobi3451/final_raytracer/framework/shape.hpp
+
+/home/IN/wobi3451/final_raytracer/framework/shape.hpp
+color.hpp
+/home/IN/wobi3451/final_raytracer/framework/color.hpp
+Ray.hpp
+/home/IN/wobi3451/final_raytracer/framework/Ray.hpp
+material.hpp
+/home/IN/wobi3451/final_raytracer/framework/material.hpp
+strike.hpp
+/home/IN/wobi3451/final_raytracer/framework/strike.hpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 glm/glm.hpp
 -
 iostream
@@ -986,9 +1074,15 @@ string
 memory
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.cpp
 sphere.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/sphere.cpp
+sphere.hpp
+/home/IN/wobi3451/final_raytracer/framework/sphere.hpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 glm/glm.hpp
 -
 glm/gtx/intersect.hpp
@@ -1002,6 +1096,7 @@ math.h
 string
 -
 Ray.hpp
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
 
 /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
@@ -1009,6 +1104,15 @@ shape.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
 strike.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/Ray.hpp
+
+/home/IN/wobi3451/final_raytracer/framework/sphere.hpp
+shape.hpp
+/home/IN/wobi3451/final_raytracer/framework/shape.hpp
+strike.hpp
+/home/IN/wobi3451/final_raytracer/framework/strike.hpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 glm/glm.hpp
 -
 glm/gtx/intersect.hpp
@@ -1022,7 +1126,11 @@ iostream
 string
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/strike.hpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 glm/glm.hpp
 -
 memory
@@ -1032,7 +1140,11 @@ glm/vec3.hpp
 string
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/source/tests.cpp
+=======
+/home/IN/wobi3451/final_raytracer/source/tests.cpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 catch.hpp
 -
 glm/vec3.hpp
@@ -1046,6 +1158,7 @@ glm/glm.hpp
 glm/gtx/intersect.hpp
 -
 ../framework/sphere.hpp
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
 ../framework/material.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/material.hpp
@@ -1057,4 +1170,17 @@ glm/gtx/intersect.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
 ../framework/Ray.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/sphere.hpp
+../framework/material.hpp
+/home/IN/wobi3451/final_raytracer/framework/material.hpp
+../framework/scene.hpp
+/home/IN/wobi3451/final_raytracer/framework/scene.hpp
+../framework/box.hpp
+/home/IN/wobi3451/final_raytracer/framework/box.hpp
+../framework/color.hpp
+/home/IN/wobi3451/final_raytracer/framework/color.hpp
+../framework/Ray.hpp
+/home/IN/wobi3451/final_raytracer/framework/Ray.hpp
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 

@@ -201,8 +201,7 @@ TEST_CASE("aufgabe 6.3" , "[intersectRayBox]")
 
 TEST_CASE("aufgabe6.5", "[sceneSDF]")
 {
-  std::shared_ptr<Scene>scene = std::make_shared<Scene>();
-  read_sdf("/home/valentina/programmiersprachen-raytracer/source/example.txt" , *scene);
+  //read_sdf("/home/valentina/programmiersprachen-raytracer/source/example.txt" );
   //search_map("red", scene);
  // search_set("blue", scene);
  // search_vector("green", scene);

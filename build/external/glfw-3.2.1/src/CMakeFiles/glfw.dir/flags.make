@@ -6,5 +6,9 @@ C_FLAGS = -fPIC   -Wall
 
 C_DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
 
+<<<<<<< HEAD
 C_INCLUDES = -I/home/judith/Dokumente/Uni/final_raytracer/external -I/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/include -I/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src -I/home/judith/Dokumente/Uni/final_raytracer/build/external/glfw-3.2.1/src 
+=======
+C_INCLUDES = -I/home/IN/wobi3451/final_raytracer/external -I/home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/include -I/home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src -I/home/IN/wobi3451/final_raytracer/build/external/glfw-3.2.1/src 
+>>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
 
