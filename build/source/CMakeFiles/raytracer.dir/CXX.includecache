@@ -930,12 +930,6 @@ glm/vec3.hpp
 glm/vec4.hpp
 -
 
-../framework/ambient.hpp
-iostream
--
-color.hpp
-../framework/color.hpp
-
 ../framework/box.hpp
 shape.hpp
 ../framework/shape.hpp
@@ -1037,8 +1031,6 @@ light.hpp
 ../framework/light.hpp
 color.hpp
 ../framework/color.hpp
-ambient.hpp
-../framework/ambient.hpp
 camera.hpp
 ../framework/camera.hpp
 glm/glm.hpp

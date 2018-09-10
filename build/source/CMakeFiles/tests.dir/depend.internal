@@ -343,6 +343,7 @@ source/CMakeFiles/tests.dir/tests.cpp.o
  ../external/glm-0.9.5.3/glm/vec3.hpp
  ../external/glm-0.9.5.3/glm/vec4.hpp
  ../external/glm-0.9.5.3/glm/vector_relational.hpp
+<<<<<<< HEAD
  /home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/ambient.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
@@ -355,3 +356,16 @@ source/CMakeFiles/tests.dir/tests.cpp.o
  /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
  /home/judith/Dokumente/Uni/final_raytracer/source/tests.cpp
+=======
+ /home/IN/wobi3451/final_raytracer/framework/Ray.hpp
+ /home/IN/wobi3451/final_raytracer/framework/box.hpp
+ /home/IN/wobi3451/final_raytracer/framework/camera.hpp
+ /home/IN/wobi3451/final_raytracer/framework/color.hpp
+ /home/IN/wobi3451/final_raytracer/framework/light.hpp
+ /home/IN/wobi3451/final_raytracer/framework/material.hpp
+ /home/IN/wobi3451/final_raytracer/framework/scene.hpp
+ /home/IN/wobi3451/final_raytracer/framework/shape.hpp
+ /home/IN/wobi3451/final_raytracer/framework/sphere.hpp
+ /home/IN/wobi3451/final_raytracer/framework/strike.hpp
+ /home/IN/wobi3451/final_raytracer/source/tests.cpp
+>>>>>>> 1532ada4fd9d32272693b6ca17bea7f7cc06d41b

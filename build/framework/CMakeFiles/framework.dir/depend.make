@@ -6,7 +6,10 @@ framework/CMakeFiles/framework.dir/glew.c.o: ../external/GL/glxew.h
 framework/CMakeFiles/framework.dir/glew.c.o: ../external/GL/wglew.h
 framework/CMakeFiles/framework.dir/glew.c.o: ../framework/glew.c
 
+framework/CMakeFiles/framework.dir/box.cpp.o: ../external/GL/glew.h
+framework/CMakeFiles/framework.dir/box.cpp.o: ../external/GL/glext.h
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/catch-1.5/catch.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glfw-3.2.1/include/GLFW/glfw3.h
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/common.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/detail/_fixes.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/detail/_swizzle.hpp
@@ -66,6 +69,12 @@ framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/expone
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/fwd.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/geometric.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/glm.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/gtx/closest_point.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/gtx/closest_point.inl
+framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/gtx/intersect.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/gtx/intersect.inl
+framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/gtx/multiple.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/gtx/multiple.inl
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/integer.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/mat2x2.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/mat2x3.hpp
@@ -86,10 +95,26 @@ framework/CMakeFiles/framework.dir/box.cpp.o: ../external/glm-0.9.5.3/glm/vector
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/Ray.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/box.cpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/box.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/camera.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/color.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/light.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/material.cpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/material.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/pixel.cpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/pixel.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/ppmwriter.cpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/ppmwriter.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/renderer.cpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/renderer.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/scene.cpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/scene.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/shape.cpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/shape.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/sphere.cpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/sphere.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/strike.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/window.cpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/window.hpp
 
 framework/CMakeFiles/framework.dir/material.cpp.o: ../framework/color.hpp
 framework/CMakeFiles/framework.dir/material.cpp.o: ../framework/material.cpp
@@ -186,7 +211,6 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/v
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/vec4.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/vector_relational.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/Ray.hpp
-framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/ambient.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/box.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/camera.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/color.hpp
@@ -283,7 +307,6 @@ framework/CMakeFiles/framework.dir/scene.cpp.o: ../external/glm-0.9.5.3/glm/vec3
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../external/glm-0.9.5.3/glm/vec4.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../external/glm-0.9.5.3/glm/vector_relational.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/Ray.hpp
-framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/ambient.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/box.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/camera.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/color.hpp

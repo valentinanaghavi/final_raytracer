@@ -850,6 +850,7 @@ glm/vec3.hpp
 glm/vec4.hpp
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/ambient.hpp
 iostream
 -
@@ -857,6 +858,9 @@ color.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
 
 /home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/box.cpp
+>>>>>>> 1532ada4fd9d32272693b6ca17bea7f7cc06d41b
 box.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
 iostream
@@ -932,9 +936,13 @@ shape.hpp
 light.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/light.hpp
 color.hpp
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
 ambient.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/ambient.hpp
+=======
+/home/IN/wobi3451/final_raytracer/framework/color.hpp
+>>>>>>> 1532ada4fd9d32272693b6ca17bea7f7cc06d41b
 camera.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/camera.hpp
 glm/glm.hpp

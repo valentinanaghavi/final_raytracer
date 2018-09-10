@@ -7,7 +7,6 @@
 #include "shape.hpp"
 #include "light.hpp"
 #include "color.hpp"
-#include "ambient.hpp"
 #include "camera.hpp"
 
 #include <glm/glm.hpp>

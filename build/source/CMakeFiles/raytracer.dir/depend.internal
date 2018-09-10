@@ -89,7 +89,6 @@ source/CMakeFiles/raytracer.dir/raytracer.cpp.o
  ../external/glm-0.9.5.3/glm/vec4.hpp
  ../external/glm-0.9.5.3/glm/vector_relational.hpp
  ../framework/Ray.hpp
- ../framework/ambient.hpp
  ../framework/box.hpp
  ../framework/camera.hpp
  ../framework/color.hpp
