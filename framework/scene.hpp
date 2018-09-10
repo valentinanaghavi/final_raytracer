@@ -33,6 +33,7 @@ struct Scene
 
     std::map <std::string , Material> material_map;
     std::vector <std::shared_ptr<Shape>> shape_vector;
+    std::shape_ptr<Composite> composite_;
    //std::shared_ptr<Color> ambient_;
     std::vector <std::shared_ptr<Light>> light_vector;
     

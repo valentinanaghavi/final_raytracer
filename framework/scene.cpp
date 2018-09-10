@@ -86,7 +86,7 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                             std::cout << "new box added:"  << name << "\n";;
                         }
 
-                        if (word=="sphere")
+                        else if (word=="sphere")
                         {
                        //Sphere sphere;
                             std::string name , materialname;
@@ -107,6 +107,40 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                             shape_vector.push_back(sphere_path);
                             
                             std::cout << "new sphere added:" << name << "\n";
+                        }
+                        else if (word=="composite")
+                        {
+                            std::string name , nameShape;
+
+                            buffer >> name;
+                        
+                            composite_ = std::make_shared<Composite>(name);
+                            std::shared_ptr<Shape> newShape;
+
+                            while (!buffer.eof())
+                            {
+                                buffer >> nameShape ;
+
+                                for (auto s :: shape_vector)
+                                {
+                                    if(s-> getName() == nameShape)
+                                    {
+                                        newShape = s ;
+                                    }
+                                }
+                                if(!newShape)
+                                {
+                                    std::cout<< " Shape not found ! \n";
+                                    
+                                }
+                                else
+                                {
+                                std::cout<< "Composite :" << composite_ << "\n";
+                                composite_ -> add(newShape);
+                                }
+                            }
+
+
                         }
 
                     }
