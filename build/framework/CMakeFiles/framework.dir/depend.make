@@ -87,12 +87,6 @@ framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/Ray.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/box.cpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/box.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/color.hpp
-<<<<<<< HEAD
-framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/composite.hpp
-framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/light.hpp
-framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/material.cpp
-=======
->>>>>>> 9ed62ce150c55a2e6949407310d8feeca237a4c0
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/material.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/shape.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/strike.hpp

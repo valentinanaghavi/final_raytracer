@@ -50,7 +50,7 @@ float const& Sphere :: getRadius() const //nur const , ohne &
         return radius_ ;
     }
 
-float Sphere :: area() const  //abstrakte M. = rein virtuelle Methode
+/*float Sphere :: area() const  //abstrakte M. = rein virtuelle Methode
     {
         return 4.0f * M_PI * radius_ * radius_ ; 
     }
@@ -58,12 +58,12 @@ float Sphere :: area() const  //abstrakte M. = rein virtuelle Methode
 float Sphere :: volume() const
     {
         return (4.0f / 3.0f) * M_PI * radius_ * radius_ * radius_ ; //std::abs
-    } 
+    } */
 
 std::ostream& Sphere :: print(std::ostream& os ) const
     {
         Shape::print(os);   //prints name and material
-        os << "area: " << area() << " \n volume: " << volume() << " \n center: (" << center_.x << ", " << center_.y << ", " << center_.z << ") \n radius: "  << radius_ << " \n";
+        os << /*"area: " << area() << " \n volume: " << volume() << " \n*/ "center: (" << center_.x << ", " << center_.y << ", " << center_.z << ") \n radius: "  << radius_ << " \n";
         
         return os;
     }

@@ -41,7 +41,7 @@ glm::vec3  Box :: getMin() const
         return min_ ;
     }
 
-float Box :: area() const //abstrakte M. = rein virtuelle Methode
+/*float Box :: area() const //abstrakte M. = rein virtuelle Methode
     {
         glm::vec3 diffVec = max_ - min_ ;
         return 2*( diffVec.x * diffVec.y + diffVec.x * diffVec.z + diffVec.y * diffVec.z) ; //std::abs
@@ -51,12 +51,12 @@ float Box :: volume() const
     {
         glm::vec3 diffVec = max_ - min_ ;
         return diffVec.x * diffVec.y * diffVec.z ;
-    }
+    }*/
 
 std::ostream& Box :: print(std::ostream& os ) const
     {
         Shape::print(os);
-        os << "area: " << area() << " \n volume: " << volume() << " \n minimum: (" << min_.x << ", " << min_.y << ", " << min_.z << ") \n maximum: (" << max_.x << ", " << max_.y << ", " << max_.z << ")" << " \n";
+        os << /*"area: " << area() << " \n volume: " << volume() << " \n */"minimum: (" << min_.x << ", " << min_.y << ", " << min_.z << ") \n maximum: (" << max_.x << ", " << max_.y << ", " << max_.z << ")" << " \n";
         
         return os;
     }

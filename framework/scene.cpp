@@ -111,7 +111,8 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
 
                             buffer >> name;
                         
-                            composite_ = std::make_shared<Composite>(name);
+                            std::shared_ptr <Composite> composite = std::make_shared<Composite>(name);
+                            composite_ = composite;
                             std::shared_ptr<Shape> newShape;
 
                             while (!buffer.eof())

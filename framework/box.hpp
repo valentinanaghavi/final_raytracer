@@ -22,8 +22,8 @@ public:
     glm::vec3 getMax() const;
     glm::vec3 getMin() const;
 
-    float area() const override; //abstrakte M. = rein virtuelle Methode
-    float volume() const override;
+    //float area() const override; //abstrakte M. = rein virtuelle Methode
+    //float volume() const override;
 
     std::ostream& print(std::ostream& os ) const override;
 

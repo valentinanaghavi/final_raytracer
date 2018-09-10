@@ -208,10 +208,10 @@ bool Renderer::breaking (Strike const& strike, glm::vec3 const& lightPosition) c
 {
   float a = 0.001f; 
 
-  glm::vec3 point = strike.origin + (a * glm::normalize(strike.normal));
+  glm::vec3 point = strike.origin + (a * glm::normalize(strike.normal)); 
 
-  Strike shadow = computeStrike(Ray{point, lightPosition - point}); //Wieso light pos_ - Strikepunkt??
-  
+  Strike shadow = computeStrike(Ray{point, lightPosition - point}); 
+    
   return (!shadow.hit || glm::length(point - lightPosition) < glm::length(point - shadow.origin));
 }
 

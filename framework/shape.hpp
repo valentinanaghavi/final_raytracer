@@ -23,8 +23,8 @@ public:
     //virtual ~Shape();
     ~Shape();
 
-    virtual float area() const = 0; //pure virtual -> muss in der abgl. Klasse ueberschrieben werden, um Objekt instanziieren zu koennen , Klasse kann nicht instanziiert werden
-    virtual float volume() const = 0; // Methodeninterface wird vererbt, keine Implementierung 
+    /*virtual float area() const = 0; //pure virtual -> muss in der abgl. Klasse ueberschrieben werden, um Objekt instanziieren zu koennen , Klasse kann nicht instanziiert werden
+    virtual float volume() const = 0; // Methodeninterface wird vererbt, keine Implementierung */
 
     virtual void setName(std::string name) ;
     virtual void setMaterial(Material material) ;
@@ -43,9 +43,9 @@ public:
     virtual Strike intersection (Ray const& ray) const = 0;
 
     //Composite
-    virtual void remove(std::shared_ptr<Shape>& shape);
-    virtual void add(std::shared_ptr<Shape>& shape);
-    virtual std::vector<std::shared_ptr<Shape>> getComposite();
+    virtual void remove(std::shared_ptr<Shape>& shape) {}
+    virtual void add(std::shared_ptr<Shape>& shape) {}
+    virtual std::vector<std::shared_ptr<Shape>> getComposite() {}
 
 
 

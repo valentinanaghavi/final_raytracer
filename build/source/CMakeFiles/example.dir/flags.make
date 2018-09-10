@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++14
 
 CXX_DEFINES = -DGLEW_STATIC
 
-CXX_INCLUDES = -I/home/IN/wobi3451/final_raytracer/external -I/home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/include -I/home/IN/wobi3451/final_raytracer/external/nanovg/src -I/home/IN/wobi3451/final_raytracer/external/catch-1.5 -I/home/IN/wobi3451/final_raytracer/external/glm-0.9.5.3 -I/home/IN/wobi3451/final_raytracer/framework 
+CXX_INCLUDES = -I/home/judith/Dokumente/Uni/final_raytracer/external -I/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/include -I/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src -I/home/judith/Dokumente/Uni/final_raytracer/external/catch-1.5 -I/home/judith/Dokumente/Uni/final_raytracer/external/glm-0.9.5.3 -I/home/judith/Dokumente/Uni/final_raytracer/framework 
 

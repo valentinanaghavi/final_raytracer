@@ -26,6 +26,10 @@ class Composite: public Shape
 
     std::vector<std::shared_ptr<Shape>> getComposite() override;
 
+    inline bool intersect(Ray const& ray, float& t) const override
+    {
+        return true;
+    }
     inline Strike intersection(Ray const& ray) const override
     {
         return Strike{};
