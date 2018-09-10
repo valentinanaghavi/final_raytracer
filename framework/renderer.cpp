@@ -100,7 +100,7 @@ Color Renderer :: toneMapping (Color const& c) const
 
 Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
 {
-  Strike closest = computeStrike(ray);
+  Strike closest = scene_.composite_ -> intersection(ray); ///ohne composite : computeStrike
 
   Color ia = scene_.ambient_;
   
@@ -209,8 +209,9 @@ bool Renderer::breaking (Strike const& strike, glm::vec3 const& lightPosition) c
   float a = 0.001f; 
 
   glm::vec3 point = strike.origin + (a * glm::normalize(strike.normal)); 
-
-  Strike shadow = computeStrike(Ray{point, lightPosition - point}); 
+  // ohne composite:
+  //Strike shadow = computeStrike(Ray{point, lightPosition - point}); 
+  Strike shadow = scene_.composite_ -> intersection(Ray{point, lightPosition - point});
     
   return (!shadow.hit || glm::length(point - lightPosition) < glm::length(point - shadow.origin));
 }

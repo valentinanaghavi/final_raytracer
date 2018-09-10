@@ -32,7 +32,18 @@ class Composite: public Shape
     }
     inline Strike intersection(Ray const& ray) const override
     {
-        return Strike{};
+        Strike nearestStrike;
+
+        for(std::shared_ptr<Shape> s : shapes_)
+        {
+            Strike strike  = s -> intersection(ray);
+
+            if(strike.hit == true && strike.distance < nearestStrike.distance)
+            {
+                nearestStrike = strike;
+            }
+        }
+        return nearestStrike;
     }
 
     /*void translate (glm::vec3 const& translate) override;

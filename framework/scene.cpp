@@ -133,7 +133,7 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                                 }
                                 else
                                 {
-                                std::cout<< "Composite :" << composite_ << "\n";
+                                std::cout<< "Composite :" << nameShape << "\n";
                                 composite_ -> add(newShape);
                                 }
                             }
