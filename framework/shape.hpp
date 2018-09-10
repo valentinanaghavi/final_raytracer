@@ -10,7 +10,7 @@
 #include <iostream>
 #include <string>
 #include <memory> //manage dynamic shared_ptr
-
+#include <vector>
 
 //struct Strike;
 
@@ -41,6 +41,13 @@ public:
     //aufgabe 6.3
     virtual bool intersect ( Ray const& ray , float& t ) const = 0;
     virtual Strike intersection (Ray const& ray) const = 0;
+
+    //Composite
+    virtual void remove(std::shared_ptr<Shape>& shape);
+    virtual void add(std::shared_ptr<Shape>& shape);
+    virtual std::vector<std::shared_ptr<Shape>> getComposite();
+
+
 
 
 private:
