@@ -97,6 +97,7 @@ framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/box.cpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/box.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/camera.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/color.hpp
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/composite.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/light.hpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/material.cpp
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/material.hpp
@@ -214,6 +215,7 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/Ray.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/box.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/camera.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/color.hpp
+framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/composite.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/light.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/material.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/pixel.hpp
@@ -310,6 +312,7 @@ framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/Ray.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/box.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/camera.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/color.hpp
+framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/composite.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/light.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/material.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/scene.cpp

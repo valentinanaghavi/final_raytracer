@@ -98,6 +98,7 @@ framework/CMakeFiles/framework.dir/box.cpp.o
  /home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/camera.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+ /home/judith/Dokumente/Uni/final_raytracer/framework/composite.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/light.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/material.hpp
@@ -215,6 +216,7 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o
  /home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/camera.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+ /home/judith/Dokumente/Uni/final_raytracer/framework/composite.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/light.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/material.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/pixel.hpp
@@ -311,6 +313,7 @@ framework/CMakeFiles/framework.dir/scene.cpp.o
  /home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/camera.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+ /home/judith/Dokumente/Uni/final_raytracer/framework/composite.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/light.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/material.hpp
  /home/judith/Dokumente/Uni/final_raytracer/framework/scene.cpp

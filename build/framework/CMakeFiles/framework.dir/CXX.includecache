@@ -1256,6 +1256,26 @@ iostream
 iostream
 -
 
+/home/judith/Dokumente/Uni/final_raytracer/framework/composite.hpp
+shape.hpp
+/home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
+box.hpp
+/home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
+sphere.hpp
+/home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
+strike.hpp
+/home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
+vector
+-
+string
+-
+iostream
+-
+memory
+-
+algorithm
+-
+
 /home/judith/Dokumente/Uni/final_raytracer/framework/light.hpp
 iostream
 -
@@ -1361,6 +1381,8 @@ color.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
 camera.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/camera.hpp
+composite.hpp
+/home/judith/Dokumente/Uni/final_raytracer/framework/composite.hpp
 glm/glm.hpp
 -
 glm/vec3.hpp
