@@ -22,11 +22,7 @@ int main(int argc, char* argv[])
   s.read_sdf(ofile);
 
   Renderer renderer{s ,image_width, image_height, filename};
-<<<<<<< HEAD
-  //std::cout << "renderer generiert:" ;
-=======
   std::cout << "renderer generiert \n" ;
->>>>>>> a76f0285a22e5e87705413e286ae3e22b282edb0
   //create separate thread to see updates of pixels while rendering
   std::thread render_thread([&renderer]() {renderer.render();});
   std::cout << "fertig mit rendern \n" ;
