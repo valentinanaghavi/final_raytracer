@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/framework.dir/glew.c.o"
   "CMakeFiles/framework.dir/box.cpp.o"
+  "CMakeFiles/framework.dir/composite.cpp.o"
   "CMakeFiles/framework.dir/material.cpp.o"
   "CMakeFiles/framework.dir/pixel.cpp.o"
   "CMakeFiles/framework.dir/ppmwriter.cpp.o"
