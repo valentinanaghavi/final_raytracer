@@ -118,7 +118,7 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                             {
                                 buffer >> nameShape ;
 
-                                for (auto s :: shape_vector)
+                                for (std::shared_ptr<Shape> s : shape_vector)
                                 {
                                     if(s-> getName() == nameShape)
                                     {
@@ -174,9 +174,10 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                         buffer >> color.g;
                         buffer >> color.b;
 
-                        std::shared_ptr<Ambient> ambient = std::make_shared<Ambient>(color);
+                       // std::shared_ptr<Ambient> ambient = std::make_shared<Ambient>(color);
                         //ambient_vector.push_back(ambient_path);
                         //ambient_ = ambient;
+                        ambient_ = color;
                         std::cout << "new ambient added \n";
                         //std::cout << "Ambient:\n" << *ambient << "\n";
 
