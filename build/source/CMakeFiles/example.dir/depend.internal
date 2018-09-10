@@ -86,8 +86,4 @@ source/CMakeFiles/example.dir/example.cpp.o
  ../framework/color.hpp
  ../framework/fensterchen.hpp
  ../framework/window.hpp
-<<<<<<< HEAD
  /home/judith/Dokumente/Uni/final_raytracer/source/example.cpp
-=======
- /home/IN/wobi3451/final_raytracer/source/example.cpp
->>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b

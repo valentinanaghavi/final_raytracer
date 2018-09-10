@@ -17,14 +17,9 @@ int main(int argc, char* argv[])
   std::string const filename = "./checkerboard.ppm";
 
   Scene s;
-<<<<<<< HEAD
-  std::string const ofile = "/home/Dokumente/Uni/final_raytracer/source/example.txt";
-
-=======
   //std::string const ofile = "/home/valentina/final_raytracer/source/example.txt";
   std::string const ofile = "../../source/example.txt";
   
->>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
   s.read_sdf(ofile);
 
   Renderer renderer{s ,image_width, image_height, filename};

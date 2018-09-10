@@ -103,8 +103,4 @@ source/CMakeFiles/raytracer.dir/raytracer.cpp.o
  ../framework/sphere.hpp
  ../framework/strike.hpp
  ../framework/window.hpp
-<<<<<<< HEAD
  /home/judith/Dokumente/Uni/final_raytracer/source/raytracer.cpp
-=======
- /home/IN/wobi3451/final_raytracer/source/raytracer.cpp
->>>>>>> 231d9bd80c53bd4cbcb1ca8f0b9213841d96bd5b
