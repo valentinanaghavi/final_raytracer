@@ -107,6 +107,31 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                             
                             std::cout << "new sphere added:" << name << "\n";
                         }
+                        else if (word=="triangle")
+                        {
+                            std::string name , materialname;
+                            glm::vec3 p1,p2,p3;
+                       
+                            buffer >> name;
+                            buffer >> p1.x;
+                            buffer >> p1.y;
+                            buffer >> p1.z;
+                            buffer >> p2.x;
+                            buffer >> p2.y;
+                            buffer >> p2.z;         
+                            buffer >> p3.x;
+                            buffer >> p3.y;
+                            buffer >> p3.z;                       
+                            buffer >> materialname;
+                       
+        
+                            Material material = material_map[materialname];
+
+                            std::shared_ptr<Shape> triangle_path = std::make_shared<Triangle>( name , material, p1 , p2, p3);
+                            shape_vector.push_back(triangle_path);
+                            
+                            std::cout << "new triangle added:" << name << "\n";
+                        }
                         else if (word=="composite")
                         {
                             std::string name , nameShape;

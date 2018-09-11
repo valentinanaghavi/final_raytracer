@@ -101,6 +101,7 @@ source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/scene.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/shape.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/sphere.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/strike.hpp
+source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/triangle.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/window.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../source/raytracer.cpp
 

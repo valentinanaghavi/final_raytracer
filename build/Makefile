@@ -48,24 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/IN/wobi3451/final_raytracer
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/IN/wobi3451/final_raytracer/build
-=======
-<<<<<<< HEAD
-CMAKE_SOURCE_DIR = /home/judith/Dokumente/Uni/final_raytracer
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/judith/Dokumente/Uni/final_raytracer/build
-=======
-CMAKE_SOURCE_DIR = /home/valentina/final_raytracer
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/valentina/final_raytracer/build
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -84,17 +70,8 @@ install/strip/fast: preinstall/fast
 
 # Special rule for the target edit_cache
 edit_cache:
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-=======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-<<<<<<< HEAD
 	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-=======
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -149,21 +126,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/IN/wobi3451/final_raytracer/build/CMakeFiles /home/IN/wobi3451/final_raytracer/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/IN/wobi3451/final_raytracer/build/CMakeFiles 0
-=======
-<<<<<<< HEAD
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles /home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles 0
-=======
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/valentina/final_raytracer/build/CMakeFiles /home/valentina/final_raytracer/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/valentina/final_raytracer/build/CMakeFiles 0
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 .PHONY : all
 
 # The main clean target

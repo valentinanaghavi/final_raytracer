@@ -43,24 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/IN/wobi3451/final_raytracer
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/IN/wobi3451/final_raytracer/build
-=======
-<<<<<<< HEAD
-CMAKE_SOURCE_DIR = /home/judith/Dokumente/Uni/final_raytracer
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/judith/Dokumente/Uni/final_raytracer/build
-=======
-CMAKE_SOURCE_DIR = /home/valentina/final_raytracer
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/valentina/final_raytracer/build
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 # Include any dependencies generated for this target.
 include source/CMakeFiles/raytracer.dir/depend.make
@@ -73,25 +59,8 @@ include source/CMakeFiles/raytracer.dir/flags.make
 
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: source/CMakeFiles/raytracer.dir/flags.make
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../source/raytracer.cpp
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/raytracer.dir/raytracer.cpp.o"
 	cd /home/IN/wobi3451/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/raytracer.dir/raytracer.cpp.o -c /home/IN/wobi3451/final_raytracer/source/raytracer.cpp
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/raytracer.dir/raytracer.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/raytracer.dir/raytracer.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/source/raytracer.cpp
-
-source/CMakeFiles/raytracer.dir/raytracer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/raytracer.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/source/raytracer.cpp > CMakeFiles/raytracer.dir/raytracer.cpp.i
-
-source/CMakeFiles/raytracer.dir/raytracer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/raytracer.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/source/raytracer.cpp -o CMakeFiles/raytracer.dir/raytracer.cpp.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/raytracer.dir/raytracer.cpp.o"
-	cd /home/valentina/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/raytracer.dir/raytracer.cpp.o -c /home/valentina/final_raytracer/source/raytracer.cpp
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 source/CMakeFiles/raytracer.dir/raytracer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/raytracer.cpp.i"
@@ -99,12 +68,7 @@ source/CMakeFiles/raytracer.dir/raytracer.cpp.i: cmake_force
 
 source/CMakeFiles/raytracer.dir/raytracer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/raytracer.cpp.s"
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/source/raytracer.cpp -o CMakeFiles/raytracer.dir/raytracer.cpp.s
-=======
-	cd /home/valentina/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valentina/final_raytracer/source/raytracer.cpp -o CMakeFiles/raytracer.dir/raytracer.cpp.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o.requires:
 
@@ -129,7 +93,6 @@ source/raytracer: source/CMakeFiles/raytracer.dir/build.make
 source/raytracer: framework/libframework.a
 source/raytracer: external/glfw-3.2.1/src/libglfw3.a
 source/raytracer: external/glfw-3.2.1/src/libglfw3.a
-<<<<<<< HEAD
 source/raytracer: /usr/lib/libGL.so
 source/raytracer: /usr/lib/libGLU.so
 source/raytracer: /usr/lib/librt.so
@@ -142,30 +105,6 @@ source/raytracer: /usr/lib/libXcursor.so
 source/raytracer: source/CMakeFiles/raytracer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable raytracer"
 	cd /home/IN/wobi3451/final_raytracer/build/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/raytracer.dir/link.txt --verbose=$(VERBOSE)
-=======
-<<<<<<< HEAD
-source/raytracer: /usr/lib/x86_64-linux-gnu/libGL.so
-source/raytracer: /usr/lib/x86_64-linux-gnu/libGLU.so
-=======
-source/raytracer: /usr/lib/x86_64-linux-gnu/libGLU.so
-source/raytracer: /usr/lib/x86_64-linux-gnu/libGL.so
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
-source/raytracer: /usr/lib/x86_64-linux-gnu/librt.so
-source/raytracer: /usr/lib/x86_64-linux-gnu/libm.so
-source/raytracer: /usr/lib/x86_64-linux-gnu/libX11.so
-source/raytracer: /usr/lib/x86_64-linux-gnu/libXrandr.so
-source/raytracer: /usr/lib/x86_64-linux-gnu/libXinerama.so
-source/raytracer: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
-source/raytracer: /usr/lib/x86_64-linux-gnu/libXcursor.so
-source/raytracer: source/CMakeFiles/raytracer.dir/link.txt
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable raytracer"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/raytracer.dir/link.txt --verbose=$(VERBOSE)
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable raytracer"
-	cd /home/valentina/final_raytracer/build/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/raytracer.dir/link.txt --verbose=$(VERBOSE)
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 # Rule to build all files generated by this target.
 source/CMakeFiles/raytracer.dir/build: source/raytracer
@@ -177,26 +116,10 @@ source/CMakeFiles/raytracer.dir/requires: source/CMakeFiles/raytracer.dir/raytra
 .PHONY : source/CMakeFiles/raytracer.dir/requires
 
 source/CMakeFiles/raytracer.dir/clean:
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/source && $(CMAKE_COMMAND) -P CMakeFiles/raytracer.dir/cmake_clean.cmake
 .PHONY : source/CMakeFiles/raytracer.dir/clean
 
 source/CMakeFiles/raytracer.dir/depend:
 	cd /home/IN/wobi3451/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/IN/wobi3451/final_raytracer /home/IN/wobi3451/final_raytracer/source /home/IN/wobi3451/final_raytracer/build /home/IN/wobi3451/final_raytracer/build/source /home/IN/wobi3451/final_raytracer/build/source/CMakeFiles/raytracer.dir/DependInfo.cmake --color=$(COLOR)
-=======
-<<<<<<< HEAD
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && $(CMAKE_COMMAND) -P CMakeFiles/raytracer.dir/cmake_clean.cmake
-.PHONY : source/CMakeFiles/raytracer.dir/clean
-
-source/CMakeFiles/raytracer.dir/depend:
-	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/judith/Dokumente/Uni/final_raytracer /home/judith/Dokumente/Uni/final_raytracer/source /home/judith/Dokumente/Uni/final_raytracer/build /home/judith/Dokumente/Uni/final_raytracer/build/source /home/judith/Dokumente/Uni/final_raytracer/build/source/CMakeFiles/raytracer.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/valentina/final_raytracer/build/source && $(CMAKE_COMMAND) -P CMakeFiles/raytracer.dir/cmake_clean.cmake
-.PHONY : source/CMakeFiles/raytracer.dir/clean
-
-source/CMakeFiles/raytracer.dir/depend:
-	cd /home/valentina/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/valentina/final_raytracer /home/valentina/final_raytracer/source /home/valentina/final_raytracer/build /home/valentina/final_raytracer/build/source /home/valentina/final_raytracer/build/source/CMakeFiles/raytracer.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 .PHONY : source/CMakeFiles/raytracer.dir/depend
 

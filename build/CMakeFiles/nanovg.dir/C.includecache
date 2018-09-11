@@ -6,35 +6,15 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/nanovg/src/fontstash.h
-=======
-<<<<<<< HEAD
-/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/fontstash.h
-=======
-/home/valentina/final_raytracer/external/nanovg/src/fontstash.h
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 ft2build.h
 -
 math.h
 -
 stb_truetype.h
-<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_truetype.h
 
 /home/IN/wobi3451/final_raytracer/external/nanovg/src/nanovg.c
-=======
-<<<<<<< HEAD
-/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_truetype.h
-
-/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/nanovg.c
-=======
-/home/valentina/final_raytracer/external/nanovg/src/stb_truetype.h
-
-/home/valentina/final_raytracer/external/nanovg/src/nanovg.c
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 stdlib.h
 -
 stdio.h
@@ -44,24 +24,7 @@ math.h
 memory.h
 -
 nanovg.h
-<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/nanovg/src/nanovg.h
-=======
-<<<<<<< HEAD
-/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/nanovg.h
-fontstash.h
-/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/fontstash.h
-stb_image.h
-/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_image.h
-
-/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/nanovg.h
-
-/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_image.h
-stb_image.h
-/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_image.h
-=======
-/home/valentina/final_raytracer/external/nanovg/src/nanovg.h
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 fontstash.h
 /home/IN/wobi3451/final_raytracer/external/nanovg/src/fontstash.h
 stb_image.h
@@ -71,12 +34,7 @@ stb_image.h
 
 /home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_image.h
 stb_image.h
-<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_image.h
-=======
-/home/valentina/final_raytracer/external/nanovg/src/stb_image.h
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 stdio.h
 -
 stdarg.h
@@ -102,31 +60,13 @@ intrin.h
 arm_neon.h
 -
 
-<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_truetype.h
-=======
-<<<<<<< HEAD
-/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_truetype.h
-stb_truetype.h
-/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_truetype.h
-stdio.h
--
-stb_truetype.h
-/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/stb_truetype.h
-=======
-/home/valentina/final_raytracer/external/nanovg/src/stb_truetype.h
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 stb_truetype.h
 /home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_truetype.h
 stdio.h
 -
 stb_truetype.h
-<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/nanovg/src/stb_truetype.h
-=======
-/home/valentina/final_raytracer/external/nanovg/src/stb_truetype.h
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 math.h
 -
 math.h

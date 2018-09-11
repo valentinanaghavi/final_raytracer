@@ -353,5 +353,6 @@ source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/scene.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/shape.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/sphere.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/strike.hpp
+source/CMakeFiles/tests.dir/tests.cpp.o: ../framework/triangle.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../source/tests.cpp
 

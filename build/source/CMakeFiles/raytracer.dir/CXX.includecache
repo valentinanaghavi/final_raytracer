@@ -1045,6 +1045,8 @@ box.hpp
 ../framework/box.hpp
 sphere.hpp
 ../framework/sphere.hpp
+triangle.hpp
+../framework/triangle.hpp
 shape.hpp
 ../framework/shape.hpp
 light.hpp
@@ -1130,6 +1132,30 @@ glm/vec3.hpp
 string
 -
 
+../framework/triangle.hpp
+glm/vec3.hpp
+-
+glm/vec4.hpp
+-
+glm/glm.hpp
+-
+glm/geometric.hpp
+-
+glm/gtx/intersect.hpp
+-
+string
+-
+shape.hpp
+../framework/shape.hpp
+material.hpp
+../framework/material.hpp
+scene.hpp
+../framework/scene.hpp
+Ray.hpp
+../framework/Ray.hpp
+strike.hpp
+../framework/strike.hpp
+
 ../framework/window.hpp
 color.hpp
 ../framework/color.hpp
@@ -1150,15 +1176,7 @@ array
 string
 -
 
-<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/source/raytracer.cpp
-=======
-<<<<<<< HEAD
-/home/judith/Dokumente/Uni/final_raytracer/source/raytracer.cpp
-=======
-/home/valentina/final_raytracer/source/raytracer.cpp
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 renderer.hpp
 -
 window.hpp

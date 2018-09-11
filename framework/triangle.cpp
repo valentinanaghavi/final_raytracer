@@ -24,13 +24,20 @@ p3_{p_3}
 Triangle::~Triangle()
 {}
 
+bool Triangle :: intersect ( Ray const& ray , float& t ) const 
+{
+    std::cout << " intersect hat hier keine Verwendung \n";
+    return false;
+}
+    
+
 Strike Triangle::intersection(Ray const& rayTriangle) const
 {
     auto ptr = std::make_shared<Triangle>(*this);
     Strike strike(ptr);
 
-    //Ray ray = rayTriangle.transformRay(world_transformation_inv);
-    float t = glm::cross(normalenVektor_, ray.direction);
+    Ray ray = transformRay(getWorld_trans_inv(), rayTriangle);
+    float t = glm::dot(normalenVektor_, ray.direction);
     if (t != 0)
     {
         float distance = (-(normalenVektor_.x * (ray.origin.x - p1_.x))-(normalenVektor_.y *(ray.origin.y - p1_.y)) 
@@ -40,22 +47,22 @@ Strike Triangle::intersection(Ray const& rayTriangle) const
         {
             glm::vec3 objectStrike = ray.origin + (distance * ray.direction);
 
-            glm::vec3 world_position{world_transformation * glm::vec4{objectStrike, 1}};
-            glm::vec4 world_normal{world_transformation_inv * glm::vec4{normalenVektor_, 0}};
-
             strike.origin = objectStrike;
 
-            {
-                if (glm::cross(p3_-p1_, p1_- strike.origin) <= glm::cross(p3_ - p1_, p2_ - p1_) && glm::cross(p1_ - p2_, p2_ - strike.origin) <= 
-                glm::cross(p1_ - p2_, p3_ - p2_) && glm::cross(p2_ - p3_, p3_ - strike.origin) <= (p2_ - p3_, p1_ - p3_))
+            
+                if (glm::dot(p3_-p1_, p1_- strike.origin) <= glm::dot(p3_ - p1_, p2_ - p1_) && glm::dot(p1_ - p2_, p2_ - strike.origin) <= 
+                glm::dot(p1_ - p2_, p3_ - p2_) && glm::dot(p2_ - p3_, p3_ - strike.origin) <= glm::dot(p2_ - p3_, p1_ - p3_))
                 {
-                    strike.origin = world_position;
+                    strike.origin = objectStrike;
                     strike.hit = true;
                     strike.normal = normalenVektor_;
-                    strike.shape = this;
+                    strike.nearestShape = ptr;
                     strike.distance = distance;
                 }
-            }
+
+                glm::mat4 transposed = glm::transpose(getWorld_trans_inv());
+                glm::vec3 transformedNormale(transposed * glm::vec4{strike.normal, 0.0f});
+                strike.normal = glm::normalize(transformedNormale);
         }
     }
     return strike;

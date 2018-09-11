@@ -43,24 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/IN/wobi3451/final_raytracer
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/IN/wobi3451/final_raytracer/build
-=======
-<<<<<<< HEAD
-CMAKE_SOURCE_DIR = /home/judith/Dokumente/Uni/final_raytracer
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/judith/Dokumente/Uni/final_raytracer/build
-=======
-CMAKE_SOURCE_DIR = /home/valentina/final_raytracer
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/valentina/final_raytracer/build
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 # Include any dependencies generated for this target.
 include framework/CMakeFiles/framework.dir/depend.make
@@ -73,25 +59,8 @@ include framework/CMakeFiles/framework.dir/flags.make
 
 framework/CMakeFiles/framework.dir/glew.c.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/glew.c.o: ../framework/glew.c
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object framework/CMakeFiles/framework.dir/glew.c.o"
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/framework.dir/glew.c.o   -c /home/IN/wobi3451/final_raytracer/framework/glew.c
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object framework/CMakeFiles/framework.dir/glew.c.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/framework.dir/glew.c.o   -c /home/judith/Dokumente/Uni/final_raytracer/framework/glew.c
-
-framework/CMakeFiles/framework.dir/glew.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/framework.dir/glew.c.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/glew.c > CMakeFiles/framework.dir/glew.c.i
-
-framework/CMakeFiles/framework.dir/glew.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/framework.dir/glew.c.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/glew.c -o CMakeFiles/framework.dir/glew.c.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object framework/CMakeFiles/framework.dir/glew.c.o"
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/framework.dir/glew.c.o   -c /home/valentina/final_raytracer/framework/glew.c
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/glew.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/framework.dir/glew.c.i"
@@ -99,12 +68,7 @@ framework/CMakeFiles/framework.dir/glew.c.i: cmake_force
 
 framework/CMakeFiles/framework.dir/glew.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/framework.dir/glew.c.s"
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/glew.c -o CMakeFiles/framework.dir/glew.c.s
-=======
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/valentina/final_raytracer/framework/glew.c -o CMakeFiles/framework.dir/glew.c.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/glew.c.o.requires:
 
@@ -119,25 +83,8 @@ framework/CMakeFiles/framework.dir/glew.c.o.provides.build: framework/CMakeFiles
 
 framework/CMakeFiles/framework.dir/box.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/box.cpp
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object framework/CMakeFiles/framework.dir/box.cpp.o"
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/box.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/box.cpp
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object framework/CMakeFiles/framework.dir/box.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/box.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp
-
-framework/CMakeFiles/framework.dir/box.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/box.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp > CMakeFiles/framework.dir/box.cpp.i
-
-framework/CMakeFiles/framework.dir/box.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/box.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp -o CMakeFiles/framework.dir/box.cpp.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object framework/CMakeFiles/framework.dir/box.cpp.o"
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/box.cpp.o -c /home/valentina/final_raytracer/framework/box.cpp
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/box.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/box.cpp.i"
@@ -145,12 +92,7 @@ framework/CMakeFiles/framework.dir/box.cpp.i: cmake_force
 
 framework/CMakeFiles/framework.dir/box.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/box.cpp.s"
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/box.cpp -o CMakeFiles/framework.dir/box.cpp.s
-=======
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valentina/final_raytracer/framework/box.cpp -o CMakeFiles/framework.dir/box.cpp.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/box.cpp.o.requires:
 
@@ -165,25 +107,8 @@ framework/CMakeFiles/framework.dir/box.cpp.o.provides.build: framework/CMakeFile
 
 framework/CMakeFiles/framework.dir/composite.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/composite.cpp.o: ../framework/composite.cpp
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object framework/CMakeFiles/framework.dir/composite.cpp.o"
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/composite.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/composite.cpp
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object framework/CMakeFiles/framework.dir/composite.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/composite.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/composite.cpp
-
-framework/CMakeFiles/framework.dir/composite.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/composite.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/composite.cpp > CMakeFiles/framework.dir/composite.cpp.i
-
-framework/CMakeFiles/framework.dir/composite.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/composite.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/composite.cpp -o CMakeFiles/framework.dir/composite.cpp.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object framework/CMakeFiles/framework.dir/composite.cpp.o"
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/composite.cpp.o -c /home/valentina/final_raytracer/framework/composite.cpp
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/composite.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/composite.cpp.i"
@@ -191,12 +116,7 @@ framework/CMakeFiles/framework.dir/composite.cpp.i: cmake_force
 
 framework/CMakeFiles/framework.dir/composite.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/composite.cpp.s"
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/composite.cpp -o CMakeFiles/framework.dir/composite.cpp.s
-=======
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valentina/final_raytracer/framework/composite.cpp -o CMakeFiles/framework.dir/composite.cpp.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/composite.cpp.o.requires:
 
@@ -211,25 +131,8 @@ framework/CMakeFiles/framework.dir/composite.cpp.o.provides.build: framework/CMa
 
 framework/CMakeFiles/framework.dir/material.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/material.cpp.o: ../framework/material.cpp
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object framework/CMakeFiles/framework.dir/material.cpp.o"
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/material.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/material.cpp
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object framework/CMakeFiles/framework.dir/material.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/material.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp
-
-framework/CMakeFiles/framework.dir/material.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/material.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp > CMakeFiles/framework.dir/material.cpp.i
-
-framework/CMakeFiles/framework.dir/material.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/material.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp -o CMakeFiles/framework.dir/material.cpp.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object framework/CMakeFiles/framework.dir/material.cpp.o"
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/material.cpp.o -c /home/valentina/final_raytracer/framework/material.cpp
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/material.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/material.cpp.i"
@@ -237,12 +140,7 @@ framework/CMakeFiles/framework.dir/material.cpp.i: cmake_force
 
 framework/CMakeFiles/framework.dir/material.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/material.cpp.s"
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/material.cpp -o CMakeFiles/framework.dir/material.cpp.s
-=======
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valentina/final_raytracer/framework/material.cpp -o CMakeFiles/framework.dir/material.cpp.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/material.cpp.o.requires:
 
@@ -257,25 +155,8 @@ framework/CMakeFiles/framework.dir/material.cpp.o.provides.build: framework/CMak
 
 framework/CMakeFiles/framework.dir/pixel.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/pixel.cpp.o: ../framework/pixel.cpp
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object framework/CMakeFiles/framework.dir/pixel.cpp.o"
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/pixel.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/pixel.cpp
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object framework/CMakeFiles/framework.dir/pixel.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/pixel.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/pixel.cpp
-
-framework/CMakeFiles/framework.dir/pixel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/pixel.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/pixel.cpp > CMakeFiles/framework.dir/pixel.cpp.i
-
-framework/CMakeFiles/framework.dir/pixel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/pixel.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/pixel.cpp -o CMakeFiles/framework.dir/pixel.cpp.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object framework/CMakeFiles/framework.dir/pixel.cpp.o"
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/pixel.cpp.o -c /home/valentina/final_raytracer/framework/pixel.cpp
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/pixel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/pixel.cpp.i"
@@ -283,12 +164,7 @@ framework/CMakeFiles/framework.dir/pixel.cpp.i: cmake_force
 
 framework/CMakeFiles/framework.dir/pixel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/pixel.cpp.s"
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/pixel.cpp -o CMakeFiles/framework.dir/pixel.cpp.s
-=======
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valentina/final_raytracer/framework/pixel.cpp -o CMakeFiles/framework.dir/pixel.cpp.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/pixel.cpp.o.requires:
 
@@ -303,25 +179,8 @@ framework/CMakeFiles/framework.dir/pixel.cpp.o.provides.build: framework/CMakeFi
 
 framework/CMakeFiles/framework.dir/ppmwriter.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/ppmwriter.cpp.o: ../framework/ppmwriter.cpp
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ppmwriter.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/ppmwriter.cpp
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ppmwriter.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/ppmwriter.cpp
-
-framework/CMakeFiles/framework.dir/ppmwriter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ppmwriter.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/ppmwriter.cpp > CMakeFiles/framework.dir/ppmwriter.cpp.i
-
-framework/CMakeFiles/framework.dir/ppmwriter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ppmwriter.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/ppmwriter.cpp -o CMakeFiles/framework.dir/ppmwriter.cpp.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ppmwriter.cpp.o -c /home/valentina/final_raytracer/framework/ppmwriter.cpp
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/ppmwriter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ppmwriter.cpp.i"
@@ -329,12 +188,7 @@ framework/CMakeFiles/framework.dir/ppmwriter.cpp.i: cmake_force
 
 framework/CMakeFiles/framework.dir/ppmwriter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ppmwriter.cpp.s"
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/ppmwriter.cpp -o CMakeFiles/framework.dir/ppmwriter.cpp.s
-=======
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valentina/final_raytracer/framework/ppmwriter.cpp -o CMakeFiles/framework.dir/ppmwriter.cpp.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.requires:
 
@@ -349,25 +203,8 @@ framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.provides.build: framework/CMa
 
 framework/CMakeFiles/framework.dir/renderer.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/renderer.cpp
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object framework/CMakeFiles/framework.dir/renderer.cpp.o"
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/renderer.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/renderer.cpp
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object framework/CMakeFiles/framework.dir/renderer.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/renderer.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/renderer.cpp
-
-framework/CMakeFiles/framework.dir/renderer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/renderer.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/renderer.cpp > CMakeFiles/framework.dir/renderer.cpp.i
-
-framework/CMakeFiles/framework.dir/renderer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/renderer.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/renderer.cpp -o CMakeFiles/framework.dir/renderer.cpp.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object framework/CMakeFiles/framework.dir/renderer.cpp.o"
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/renderer.cpp.o -c /home/valentina/final_raytracer/framework/renderer.cpp
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/renderer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/renderer.cpp.i"
@@ -375,12 +212,7 @@ framework/CMakeFiles/framework.dir/renderer.cpp.i: cmake_force
 
 framework/CMakeFiles/framework.dir/renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/renderer.cpp.s"
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/renderer.cpp -o CMakeFiles/framework.dir/renderer.cpp.s
-=======
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valentina/final_raytracer/framework/renderer.cpp -o CMakeFiles/framework.dir/renderer.cpp.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/renderer.cpp.o.requires:
 
@@ -395,25 +227,8 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o.provides.build: framework/CMak
 
 framework/CMakeFiles/framework.dir/scene.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/scene.cpp
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object framework/CMakeFiles/framework.dir/scene.cpp.o"
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/scene.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/scene.cpp
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object framework/CMakeFiles/framework.dir/scene.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/scene.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/scene.cpp
-
-framework/CMakeFiles/framework.dir/scene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/scene.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/scene.cpp > CMakeFiles/framework.dir/scene.cpp.i
-
-framework/CMakeFiles/framework.dir/scene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/scene.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/scene.cpp -o CMakeFiles/framework.dir/scene.cpp.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object framework/CMakeFiles/framework.dir/scene.cpp.o"
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/scene.cpp.o -c /home/valentina/final_raytracer/framework/scene.cpp
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/scene.cpp.i"
@@ -421,12 +236,7 @@ framework/CMakeFiles/framework.dir/scene.cpp.i: cmake_force
 
 framework/CMakeFiles/framework.dir/scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/scene.cpp.s"
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/scene.cpp -o CMakeFiles/framework.dir/scene.cpp.s
-=======
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valentina/final_raytracer/framework/scene.cpp -o CMakeFiles/framework.dir/scene.cpp.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/scene.cpp.o.requires:
 
@@ -441,25 +251,8 @@ framework/CMakeFiles/framework.dir/scene.cpp.o.provides.build: framework/CMakeFi
 
 framework/CMakeFiles/framework.dir/shape.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/shape.cpp.o: ../framework/shape.cpp
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object framework/CMakeFiles/framework.dir/shape.cpp.o"
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/shape.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/shape.cpp
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object framework/CMakeFiles/framework.dir/shape.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/shape.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/shape.cpp
-
-framework/CMakeFiles/framework.dir/shape.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/shape.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/shape.cpp > CMakeFiles/framework.dir/shape.cpp.i
-
-framework/CMakeFiles/framework.dir/shape.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/shape.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/shape.cpp -o CMakeFiles/framework.dir/shape.cpp.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object framework/CMakeFiles/framework.dir/shape.cpp.o"
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/shape.cpp.o -c /home/valentina/final_raytracer/framework/shape.cpp
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/shape.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/shape.cpp.i"
@@ -467,12 +260,7 @@ framework/CMakeFiles/framework.dir/shape.cpp.i: cmake_force
 
 framework/CMakeFiles/framework.dir/shape.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/shape.cpp.s"
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/shape.cpp -o CMakeFiles/framework.dir/shape.cpp.s
-=======
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valentina/final_raytracer/framework/shape.cpp -o CMakeFiles/framework.dir/shape.cpp.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/shape.cpp.o.requires:
 
@@ -487,25 +275,8 @@ framework/CMakeFiles/framework.dir/shape.cpp.o.provides.build: framework/CMakeFi
 
 framework/CMakeFiles/framework.dir/sphere.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/sphere.cpp.o: ../framework/sphere.cpp
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object framework/CMakeFiles/framework.dir/sphere.cpp.o"
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/sphere.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/sphere.cpp
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object framework/CMakeFiles/framework.dir/sphere.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/sphere.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.cpp
-
-framework/CMakeFiles/framework.dir/sphere.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/sphere.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.cpp > CMakeFiles/framework.dir/sphere.cpp.i
-
-framework/CMakeFiles/framework.dir/sphere.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/sphere.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.cpp -o CMakeFiles/framework.dir/sphere.cpp.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object framework/CMakeFiles/framework.dir/sphere.cpp.o"
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/sphere.cpp.o -c /home/valentina/final_raytracer/framework/sphere.cpp
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/sphere.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/sphere.cpp.i"
@@ -513,12 +284,7 @@ framework/CMakeFiles/framework.dir/sphere.cpp.i: cmake_force
 
 framework/CMakeFiles/framework.dir/sphere.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/sphere.cpp.s"
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/sphere.cpp -o CMakeFiles/framework.dir/sphere.cpp.s
-=======
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valentina/final_raytracer/framework/sphere.cpp -o CMakeFiles/framework.dir/sphere.cpp.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/sphere.cpp.o.requires:
 
@@ -531,27 +297,34 @@ framework/CMakeFiles/framework.dir/sphere.cpp.o.provides: framework/CMakeFiles/f
 framework/CMakeFiles/framework.dir/sphere.cpp.o.provides.build: framework/CMakeFiles/framework.dir/sphere.cpp.o
 
 
+framework/CMakeFiles/framework.dir/triangle.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/triangle.cpp.o: ../framework/triangle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object framework/CMakeFiles/framework.dir/triangle.cpp.o"
+	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/triangle.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/triangle.cpp
+
+framework/CMakeFiles/framework.dir/triangle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/triangle.cpp.i"
+	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/IN/wobi3451/final_raytracer/framework/triangle.cpp > CMakeFiles/framework.dir/triangle.cpp.i
+
+framework/CMakeFiles/framework.dir/triangle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/triangle.cpp.s"
+	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/triangle.cpp -o CMakeFiles/framework.dir/triangle.cpp.s
+
+framework/CMakeFiles/framework.dir/triangle.cpp.o.requires:
+
+.PHONY : framework/CMakeFiles/framework.dir/triangle.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/triangle.cpp.o.provides: framework/CMakeFiles/framework.dir/triangle.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/triangle.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/triangle.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/triangle.cpp.o.provides.build: framework/CMakeFiles/framework.dir/triangle.cpp.o
+
+
 framework/CMakeFiles/framework.dir/window.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/window.cpp.o: ../framework/window.cpp
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object framework/CMakeFiles/framework.dir/window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object framework/CMakeFiles/framework.dir/window.cpp.o"
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/window.cpp.o -c /home/IN/wobi3451/final_raytracer/framework/window.cpp
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object framework/CMakeFiles/framework.dir/window.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/window.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/window.cpp
-
-framework/CMakeFiles/framework.dir/window.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/window.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/window.cpp > CMakeFiles/framework.dir/window.cpp.i
-
-framework/CMakeFiles/framework.dir/window.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/window.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/window.cpp -o CMakeFiles/framework.dir/window.cpp.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object framework/CMakeFiles/framework.dir/window.cpp.o"
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/window.cpp.o -c /home/valentina/final_raytracer/framework/window.cpp
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/window.cpp.i"
@@ -559,12 +332,7 @@ framework/CMakeFiles/framework.dir/window.cpp.i: cmake_force
 
 framework/CMakeFiles/framework.dir/window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/window.cpp.s"
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/wobi3451/final_raytracer/framework/window.cpp -o CMakeFiles/framework.dir/window.cpp.s
-=======
-	cd /home/valentina/final_raytracer/build/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valentina/final_raytracer/framework/window.cpp -o CMakeFiles/framework.dir/window.cpp.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 framework/CMakeFiles/framework.dir/window.cpp.o.requires:
 
@@ -589,6 +357,7 @@ framework_OBJECTS = \
 "CMakeFiles/framework.dir/scene.cpp.o" \
 "CMakeFiles/framework.dir/shape.cpp.o" \
 "CMakeFiles/framework.dir/sphere.cpp.o" \
+"CMakeFiles/framework.dir/triangle.cpp.o" \
 "CMakeFiles/framework.dir/window.cpp.o"
 
 # External object files for target framework
@@ -604,24 +373,13 @@ framework/libframework.a: framework/CMakeFiles/framework.dir/renderer.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/scene.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/shape.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/sphere.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/triangle.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/window.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/build.make
 framework/libframework.a: framework/CMakeFiles/framework.dir/link.txt
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libframework.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library libframework.a"
 	cd /home/IN/wobi3451/final_raytracer/build/framework && $(CMAKE_COMMAND) -P CMakeFiles/framework.dir/cmake_clean_target.cmake
 	cd /home/IN/wobi3451/final_raytracer/build/framework && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/framework.dir/link.txt --verbose=$(VERBOSE)
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libframework.a"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && $(CMAKE_COMMAND) -P CMakeFiles/framework.dir/cmake_clean_target.cmake
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/framework.dir/link.txt --verbose=$(VERBOSE)
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libframework.a"
-	cd /home/valentina/final_raytracer/build/framework && $(CMAKE_COMMAND) -P CMakeFiles/framework.dir/cmake_clean_target.cmake
-	cd /home/valentina/final_raytracer/build/framework && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/framework.dir/link.txt --verbose=$(VERBOSE)
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 # Rule to build all files generated by this target.
 framework/CMakeFiles/framework.dir/build: framework/libframework.a
@@ -638,31 +396,16 @@ framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/scene.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/shape.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/sphere.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/triangle.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/window.cpp.o.requires
 
 .PHONY : framework/CMakeFiles/framework.dir/requires
 
 framework/CMakeFiles/framework.dir/clean:
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build/framework && $(CMAKE_COMMAND) -P CMakeFiles/framework.dir/cmake_clean.cmake
 .PHONY : framework/CMakeFiles/framework.dir/clean
 
 framework/CMakeFiles/framework.dir/depend:
 	cd /home/IN/wobi3451/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/IN/wobi3451/final_raytracer /home/IN/wobi3451/final_raytracer/framework /home/IN/wobi3451/final_raytracer/build /home/IN/wobi3451/final_raytracer/build/framework /home/IN/wobi3451/final_raytracer/build/framework/CMakeFiles/framework.dir/DependInfo.cmake --color=$(COLOR)
-=======
-<<<<<<< HEAD
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/framework && $(CMAKE_COMMAND) -P CMakeFiles/framework.dir/cmake_clean.cmake
-.PHONY : framework/CMakeFiles/framework.dir/clean
-
-framework/CMakeFiles/framework.dir/depend:
-	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/judith/Dokumente/Uni/final_raytracer /home/judith/Dokumente/Uni/final_raytracer/framework /home/judith/Dokumente/Uni/final_raytracer/build /home/judith/Dokumente/Uni/final_raytracer/build/framework /home/judith/Dokumente/Uni/final_raytracer/build/framework/CMakeFiles/framework.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/valentina/final_raytracer/build/framework && $(CMAKE_COMMAND) -P CMakeFiles/framework.dir/cmake_clean.cmake
-.PHONY : framework/CMakeFiles/framework.dir/clean
-
-framework/CMakeFiles/framework.dir/depend:
-	cd /home/valentina/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/valentina/final_raytracer /home/valentina/final_raytracer/framework /home/valentina/final_raytracer/build /home/valentina/final_raytracer/build/framework /home/valentina/final_raytracer/build/framework/CMakeFiles/framework.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 .PHONY : framework/CMakeFiles/framework.dir/depend
 

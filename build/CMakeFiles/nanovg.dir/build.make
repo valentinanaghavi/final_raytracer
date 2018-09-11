@@ -43,24 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/IN/wobi3451/final_raytracer
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/IN/wobi3451/final_raytracer/build
-=======
-<<<<<<< HEAD
-CMAKE_SOURCE_DIR = /home/judith/Dokumente/Uni/final_raytracer
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/judith/Dokumente/Uni/final_raytracer/build
-=======
-CMAKE_SOURCE_DIR = /home/valentina/final_raytracer
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/valentina/final_raytracer/build
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 # Include any dependencies generated for this target.
 include CMakeFiles/nanovg.dir/depend.make
@@ -73,25 +59,8 @@ include CMakeFiles/nanovg.dir/flags.make
 
 CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o: CMakeFiles/nanovg.dir/flags.make
 CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o: ../external/nanovg/src/nanovg.c
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Wno-unused-result -o CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o   -c /home/IN/wobi3451/final_raytracer/external/nanovg/src/nanovg.c
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Wno-unused-result -o CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o   -c /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/nanovg.c
-
-CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Wno-unused-result -E /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/nanovg.c > CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.i
-
-CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Wno-unused-result -S /home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src/nanovg.c -o CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Wno-unused-result -o CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o   -c /home/valentina/final_raytracer/external/nanovg/src/nanovg.c
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.i"
@@ -99,12 +68,7 @@ CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.i: cmake_force
 
 CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.s"
-<<<<<<< HEAD
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Wno-unused-result -S /home/IN/wobi3451/final_raytracer/external/nanovg/src/nanovg.c -o CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.s
-=======
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Wno-unused-result -S /home/valentina/final_raytracer/external/nanovg/src/nanovg.c -o CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.s
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o.requires:
 
@@ -127,15 +91,7 @@ nanovg_EXTERNAL_OBJECTS =
 libnanovg.a: CMakeFiles/nanovg.dir/external/nanovg/src/nanovg.c.o
 libnanovg.a: CMakeFiles/nanovg.dir/build.make
 libnanovg.a: CMakeFiles/nanovg.dir/link.txt
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/IN/wobi3451/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libnanovg.a"
-=======
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libnanovg.a"
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/valentina/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libnanovg.a"
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 	$(CMAKE_COMMAND) -P CMakeFiles/nanovg.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nanovg.dir/link.txt --verbose=$(VERBOSE)
 
@@ -153,14 +109,6 @@ CMakeFiles/nanovg.dir/clean:
 .PHONY : CMakeFiles/nanovg.dir/clean
 
 CMakeFiles/nanovg.dir/depend:
-<<<<<<< HEAD
 	cd /home/IN/wobi3451/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/IN/wobi3451/final_raytracer /home/IN/wobi3451/final_raytracer /home/IN/wobi3451/final_raytracer/build /home/IN/wobi3451/final_raytracer/build /home/IN/wobi3451/final_raytracer/build/CMakeFiles/nanovg.dir/DependInfo.cmake --color=$(COLOR)
-=======
-<<<<<<< HEAD
-	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/judith/Dokumente/Uni/final_raytracer /home/judith/Dokumente/Uni/final_raytracer /home/judith/Dokumente/Uni/final_raytracer/build /home/judith/Dokumente/Uni/final_raytracer/build /home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles/nanovg.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/valentina/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/valentina/final_raytracer /home/valentina/final_raytracer /home/valentina/final_raytracer/build /home/valentina/final_raytracer/build /home/valentina/final_raytracer/build/CMakeFiles/nanovg.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 .PHONY : CMakeFiles/nanovg.dir/depend
 

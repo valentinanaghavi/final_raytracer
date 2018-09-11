@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/framework.dir/scene.cpp.o"
   "CMakeFiles/framework.dir/shape.cpp.o"
   "CMakeFiles/framework.dir/sphere.cpp.o"
+  "CMakeFiles/framework.dir/triangle.cpp.o"
   "CMakeFiles/framework.dir/window.cpp.o"
   "libframework.pdb"
   "libframework.a"
