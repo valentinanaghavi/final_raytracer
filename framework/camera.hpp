@@ -15,7 +15,7 @@ struct Camera
 
     std::string name_;
     float fovX_;  //Oeffnungswinkel der Kamera
-    glm::vec3 eye_; // von position zu eye geandert
+    glm::vec3 eye_; // von position zu eye geaendert
     glm::vec3 direction_;
     glm::vec3 up_;
     glm::mat4 world_transformation_;

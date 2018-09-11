@@ -46,9 +46,6 @@ class Composite: public Shape
         return nearestStrike;
     }
 
-    /*void translate (glm::vec3 const& translate) override;
-    void scale (glm::vec3 const& scale) override;
-    void rotate (float phi, glm::vec3 const& achse) override;*/
 
     private:
     std::string name_;

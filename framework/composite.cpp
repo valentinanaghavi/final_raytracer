@@ -44,27 +44,3 @@ std::vector<std::shared_ptr<Shape>> Composite::getComposite()
 {
     return shapes_;
 }
-
-/*void Composite::translate(glm::vec3 const& translate)
-{
-    for(auto element: shapes_)
-    {
-        element -> translate(translate);
-    }
-}
-
-void Composite::scale(glm::vec3 const& scale)
-{
-    for(auto element: shapes_)
-    {
-        element -> scale(scale);
-    }
-}
-
-void Composite::rotate(float phi, glm::vec3 const& achse)
-{
-    for (auto element: shapes_)
-    {
-        element -> rotate(phi, achse);
-    }
-}*/

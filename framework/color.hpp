@@ -83,10 +83,6 @@ struct Color
 
   friend Color operator* (Color const& a, Color const& b)
   {
-  /*  auto tmp(a);
-    tmp *= b;
-    return tmp;
-  */
      Color tmp (0.0 , 0.0 , 0.0);
      tmp.r = a.r * b.r;
      tmp.g = a.g * b.g;

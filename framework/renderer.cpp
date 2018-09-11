@@ -56,7 +56,7 @@ void Renderer::render()
     for (unsigned x = 0; x < width_; ++x) {
       Pixel p(x,y);
       Ray ray = scene_.camera_.camera_ray(x,y,width_,height_);
-      p.color = raytrace(ray,2);
+      p.color = raytrace(ray,2); //depth wird festgelegt für die Tiefe/Anzahl der Spiegelungen
       p.color = toneMapping(p.color);
       write(p);
     }
@@ -105,11 +105,11 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
   Color ia = scene_.ambient_;
   
 
-  if(closest.hit == true) // -> in shape unterklassen muss Strike intersect geändert werden damit Strike.hit true wird
+  if(closest.hit == true)
   {
-    /* Ambiente Beleuchtung = I_a*k_a   I_a: Intensität des ambienten Lichts, bestimmt
-    durch konstante I_a = 0.10     k_a: ambienter Reflexionskoeffizient (in Material
-    ka = ambiente Reflexion*/
+    /* Ambiente Beleuchtung = I_a*k_a   I_a: Intensitaet des ambienten Lichts, bestimmt
+    durch konstante I_a = 0.10 (keine Konstante mehr, festgelegt durch ambientes Licht)
+    k_a: ambienter Reflexionskoeffizient (in Material ka = ambiente Reflexion*/
     Color c {0.0, 0.0, 0.0};
     Color ip {0.0, 0.0, 0.0};
     float ln = 0;
@@ -119,32 +119,14 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
     //Falls andere Lichtquellen vorhanden werden diese durchgegangen
     for (unsigned int i = 0; i < scene_.light_vector.size(); i++)
     {
-      /*if(c.r < 1.0f || c.g < 1.0f ||c.b < 1.0f)
-      {
-        bool noObject = false;
-        
-                //Vector von Intersection zu Lichtquelle berechnen
-                glm::vec3 dirToLight = glm::normalize(light -> m_pos - closestHit.m_intersection); //normalize that light!!!
-        
-                //bisschen verschieben, damit intersect richtig funktioniert
-                glm::vec3 newOrigin = closestHit.m_intersection + dirToLight * 0.001f; //so intersect works properly
-                Ray rayToLight{newOrigin, dirToLight}; //vec from hit to lightsource
-                
-                //Liegt Objekt zwischen Shape und Lichtquelle?
-                //Trifft der Ray eine andere Shape?
-                Hit shadowHit = m_scene.m_composite -> intersect(rayToLight); //does the vec meet another object?
-                //wenn OShape getroffen wird:
-        //std::cout << "shadow hit: " << shadowHit << std::endl;*/
-
-
       if (breaking(closest, scene_.light_vector[i] -> pos_)) // wenn es keinen Schatten gibt 
       {
-        ip = scene_.light_vector[i] -> intensity(); // Intensität: brightness * color
+        ip = scene_.light_vector[i] -> intensity(); // Intensitaet: brightness * color
         
         glm::vec3 l = glm::normalize(scene_.light_vector[i] -> pos_ - closest.origin); //Vektor zur Lichtquelle
         glm::vec3 n = glm::normalize(closest.normal); //Normalenvektor von Strike
         // ln: i_p * k_d || i_p: Helligkeit Puntlichtquelle, k_d: diffuser Reflexionskoeffizient
-        ln = glm::dot(l,n); //dot: Skalarprodukt der beiden normalisierten Vektoren l und n
+        ln = glm::dot(l,n); //dot: Skalarprodukt der beiden normalisierten Vektoren l und n float als Ergebnis
         
         // in der Folie S.14 l+r = 2(n*l)n, also r = (2*(ln)*n-l)
         glm::vec3 r = glm::normalize(2 * ln * n - l);
@@ -172,7 +154,7 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
     }
 
     //Reflektion anderer Objekte
-    //if depth > 0 || ist es größer null gibt es eine Tiefe es können also auch andere Objekte vorhanden sein
+    //if depth > 0 || ist es größer null gibt es eine Tiefe es koennen also auch andere Objekte vorhanden sein die spiegeln
     if (depth > 0)
     {
       //reflect:: reflektiert Vektor V1 mit der Orientierung von Vektor V2, wird an der Normalen gespiegelt
@@ -185,10 +167,10 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
 
 
       /*Die Farbe der Spiegelung berechnet sich zur Hälfte aus der color c und 
-      zur Häfte aus aus der Color c * gespiegelte Farbe * ks (specular reflection)
+      zur Haelfte aus aus der Color c * gespiegelte Farbe * ks (specular reflection)
       * m (specular reflection exponent)*/
       float m = closest.nearestShape -> getMaterial().m_; //ich glaube anstatt m soll refract irgendwas dahin !
-      float refract = closest.nearestShape -> getMaterial().refract_;       
+      //float refract = closest.nearestShape -> getMaterial().refract_;       
       Color ks = closest.nearestShape -> getMaterial().ks_;
       c = c * 0.5f + c * 0.5f * reflection * ks * m;
      
