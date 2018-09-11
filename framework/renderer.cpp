@@ -56,7 +56,7 @@ void Renderer::render()
     for (unsigned x = 0; x < width_; ++x) {
       Pixel p(x,y);
       Ray ray = scene_.camera_.camera_ray(x,y,width_,height_);
-      p.color = raytrace(ray,200);
+      p.color = raytrace(ray,2);
       p.color = toneMapping(p.color);
       write(p);
     }

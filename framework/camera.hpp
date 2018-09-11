@@ -35,7 +35,6 @@ struct Camera
     world_transformation_inv_{glm::inverse(world_transformation_)}
     {
         world_transformation_ = camera_transformation();
-        std::cout << "Added eye dir up stuff when construction";
         world_transformation_inv_ = glm::inverse(world_transformation_);
 
     };

@@ -240,8 +240,8 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                     buffer >> shape_name;
                     std::shared_ptr<Shape> foundShape = search_shape_vector( shape_name,    shape_vector ); 
                 //auto foundShape = shape_vector.find(shape_name);
-
-                    if(foundShape != nullptr)
+                std::cout << "folgende Camera oder shape soll transformiert werden:" << shape_name << "\n";
+                if(foundShape != nullptr)
                     {
                         buffer >> word ;
 
@@ -332,6 +332,8 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                         }
                         else if(word == "rotate")
                         {
+                            std::cout << "Camera rotate."<< std::endl;
+                            
                             float winkel;
                             glm::vec3 r;
                          
@@ -342,7 +344,7 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                         
                             glm::mat4 rotate_mat = rotation(r, winkel);
                             glm::mat4 trans_mat = camera_.world_transformation_;
-                            trans_mat *= rotate_mat ;
+                            trans_mat = trans_mat * rotate_mat ;
                             camera_.world_transformation_ =trans_mat;
                             camera_.world_transformation_inv_ = glm::inverse(trans_mat);
                         }
@@ -479,23 +481,23 @@ glm::mat4 rotation(glm::vec3 rotation_vec, float winkel) //Winkel in Bogenmaß !
     if (rotation_vec.x == 1.0f) //Drehung um X-Achse
     {
         rotation_mat[0] =  glm::vec4 {1.0f , 0.0f , 0.0f , 0.0f};
-        rotation_mat[1] =  glm::vec4 {0.0f , cos(winkel) , sin(winkel) , 0.0f};
-        rotation_mat[2] =  glm::vec4 {0.0f , - sin(winkel) , cos(winkel) , 0.0f};
+        rotation_mat[1] =  glm::vec4 {0.0f , cos(winkel* M_PI /180* M_PI /180) , sin(winkel* M_PI /180) , 0.0f};
+        rotation_mat[2] =  glm::vec4 {0.0f , - sin(winkel* M_PI /180) , cos(winkel* M_PI /180) , 0.0f};
         rotation_mat[3] =  glm::vec4 {0.0f , 0.0f , 0.0f , 1.0f};
 
     }
     if (rotation_vec.y == 1.0f)  //Drehung um Y-Achse
     {
-        rotation_mat[0] =  glm::vec4 {cos(winkel) , 0.0f , -sin(winkel) , 0.0f};
+        rotation_mat[0] =  glm::vec4 {cos(winkel* M_PI /180) , 0.0f , sin(winkel* M_PI /180) , 0.0f};
         rotation_mat[1] =  glm::vec4 {0.0f , 1.0f , 0.0f , 0.0f};
-        rotation_mat[2] =  glm::vec4 {sin(winkel) , 0.0f , cos(winkel) , 0.0f};
+        rotation_mat[2] =  glm::vec4 {-sin(winkel* M_PI /180) , 0.0f , cos(winkel* M_PI /180) , 0.0f};
         rotation_mat[3] =  glm::vec4 {0.0f , 0.0f , 0.0f , 1.0f};
   
     }
     if (rotation_vec.z == 1.0f)  //Drehung um Z-Achse
     {
-        rotation_mat[0] =  glm::vec4 {cos(winkel) , sin(winkel) , 0.0f , 0.0f};
-        rotation_mat[1] =  glm::vec4 { - sin(winkel) , cos(winkel) , 0.0f , 0.0f};
+        rotation_mat[0] =  glm::vec4 {cos(winkel* M_PI /180) , sin(winkel* M_PI /180) , 0.0f , 0.0f};
+        rotation_mat[1] =  glm::vec4 { - sin(winkel* M_PI /180) , cos(winkel* M_PI /180) , 0.0f , 0.0f};
         rotation_mat[2] =  glm::vec4 {0.0f , 0.0f , 1.0f , 0.0f};
         rotation_mat[3] =  glm::vec4 {0.0f , 0.0f , 0.0f , 1.0f};
 

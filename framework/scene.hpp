@@ -19,6 +19,8 @@
 #include <vector>
 #include <set>
 
+#include <math.h>
+
 #include <string>
 #include <iostream>
 #include <sstream>

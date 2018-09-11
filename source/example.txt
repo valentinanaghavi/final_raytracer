@@ -16,7 +16,8 @@ define shape composite root rbox first_sphere second_sphere floor little quaderp
 define light sun 50 200 10 1.0 1.0 1.0 10
 define light lampe 50 10 -15 1.0 1.0 1.0 5
 define ambient 0.1 0.1 0.1
-define camera eye 90.0 0 0 0 0 0 -1 0 1 0
+define camera eye 100.0 0 0 0 0 0 -1 0 1 0
+transform eye rotate 5000.0  0 1 0
 render eye ./checkerboard.ppm 1500 1000 
 
     
