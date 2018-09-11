@@ -12,12 +12,12 @@ define shape box floor -100 -200 -100 100 -20 20 white
 define shape box little -7 -19 -20 -3 -10 -17 red2
 define shape box quaderpie 10 -19 -40 20 -9 -50 red2
 define shape box staengel -8 -19 -50 -4 -5 -60 red2
-define shape composite root rbox first_sphere second_sphere floor little quaderpie staengel martin valli
-define light sun 50 200 10 1.0 1.0 1.0 10
+define shape composite root rbox first_sphere second_sphere little quaderpie staengel martin valli floor
+define light sun 80 100 10 1.0 1.0 1.0 8
 define light lampe 50 10 -15 1.0 1.0 1.0 5
 define ambient 0.1 0.1 0.1
 define camera eye 100.0 0 0 0 0 0 -1 0 1 0
-transform eye rotate 5000.0  0 1 0
+transform quaderpie scale  2 4 2
 render eye ./checkerboard.ppm 1500 1000 
 
     
