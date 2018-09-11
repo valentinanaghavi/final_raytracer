@@ -16,7 +16,7 @@ define shape composite root rbox first_sphere little quaderpie staengel martin v
 define light sun 80 100 10 1.0 1.0 1.0 8
 define light lampe 50 10 -15 1.0 1.0 1.0 5
 define ambient 0.1 0.1 0.1
-transform little rotate -9.6 0 1 0
+transform little rotate -10 0 1 0
 define camera eye 100.0 0 0 0 0 0 -1 0 1 0
 render eye ./image97.ppm 1500 1000 
     
