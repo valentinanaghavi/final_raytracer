@@ -467,7 +467,7 @@ glm::mat4 scale(glm::vec3 scale_vec)
 
     scale_mat[0] = glm::vec4 {scale_vec.x , 0.0f , 0.0f , 0.0f};
     scale_mat[1] = glm::vec4 {0.0f , scale_vec.y , 0.0f , 0.0f};
-    scale_mat[2] = glm::vec4 {1.0f , 0.0f , scale_vec.z , 0.0f};
+    scale_mat[2] = glm::vec4 {0.0f , 0.0f , scale_vec.z , 0.0f};
     scale_mat[3] = glm::vec4 {0.0f,  0.0f , 0.0f , 1.0f};
     
     return scale_mat ;   
