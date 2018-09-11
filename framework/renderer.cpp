@@ -188,10 +188,11 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
       zur Häfte aus aus der Color c * gespiegelte Farbe * ks (specular reflection)
       * m (specular reflection exponent)*/
       float m = closest.nearestShape -> getMaterial().m_; //ich glaube anstatt m soll refract irgendwas dahin !
+      float refract = closest.nearestShape -> getMaterial().refract_;       
       Color ks = closest.nearestShape -> getMaterial().ks_;
       c = c * 0.5f + c * 0.5f * reflection * ks * m;
      
-     /*
+     
       //Refraction , oben noch refractionparamter hinzufuegen
       float o =  closest.nearestShape -> getMaterial().opacity_ ;
 
@@ -199,7 +200,7 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
       Ray transparentRay {(closest.origin + (0.0001f * transparentDirection)), transparentDirection};
       Color refraction = raytrace(transparentRay, depth -1);
 
-      c += refraction * ks * (1 - m) ;//anstelle von m refract parameter und noch in material einfuegen */
+      c += refraction * ks * (1 - refract) ;//anstelle von m refract parameter und noch in material einfuegen 
       return c;  
     }
 

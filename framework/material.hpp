@@ -9,7 +9,7 @@ struct Material
     //constructors
     Material();
     Material(std::string const& name, Color const& ka, Color const& kd, Color const& ks, float m);
-    
+    Material(std::string name, Color const& ka, Color const& kd, Color const& ks, float m, float r, float o) ;
     //function
     std::ostream& print(std::ostream& os ) const ;
 
@@ -19,6 +19,8 @@ struct Material
     Color kd_;
     Color ks_;
     float m_;
+    float refract_;
+    float opacity_;
 
 };
 //free function

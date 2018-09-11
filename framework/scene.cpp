@@ -47,6 +47,8 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
                         buffer >> material.ks_.g;
                         buffer >> material.ks_.b;
                         buffer >> material.m_;
+                        buffer >> material.refract_;
+                        buffer >> material.opacity_;
 
                 //std::shared_ptr<Material> material_path = std::make_shared<Material>(material);
                         material_map[material.name_] = material;
@@ -339,11 +341,10 @@ void Scene :: read_sdf(std::string const& file_path) //, Scene& scene)
 
                 if (cameraName == camera_.name_)
                 {
-
+                    buffer >> filename_;
                     buffer >> width_;
                     buffer >> height_;
-                    buffer >> filename_;
-                
+
                 /*width_ = width;
                 height_ = height;
                 filename_ = filename;*/
