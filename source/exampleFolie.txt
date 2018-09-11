@@ -1,7 +1,6 @@
 define material white   1.0 1.0 1.0     1.0 1.0 1.0     1.0 1.0 1.0     0.8 0.5 1
 define material turquoise 0.3 0.9 0.9	0.3 0.9 0.9	0.3 0.9 0.9	0.8 0.5 1
 define material pink	1.0 0.6 0.65	1.0 0.6 0.65	1.0 0.7 0.75	0.8 0.5 1
-<<<<<<< HEAD
 define shape sphere left_sphere   0  5 -10  2.5 pink
 define shape box right_box 	 -1 -1 -1	1 1 1  turquoise
 define shape box left_box 	-7 -2 -12	-3 2 -8 pink
@@ -13,15 +12,3 @@ define camera eye 90.0	 0 0 0 	0 0 -1 	0 1 0 		0
 transform eye rotate 10 0 1 0
 transform eye translate 0 0 10
 render eye image.ppm 1500 1000
-=======
-define shape box    green_box -15 0 -8 -10 3 -3  red2
-define shape sphere asphere   -0.5 3 -5   3      turquoise
-define shape sphere bsphere   -9.5 4 -15   4     green
-define shape sphere csphere -6.5 0.8 -3.5 0.8    blue2
-define shape box ground -20 -1 -30 10 0 0 red2
-define shape composite root green_box ground asphere bsphere csphere
-define light sun  -50 200 100  0.2 0.2 0.2 4
-ambient 0.2 0.2 0.2 
-define camera eye 90.0 -7 3.5 0.8  0 0 -1  0 1 0
-render eye 1500 1000 ./checkerboard.ppm
->>>>>>> 12364cb1d189c472b8070b099e08b29085803790
