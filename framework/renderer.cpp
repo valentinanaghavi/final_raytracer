@@ -187,9 +187,19 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
       /*Die Farbe der Spiegelung berechnet sich zur Hälfte aus der color c und 
       zur Häfte aus aus der Color c * gespiegelte Farbe * ks (specular reflection)
       * m (specular reflection exponent)*/
-      float m = closest.nearestShape -> getMaterial().m_;
+      float m = closest.nearestShape -> getMaterial().m_; //ich glaube anstatt m soll refract irgendwas dahin !
       Color ks = closest.nearestShape -> getMaterial().ks_;
-      c = c * 0.5f + c * 0.5f * reflection * ks * m; 
+      c = c * 0.5f + c * 0.5f * reflection * ks * m;
+     
+     /*
+      //Refraction , oben noch refractionparamter hinzufuegen
+      float o =  closest.nearestShape -> getMaterial().opacity_ ;
+
+      glm::vec3 transparentDirection = glm::normalize(glm::refract(ray.direction, closest.normal, o));
+      Ray transparentRay {(closest.origin + (0.0001f * transparentDirection)), transparentDirection};
+      Color refraction = raytrace(transparentRay, depth -1);
+
+      c += refraction * ks * (1 - m) ;//anstelle von m refract parameter und noch in material einfuegen */
       return c;  
     }
 

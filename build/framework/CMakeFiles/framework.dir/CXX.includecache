@@ -932,7 +932,11 @@ iosfwd
 color.hpp
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
+=======
+/home/valentina/final_raytracer/framework/Ray.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 glm/glm.hpp
 -
 glm/vec3.hpp
@@ -940,9 +944,15 @@ glm/vec3.hpp
 glm/vec4.hpp
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp
 box.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
+=======
+/home/valentina/final_raytracer/framework/box.cpp
+box.hpp
+/home/valentina/final_raytracer/framework/box.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 iostream
 -
 string
@@ -952,9 +962,15 @@ math.h
 glm/vec3.hpp
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/box.hpp
 shape.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
+=======
+/home/valentina/final_raytracer/framework/box.hpp
+shape.hpp
+/home/valentina/final_raytracer/framework/shape.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 iostream
 -
 glm/vec3.hpp
@@ -962,11 +978,19 @@ glm/vec3.hpp
 catch.hpp
 -
 strike.hpp
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
 
 /home/judith/Dokumente/Uni/final_raytracer/framework/camera.hpp
 Ray.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
+=======
+/home/valentina/final_raytracer/framework/strike.hpp
+
+/home/valentina/final_raytracer/framework/camera.hpp
+Ray.hpp
+/home/valentina/final_raytracer/framework/Ray.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 glm/vec3.hpp
 -
 glm/vec4.hpp
@@ -978,6 +1002,7 @@ string
 iostream
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
 iostream
 -
@@ -995,6 +1020,25 @@ sphere.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
 strike.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
+=======
+/home/valentina/final_raytracer/framework/color.hpp
+iostream
+-
+
+/home/valentina/final_raytracer/framework/composite.cpp
+composite.hpp
+/home/valentina/final_raytracer/framework/composite.hpp
+
+/home/valentina/final_raytracer/framework/composite.hpp
+shape.hpp
+/home/valentina/final_raytracer/framework/shape.hpp
+box.hpp
+/home/valentina/final_raytracer/framework/box.hpp
+sphere.hpp
+/home/valentina/final_raytracer/framework/sphere.hpp
+strike.hpp
+/home/valentina/final_raytracer/framework/strike.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 vector
 -
 string
@@ -1006,7 +1050,11 @@ memory
 algorithm
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/light.hpp
+=======
+/home/valentina/final_raytracer/framework/light.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 iostream
 -
 string
@@ -1014,6 +1062,7 @@ string
 glm/vec3.hpp
 -
 color.hpp
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
 
 /home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp
@@ -1035,14 +1084,43 @@ ostream
 -
 
 /home/judith/Dokumente/Uni/final_raytracer/framework/pixel.hpp
+=======
+/home/valentina/final_raytracer/framework/color.hpp
+
+/home/valentina/final_raytracer/framework/material.cpp
+material.hpp
+/home/valentina/final_raytracer/framework/material.hpp
+iostream
+-
+
+/home/valentina/final_raytracer/framework/material.hpp
+string
+-
+color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
+
+/home/valentina/final_raytracer/framework/pixel.cpp
+pixel.hpp
+/home/valentina/final_raytracer/framework/pixel.hpp
+ostream
+-
+
+/home/valentina/final_raytracer/framework/pixel.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 iosfwd
 -
 color.hpp
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/ppmwriter.cpp
 ppmwriter.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/ppmwriter.hpp
+=======
+/home/valentina/final_raytracer/framework/ppmwriter.cpp
+ppmwriter.hpp
+/home/valentina/final_raytracer/framework/ppmwriter.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 iostream
 -
 fstream
@@ -1052,7 +1130,11 @@ cmath
 algorithm
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/ppmwriter.hpp
+=======
+/home/valentina/final_raytracer/framework/ppmwriter.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 string
 -
 vector
@@ -1060,6 +1142,7 @@ vector
 pixel.hpp
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/renderer.cpp
 renderer.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/renderer.hpp
@@ -1079,6 +1162,27 @@ shape.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
 camera.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/camera.hpp
+=======
+/home/valentina/final_raytracer/framework/renderer.cpp
+renderer.hpp
+/home/valentina/final_raytracer/framework/renderer.hpp
+
+/home/valentina/final_raytracer/framework/renderer.hpp
+color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
+pixel.hpp
+/home/valentina/final_raytracer/framework/pixel.hpp
+ppmwriter.hpp
+/home/valentina/final_raytracer/framework/ppmwriter.hpp
+Ray.hpp
+/home/valentina/final_raytracer/framework/Ray.hpp
+scene.hpp
+/home/valentina/final_raytracer/framework/scene.hpp
+shape.hpp
+/home/valentina/final_raytracer/framework/shape.hpp
+camera.hpp
+/home/valentina/final_raytracer/framework/camera.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 string
 -
 glm/glm.hpp
@@ -1092,6 +1196,7 @@ algorithm
 iostream
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/scene.cpp
 scene.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/scene.hpp
@@ -1113,6 +1218,29 @@ camera.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/camera.hpp
 composite.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/composite.hpp
+=======
+/home/valentina/final_raytracer/framework/scene.cpp
+scene.hpp
+/home/valentina/final_raytracer/framework/scene.hpp
+
+/home/valentina/final_raytracer/framework/scene.hpp
+material.hpp
+/home/valentina/final_raytracer/framework/material.hpp
+box.hpp
+/home/valentina/final_raytracer/framework/box.hpp
+sphere.hpp
+/home/valentina/final_raytracer/framework/sphere.hpp
+shape.hpp
+/home/valentina/final_raytracer/framework/shape.hpp
+light.hpp
+/home/valentina/final_raytracer/framework/light.hpp
+color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
+camera.hpp
+/home/valentina/final_raytracer/framework/camera.hpp
+composite.hpp
+/home/valentina/final_raytracer/framework/composite.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 glm/glm.hpp
 -
 glm/vec3.hpp
@@ -1140,6 +1268,7 @@ fstream
 memory
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/shape.cpp
 shape.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
@@ -1153,6 +1282,21 @@ material.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/material.hpp
 strike.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
+=======
+/home/valentina/final_raytracer/framework/shape.cpp
+shape.hpp
+/home/valentina/final_raytracer/framework/shape.hpp
+
+/home/valentina/final_raytracer/framework/shape.hpp
+color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
+Ray.hpp
+/home/valentina/final_raytracer/framework/Ray.hpp
+material.hpp
+/home/valentina/final_raytracer/framework/material.hpp
+strike.hpp
+/home/valentina/final_raytracer/framework/strike.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 glm/glm.hpp
 -
 iostream
@@ -1164,9 +1308,15 @@ memory
 vector
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.cpp
 sphere.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
+=======
+/home/valentina/final_raytracer/framework/sphere.cpp
+sphere.hpp
+/home/valentina/final_raytracer/framework/sphere.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 glm/glm.hpp
 -
 glm/gtx/intersect.hpp
@@ -1180,6 +1330,7 @@ math.h
 string
 -
 Ray.hpp
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/Ray.hpp
 
 /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.hpp
@@ -1187,6 +1338,15 @@ shape.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/shape.hpp
 strike.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
+=======
+/home/valentina/final_raytracer/framework/Ray.hpp
+
+/home/valentina/final_raytracer/framework/sphere.hpp
+shape.hpp
+/home/valentina/final_raytracer/framework/shape.hpp
+strike.hpp
+/home/valentina/final_raytracer/framework/strike.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 glm/glm.hpp
 -
 glm/gtx/intersect.hpp
@@ -1200,7 +1360,11 @@ iostream
 string
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/strike.hpp
+=======
+/home/valentina/final_raytracer/framework/strike.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 glm/glm.hpp
 -
 memory
@@ -1210,9 +1374,15 @@ glm/vec3.hpp
 string
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/window.cpp
 window.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/window.hpp
+=======
+/home/valentina/final_raytracer/framework/window.cpp
+window.hpp
+/home/valentina/final_raytracer/framework/window.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 utility
 -
 cstring
@@ -1224,9 +1394,15 @@ cassert
 exception
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/window.hpp
 color.hpp
 /home/judith/Dokumente/Uni/final_raytracer/framework/color.hpp
+=======
+/home/valentina/final_raytracer/framework/window.hpp
+color.hpp
+/home/valentina/final_raytracer/framework/color.hpp
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 GL/glew.h
 -
 GLFW/glfw3.h

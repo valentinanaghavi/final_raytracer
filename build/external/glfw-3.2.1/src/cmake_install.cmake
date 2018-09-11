@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src
+=======
+# Install script for directory: /home/valentina/final_raytracer/external/glfw-3.2.1/src
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -30,10 +34,13 @@ endif()
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
+<<<<<<< HEAD
 endif()
 
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
+=======
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 endif()
 

@@ -34,7 +34,11 @@ GL/glew.h
 windows.h
 -
 
+<<<<<<< HEAD
 /home/judith/Dokumente/Uni/final_raytracer/framework/glew.c
+=======
+/home/valentina/final_raytracer/framework/glew.c
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
 GL/glew.h
 -
 GL/wglew.h
