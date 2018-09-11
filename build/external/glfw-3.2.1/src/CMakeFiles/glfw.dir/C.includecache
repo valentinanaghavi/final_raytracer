@@ -24,7 +24,15 @@ stdint.h
 inttypes.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/include/GLFW/glfw3.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/include/GLFW/glfw3.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/include/GLFW/glfw3.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 stddef.h
 -
 stdint.h
@@ -64,7 +72,15 @@ GL/glext.h
 GL/glu.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/cocoa_joystick.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/cocoa_joystick.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/cocoa_joystick.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 IOKit/IOKitLib.h
 -
 IOKit/IOCFPlugIn.h
@@ -74,7 +90,15 @@ IOKit/hid/IOHIDLib.h
 IOKit/hid/IOHIDKeys.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/cocoa_platform.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/cocoa_platform.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/cocoa_platform.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 stdint.h
 -
 dlfcn.h
@@ -88,7 +112,22 @@ Carbon/Carbon.h
 ApplicationServices/ApplicationServices.h
 -
 posix_tls.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+cocoa_joystick.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/cocoa_joystick.h
+nsgl_context.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/nsgl_context.h
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/context.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 cocoa_joystick.h
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/cocoa_joystick.h
 nsgl_context.h
@@ -96,7 +135,12 @@ nsgl_context.h
 
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/context.c
 internal.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 assert.h
 -
 stdio.h
@@ -108,9 +152,21 @@ limits.h
 stdio.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/egl_context.c
 internal.h
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/egl_context.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/egl_context.c
+internal.h
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 stdio.h
 -
 string.h
@@ -120,13 +176,31 @@ stdlib.h
 assert.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/egl_context.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/egl_context.h
+EGL/eglplatform.h
+-
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/glx_context.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/egl_context.h
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 EGL/eglplatform.h
 -
 
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/glx_context.c
 internal.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 string.h
 -
 stdlib.h
@@ -134,11 +208,27 @@ stdlib.h
 assert.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/glx_context.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/glx_context.h
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/init.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/glx_context.h
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/init.c
 internal.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 string.h
 -
 stdlib.h
@@ -148,9 +238,21 @@ stdio.h
 stdarg.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/input.c
 internal.h
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/input.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/input.c
+internal.h
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 assert.h
 -
 float.h
@@ -158,7 +260,32 @@ float.h
 stdlib.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+glfw_config.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/glfw_config.h
+../include/GLFW/glfw3.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/include/GLFW/glfw3.h
+cocoa_platform.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/cocoa_platform.h
+win32_platform.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/win32_platform.h
+x11_platform.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/x11_platform.h
+wl_platform.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/wl_platform.h
+mir_platform.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/mir_platform.h
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/linux_joystick.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 glfw_config.h
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/glfw_config.h
 ../include/GLFW/glfw3.h
@@ -176,7 +303,12 @@ mir_platform.h
 
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/linux_joystick.c
 internal.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 linux/joystick.h
 -
 sys/types.h
@@ -200,11 +332,27 @@ string.h
 unistd.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/linux_joystick.h
 regex.h
 -
 
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/mir_platform.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/linux_joystick.h
+regex.h
+-
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/mir_platform.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/linux_joystick.h
+regex.h
+-
+
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/mir_platform.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 sys/queue.h
 -
 pthread.h
@@ -214,7 +362,26 @@ dlfcn.h
 mir_toolkit/mir_client_library.h
 -
 posix_tls.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+posix_time.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/posix_time.h
+linux_joystick.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/linux_joystick.h
+xkb_unicode.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/xkb_unicode.h
+egl_context.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/egl_context.h
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/monitor.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 posix_time.h
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/posix_time.h
 linux_joystick.h
@@ -226,7 +393,12 @@ egl_context.h
 
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/monitor.c
 internal.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 assert.h
 -
 math.h
@@ -240,17 +412,54 @@ stdlib.h
 limits.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/nsgl_context.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/nsgl_context.h
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/posix_time.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/nsgl_context.h
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/posix_time.c
 internal.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 sys/time.h
 -
 time.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/posix_time.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/posix_time.h
+stdint.h
+-
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/posix_tls.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+pthread.h
+-
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/vulkan.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/posix_time.h
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 stdint.h
 -
 
@@ -264,7 +473,12 @@ pthread.h
 
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/vulkan.c
 internal.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 assert.h
 -
 string.h
@@ -272,11 +486,27 @@ string.h
 stdlib.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/wgl_context.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/wgl_context.h
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/win32_joystick.h
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/win32_platform.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/wgl_context.h
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/win32_joystick.h
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/win32_platform.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/win32_platform.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 wctype.h
 -
 windows.h
@@ -292,7 +522,22 @@ dbt.h
 malloc.h
 -
 win32_joystick.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/win32_joystick.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/win32_joystick.h
+wgl_context.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/wgl_context.h
+egl_context.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/egl_context.h
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/window.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/win32_joystick.h
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 wgl_context.h
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/wgl_context.h
 egl_context.h
@@ -300,7 +545,12 @@ egl_context.h
 
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/window.c
 internal.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 assert.h
 -
 string.h
@@ -310,7 +560,15 @@ stdlib.h
 float.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/wl_platform.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/wl_platform.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/wl_platform.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 wayland-client.h
 -
 xkbcommon/xkbcommon.h
@@ -318,7 +576,30 @@ xkbcommon/xkbcommon.h
 dlfcn.h
 -
 posix_tls.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+posix_time.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/posix_time.h
+linux_joystick.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/linux_joystick.h
+xkb_unicode.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/xkb_unicode.h
+egl_context.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/egl_context.h
+wayland-relative-pointer-unstable-v1-client-protocol.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/wayland-relative-pointer-unstable-v1-client-protocol.h
+wayland-pointer-constraints-unstable-v1-client-protocol.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/wayland-pointer-constraints-unstable-v1-client-protocol.h
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/x11_init.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 posix_time.h
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/posix_time.h
 linux_joystick.h
@@ -334,7 +615,12 @@ wayland-pointer-constraints-unstable-v1-client-protocol.h
 
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/x11_init.c
 internal.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 X11/Xresource.h
 -
 stdlib.h
@@ -348,9 +634,21 @@ stdio.h
 locale.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/x11_monitor.c
 internal.h
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/x11_monitor.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/x11_monitor.c
+internal.h
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 limits.h
 -
 stdlib.h
@@ -358,7 +656,15 @@ stdlib.h
 string.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/x11_platform.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/x11_platform.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/x11_platform.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 unistd.h
 -
 signal.h
@@ -384,7 +690,28 @@ X11/extensions/Xinerama.h
 X11/extensions/xf86vmode.h
 -
 posix_tls.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+posix_time.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/posix_time.h
+linux_joystick.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/linux_joystick.h
+xkb_unicode.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/xkb_unicode.h
+glx_context.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/glx_context.h
+egl_context.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/egl_context.h
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/x11_window.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/posix_tls.h
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 posix_time.h
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/posix_time.h
 linux_joystick.h
@@ -398,7 +725,12 @@ egl_context.h
 
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/x11_window.c
 internal.h
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/internal.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 X11/cursorfont.h
 -
 X11/Xmd.h
@@ -418,11 +750,27 @@ errno.h
 assert.h
 -
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/xkb_unicode.c
+=======
+<<<<<<< HEAD
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/xkb_unicode.c
+internal.h
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/internal.h
+
+/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/src/xkb_unicode.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/xkb_unicode.c
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 internal.h
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/internal.h
 
+<<<<<<< HEAD
 /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1/src/xkb_unicode.h
+=======
+/home/valentina/final_raytracer/external/glfw-3.2.1/src/xkb_unicode.h
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 external/glfw-3.2.1/src/glfw_config.h
 

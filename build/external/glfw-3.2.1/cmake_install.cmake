@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 # Install script for directory: /home/IN/wobi3451/final_raytracer/external/glfw-3.2.1
+=======
+<<<<<<< HEAD
+# Install script for directory: /home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1
+=======
+# Install script for directory: /home/valentina/final_raytracer/external/glfw-3.2.1
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,17 +37,35 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+<<<<<<< HEAD
   set(CMAKE_INSTALL_SO_NO_EXE "0")
+=======
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+<<<<<<< HEAD
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 endif()
 
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+<<<<<<< HEAD
   include("/home/IN/wobi3451/final_raytracer/build/external/glfw-3.2.1/src/cmake_install.cmake")
+=======
+<<<<<<< HEAD
+  include("/home/judith/Dokumente/Uni/final_raytracer/build/external/glfw-3.2.1/src/cmake_install.cmake")
+=======
+  include("/home/valentina/final_raytracer/build/external/glfw-3.2.1/src/cmake_install.cmake")
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 endif()
 

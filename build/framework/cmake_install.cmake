@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 # Install script for directory: /home/IN/wobi3451/final_raytracer/framework
+=======
+<<<<<<< HEAD
+# Install script for directory: /home/judith/Dokumente/Uni/final_raytracer/framework
+=======
+# Install script for directory: /home/valentina/final_raytracer/framework
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,11 +37,21 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+<<<<<<< HEAD
   set(CMAKE_INSTALL_SO_NO_EXE "0")
+=======
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+<<<<<<< HEAD
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 endif()
 
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 103048cf0f4e2f0863f42ad307412c7059044d8a
+>>>>>>> 12364cb1d189c472b8070b099e08b29085803790
 endif()
 
