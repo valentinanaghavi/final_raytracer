@@ -1,0 +1,23 @@
+define material red2 	0.9 0 0 	0.7 0.01 0.01 	0.7 0.01 0.01 	0.8 0.5 50
+define material blue2 	0 0 0.9 	0.01 0.01 0.3	0.01 0.01 0.3	0.8 0.5 1
+define material white 0.2 0.2 0.2 1 1 1 0.2 0.2 0.2 10 0.0
+define material turquoise 0.3 0.9 0.9	0.3 0.9 0.9	0.3 0.9 0.9	0.8 0.5 1
+define material pink	1.0 0.6 0.65	1.0 0.6 0.65	1.0 0.7 0.75	0.8 0.5 1
+define material senf	 0.9 0.8 0.1  0.9 0.8 0.1  1.0 0.9 0.2  0.8
+define shape sphere first_sphere 0 8 -15 2.5 pink
+define shape sphere second_sphere 0 4 -25 2.5 turquoise 
+define shape sphere martin 10 -9 -25 4.5 senf
+define shape sphere valli -41.5 -1 -70 20 senf
+define shape box floor -100 -200 -100 100 -20 20 white
+define shape box little -7 -19 -20 -3 -10 -17 pink
+define shape box quaderpie 10 -19 -40 20 -9 -50 red2
+define shape box staengel -8 -19 -50 -4 -5 -60 pink
+define shape composite root rbox first_sphere little quaderpie staengel martin valli floor second_sphere
+define light sun 80 100 10 1.0 1.0 1.0 8
+define light lampe 50 10 -15 1.0 1.0 1.0 5
+define ambient 0.1 0.1 0.1
+transform little rotate -1.5 0 1 0
+define camera eye 100.0 0 0 0 0 0 -1 0 1 0
+render eye ./image16.ppm 1500 1000 
+    
+    
