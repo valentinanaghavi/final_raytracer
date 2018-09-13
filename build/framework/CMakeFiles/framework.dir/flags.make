@@ -3,13 +3,13 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_FLAGS = -O3 -DNDEBUG  
+C_FLAGS =  
 
 C_DEFINES = -DGLEW_STATIC
 
 C_INCLUDES = -I/home/judith/Dokumente/Uni/final_raytracer/external -I/home/judith/Dokumente/Uni/final_raytracer/external/glfw-3.2.1/include -I/home/judith/Dokumente/Uni/final_raytracer/external/nanovg/src -I/home/judith/Dokumente/Uni/final_raytracer/external/catch-1.5 -I/home/judith/Dokumente/Uni/final_raytracer/external/glm-0.9.5.3 -I/home/judith/Dokumente/Uni/final_raytracer/framework -I/home/judith/Dokumente/Uni/final_raytracer/framework/.. 
 
-CXX_FLAGS =  -std=c++14 -O3 -DNDEBUG  
+CXX_FLAGS =  -std=c++14  
 
 CXX_DEFINES = -DGLEW_STATIC
 

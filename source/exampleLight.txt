@@ -1,0 +1,6 @@
+define material senf	 0.2 0.2 0.2  0.2 0.4 0.1  0.3 0.6 0.2  40
+define shape sphere first_sphere 0 0 -10 2.5 senf
+define shape composite root first_sphere
+define light sun 0 10 -30 1.0 1.0 1.0 8
+define camera eye 100.0 0 0 0 0 0 -1 0 0 0
+render eye ./bsp2.ppm 300 300 

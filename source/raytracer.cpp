@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 
   Scene s;
   //std::string const ofile = "/home/valentina/final_raytracer/source/example.txt";
-  std::string const ofile = "../../source/example.txt";
+  std::string const ofile = "../../source/exampleLight.txt";
   
   s.read_sdf(ofile);
 

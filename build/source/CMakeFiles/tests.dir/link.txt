@@ -1,1 +1,1 @@
-/usr/bin/c++   -std=c++14 -O3 -DNDEBUG  -rdynamic CMakeFiles/tests.dir/tests.cpp.o CMakeFiles/tests.dir/__/framework/box.cpp.o CMakeFiles/tests.dir/__/framework/material.cpp.o CMakeFiles/tests.dir/__/framework/sphere.cpp.o CMakeFiles/tests.dir/__/framework/shape.cpp.o  -o tests 
+/usr/bin/c++   -std=c++14  -rdynamic CMakeFiles/tests.dir/tests.cpp.o CMakeFiles/tests.dir/__/framework/box.cpp.o CMakeFiles/tests.dir/__/framework/material.cpp.o CMakeFiles/tests.dir/__/framework/sphere.cpp.o CMakeFiles/tests.dir/__/framework/shape.cpp.o  -o tests 
