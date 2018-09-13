@@ -10,8 +10,8 @@
 int main(int argc, char* argv[])
 {
 
-  unsigned const image_width = 1500;
-  unsigned const image_height = 1000;
+  //unsigned const image_width = 1500;
+  //unsigned const image_height = 1000;
   //unsigned const image_width = 480;
   //unsigned const image_height = 320;
   std::string const filename = "./checkerboard.ppm";
@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
   std::thread render_thread([&renderer]() {renderer.render();});
   std::cout << "fertig mit rendern \n" ;
 
-  Window window{{image_width, image_height}};
+  Window window{{widthR, heightR}};
 
   while (!window.should_close()) {
     if (window.get_key(GLFW_KEY_ESCAPE) == GLFW_PRESS) {

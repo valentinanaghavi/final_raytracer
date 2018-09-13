@@ -3,7 +3,7 @@ define material blue2 	0 0 0.9 	0.01 0.01 0.3	0.01 0.01 0.3	0.8 0.5 1
 define material white 0.2 0.2 0.2 1 1 1 0.2 0.2 0.2 10 0.0
 define material turquoise 0.3 0.9 0.9	0.3 0.9 0.9	0.3 0.9 0.9	0.8 0.5 1
 define material pink	1.0 0.6 0.65	1.0 0.6 0.65	1.0 0.7 0.75	0.8 0.5 1
-define material senf	 0.9 0.8 0.1  0.9 0.8 0.1  1.0 0.9 0.2  0.8
+define material senf	 0.2 0.2 0.2  0.9 0.8 0.1  1.0 0.9 0.2  0.8
 define shape sphere first_sphere 0 8 -15 2.5 pink
 define shape sphere second_sphere 0 7.5 -25 2.5 turquoise 
 define shape sphere martin 10 -17 -25 4.5 senf
@@ -20,6 +20,6 @@ transform second_sphere scale 2 5 2
 transform little rotate 30.0 0 1 0
 transform martin translate 3 0 2
 define camera eye 100.0 0 0 0 0 0 -1 0 1 0
-render eye ./bsp2.ppm 1500 1000 
+render eye ./bsp2.ppm 300 300 
 
     

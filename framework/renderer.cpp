@@ -123,26 +123,18 @@ Color Renderer::raytrace(Ray const& ray, unsigned int depth) const
       {
         ip = scene_.light_vector[i] -> intensity(); // Intensitaet: brightness * color
         
-        glm::vec3 l = glm::normalize(scene_.light_vector[i] -> pos_ - closest.origin); //Vektor zur Lichtquelle
+        glm::vec3 l = glm::normalize(scene_.light_vector[i]->pos_ - closest.origin); //Vektor zur Lichtquelle
         glm::vec3 n = glm::normalize(closest.normal); //Normalenvektor von Strike
         // ln: i_p * k_d || i_p: Helligkeit Puntlichtquelle, k_d: diffuser Reflexionskoeffizient
-        ln = glm::dot(l,n); //dot: Skalarprodukt der beiden normalisierten Vektoren l und n float als Ergebnis
+        ln = std::max(0.0f, glm::dot(l,n)); //dot: Skalarprodukt der beiden normalisierten Vektoren l und n float als Ergebnis
         
         // in der Folie S.14 l+r = 2(n*l)n, also r = (2*(ln)*n-l)
         glm::vec3 r = glm::normalize(2 * ln * n - l);
         glm::vec3 v = - ray.direction; // v: Vektor zum Betrachter. Ray geht vom Betrachter aus -> ZUM also -
         //rv: cos^m ß -> (r*v)^m || r: reflektierter Lichtvektor, v: Vektor zum Betrachter
-        rv = glm::dot(r,v);
+        rv = std::max(0.0f, glm::dot(r,v));
 
-        if(ln < 0)
-        {
-          ln = 0;
-        }
-
-        if (rv < 0)
-        {
-          rv = 0;
-        }
+    
 
         // Ip * (kd * (ln) + ks * (rv)^m)
         c += ip * (ln * (closest.nearestShape -> getMaterial().kd_) 
