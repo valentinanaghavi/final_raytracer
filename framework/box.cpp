@@ -177,6 +177,10 @@ Strike Box::intersection(Ray const& ray_in) const
             ray_in.origin.z + strike.distance * nray.direction.z};
        
         strike.origin = intersect;
+
+        /*glm::mat4 transposed_or = glm::transpose(getWorld_trans());
+        glm::vec3 transformedOrigin(transposed_or * glm::vec4{strike.origin, 0.0f});
+        strike.origin = glm::normalize(transformedOrigin);*/
     
 
         // Die Seite der Box finden an dem Strike.origin entsteht/ist

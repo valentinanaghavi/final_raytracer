@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/judith/Dokumente/Uni/final_raytracer
+CMAKE_SOURCE_DIR = /home/IN/nasu9271/Documents/final_raytracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/judith/Dokumente/Uni/final_raytracer/build
+CMAKE_BINARY_DIR = /home/IN/nasu9271/Documents/final_raytracer/build
 
 # Include any dependencies generated for this target.
 include source/CMakeFiles/tests.dir/depend.make
@@ -59,16 +59,16 @@ include source/CMakeFiles/tests.dir/flags.make
 
 source/CMakeFiles/tests.dir/tests.cpp.o: source/CMakeFiles/tests.dir/flags.make
 source/CMakeFiles/tests.dir/tests.cpp.o: ../source/tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/tests.dir/tests.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/tests.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/source/tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/nasu9271/Documents/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/tests.dir/tests.cpp.o"
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/tests.cpp.o -c /home/IN/nasu9271/Documents/final_raytracer/source/tests.cpp
 
 source/CMakeFiles/tests.dir/tests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/tests.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/source/tests.cpp > CMakeFiles/tests.dir/tests.cpp.i
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/IN/nasu9271/Documents/final_raytracer/source/tests.cpp > CMakeFiles/tests.dir/tests.cpp.i
 
 source/CMakeFiles/tests.dir/tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/tests.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/source/tests.cpp -o CMakeFiles/tests.dir/tests.cpp.s
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/nasu9271/Documents/final_raytracer/source/tests.cpp -o CMakeFiles/tests.dir/tests.cpp.s
 
 source/CMakeFiles/tests.dir/tests.cpp.o.requires:
 
@@ -83,16 +83,16 @@ source/CMakeFiles/tests.dir/tests.cpp.o.provides.build: source/CMakeFiles/tests.
 
 source/CMakeFiles/tests.dir/__/framework/box.cpp.o: source/CMakeFiles/tests.dir/flags.make
 source/CMakeFiles/tests.dir/__/framework/box.cpp.o: ../framework/box.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/CMakeFiles/tests.dir/__/framework/box.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/__/framework/box.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/nasu9271/Documents/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/CMakeFiles/tests.dir/__/framework/box.cpp.o"
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/__/framework/box.cpp.o -c /home/IN/nasu9271/Documents/final_raytracer/framework/box.cpp
 
 source/CMakeFiles/tests.dir/__/framework/box.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/__/framework/box.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp > CMakeFiles/tests.dir/__/framework/box.cpp.i
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/IN/nasu9271/Documents/final_raytracer/framework/box.cpp > CMakeFiles/tests.dir/__/framework/box.cpp.i
 
 source/CMakeFiles/tests.dir/__/framework/box.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/__/framework/box.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/box.cpp -o CMakeFiles/tests.dir/__/framework/box.cpp.s
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/nasu9271/Documents/final_raytracer/framework/box.cpp -o CMakeFiles/tests.dir/__/framework/box.cpp.s
 
 source/CMakeFiles/tests.dir/__/framework/box.cpp.o.requires:
 
@@ -107,16 +107,16 @@ source/CMakeFiles/tests.dir/__/framework/box.cpp.o.provides.build: source/CMakeF
 
 source/CMakeFiles/tests.dir/__/framework/material.cpp.o: source/CMakeFiles/tests.dir/flags.make
 source/CMakeFiles/tests.dir/__/framework/material.cpp.o: ../framework/material.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object source/CMakeFiles/tests.dir/__/framework/material.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/__/framework/material.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/nasu9271/Documents/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object source/CMakeFiles/tests.dir/__/framework/material.cpp.o"
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/__/framework/material.cpp.o -c /home/IN/nasu9271/Documents/final_raytracer/framework/material.cpp
 
 source/CMakeFiles/tests.dir/__/framework/material.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/__/framework/material.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp > CMakeFiles/tests.dir/__/framework/material.cpp.i
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/IN/nasu9271/Documents/final_raytracer/framework/material.cpp > CMakeFiles/tests.dir/__/framework/material.cpp.i
 
 source/CMakeFiles/tests.dir/__/framework/material.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/__/framework/material.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/material.cpp -o CMakeFiles/tests.dir/__/framework/material.cpp.s
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/nasu9271/Documents/final_raytracer/framework/material.cpp -o CMakeFiles/tests.dir/__/framework/material.cpp.s
 
 source/CMakeFiles/tests.dir/__/framework/material.cpp.o.requires:
 
@@ -131,16 +131,16 @@ source/CMakeFiles/tests.dir/__/framework/material.cpp.o.provides.build: source/C
 
 source/CMakeFiles/tests.dir/__/framework/sphere.cpp.o: source/CMakeFiles/tests.dir/flags.make
 source/CMakeFiles/tests.dir/__/framework/sphere.cpp.o: ../framework/sphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object source/CMakeFiles/tests.dir/__/framework/sphere.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/__/framework/sphere.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/nasu9271/Documents/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object source/CMakeFiles/tests.dir/__/framework/sphere.cpp.o"
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/__/framework/sphere.cpp.o -c /home/IN/nasu9271/Documents/final_raytracer/framework/sphere.cpp
 
 source/CMakeFiles/tests.dir/__/framework/sphere.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/__/framework/sphere.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.cpp > CMakeFiles/tests.dir/__/framework/sphere.cpp.i
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/IN/nasu9271/Documents/final_raytracer/framework/sphere.cpp > CMakeFiles/tests.dir/__/framework/sphere.cpp.i
 
 source/CMakeFiles/tests.dir/__/framework/sphere.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/__/framework/sphere.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/sphere.cpp -o CMakeFiles/tests.dir/__/framework/sphere.cpp.s
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/nasu9271/Documents/final_raytracer/framework/sphere.cpp -o CMakeFiles/tests.dir/__/framework/sphere.cpp.s
 
 source/CMakeFiles/tests.dir/__/framework/sphere.cpp.o.requires:
 
@@ -155,16 +155,16 @@ source/CMakeFiles/tests.dir/__/framework/sphere.cpp.o.provides.build: source/CMa
 
 source/CMakeFiles/tests.dir/__/framework/shape.cpp.o: source/CMakeFiles/tests.dir/flags.make
 source/CMakeFiles/tests.dir/__/framework/shape.cpp.o: ../framework/shape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/CMakeFiles/tests.dir/__/framework/shape.cpp.o"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/__/framework/shape.cpp.o -c /home/judith/Dokumente/Uni/final_raytracer/framework/shape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/IN/nasu9271/Documents/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/CMakeFiles/tests.dir/__/framework/shape.cpp.o"
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/__/framework/shape.cpp.o -c /home/IN/nasu9271/Documents/final_raytracer/framework/shape.cpp
 
 source/CMakeFiles/tests.dir/__/framework/shape.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/__/framework/shape.cpp.i"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/judith/Dokumente/Uni/final_raytracer/framework/shape.cpp > CMakeFiles/tests.dir/__/framework/shape.cpp.i
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/IN/nasu9271/Documents/final_raytracer/framework/shape.cpp > CMakeFiles/tests.dir/__/framework/shape.cpp.i
 
 source/CMakeFiles/tests.dir/__/framework/shape.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/__/framework/shape.cpp.s"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/judith/Dokumente/Uni/final_raytracer/framework/shape.cpp -o CMakeFiles/tests.dir/__/framework/shape.cpp.s
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/IN/nasu9271/Documents/final_raytracer/framework/shape.cpp -o CMakeFiles/tests.dir/__/framework/shape.cpp.s
 
 source/CMakeFiles/tests.dir/__/framework/shape.cpp.o.requires:
 
@@ -195,8 +195,8 @@ source/tests: source/CMakeFiles/tests.dir/__/framework/sphere.cpp.o
 source/tests: source/CMakeFiles/tests.dir/__/framework/shape.cpp.o
 source/tests: source/CMakeFiles/tests.dir/build.make
 source/tests: source/CMakeFiles/tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/judith/Dokumente/Uni/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable tests"
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/IN/nasu9271/Documents/final_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable tests"
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 source/CMakeFiles/tests.dir/build: source/tests
@@ -212,10 +212,10 @@ source/CMakeFiles/tests.dir/requires: source/CMakeFiles/tests.dir/__/framework/s
 .PHONY : source/CMakeFiles/tests.dir/requires
 
 source/CMakeFiles/tests.dir/clean:
-	cd /home/judith/Dokumente/Uni/final_raytracer/build/source && $(CMAKE_COMMAND) -P CMakeFiles/tests.dir/cmake_clean.cmake
+	cd /home/IN/nasu9271/Documents/final_raytracer/build/source && $(CMAKE_COMMAND) -P CMakeFiles/tests.dir/cmake_clean.cmake
 .PHONY : source/CMakeFiles/tests.dir/clean
 
 source/CMakeFiles/tests.dir/depend:
-	cd /home/judith/Dokumente/Uni/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/judith/Dokumente/Uni/final_raytracer /home/judith/Dokumente/Uni/final_raytracer/source /home/judith/Dokumente/Uni/final_raytracer/build /home/judith/Dokumente/Uni/final_raytracer/build/source /home/judith/Dokumente/Uni/final_raytracer/build/source/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/IN/nasu9271/Documents/final_raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/IN/nasu9271/Documents/final_raytracer /home/IN/nasu9271/Documents/final_raytracer/source /home/IN/nasu9271/Documents/final_raytracer/build /home/IN/nasu9271/Documents/final_raytracer/build/source /home/IN/nasu9271/Documents/final_raytracer/build/source/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : source/CMakeFiles/tests.dir/depend
 
